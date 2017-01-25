@@ -13,6 +13,8 @@ function Update () {
 	var moveV = Input.GetAxis("Vertical")*Time.deltaTime * speed;
 	transform.Translate(moveH,moveV,0);
 
+
+
 	//Facing right way
      if(moveH < 0 && facingRight)
          Flip();
@@ -27,3 +29,4 @@ function Flip()
      theScale.x *= -1;
      transform.localScale = theScale;
  }
+
