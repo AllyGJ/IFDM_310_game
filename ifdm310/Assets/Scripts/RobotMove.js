@@ -32,16 +32,17 @@ function Update () {
 	//connects animation to horizontal speed of robot
 	anim.SetFloat("Speed", Mathf.Abs(moveH));
 
-	//Flips robot
-     if(transform.position.x < 0 && !facingRight)
+	//Flips robot after it hits it's target
+     if(transform.position.x <= targetTouch.position.x && !facingRight)
          Flip();
-     else if(transform.position.x > 0 && facingRight)
+     else if(transform.position.x >= targetTouch.position.x && facingRight)
          Flip();
 }
 
 function move()
 {
-	transform.position = Vector3.MoveTowards(transform.position, targetTouch.position, speed*Time.deltaTime);
+	var step = speed * Time.deltaTime;
+	transform.position = Vector3.MoveTowards(transform.position, targetTouch.position, step);
 	if(transform.position == targetTouch.position)
          {
            	currentTouch = targetTouch;
