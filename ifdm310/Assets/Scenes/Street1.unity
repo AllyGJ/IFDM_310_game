@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 122109155}
   m_Layer: 0
-  m_Name: touch0
+  m_Name: touch2.0
   m_TagString: Untagged
   m_Icon: {fileID: -6431860639581277017, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -128,7 +128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 152322362}
   m_Layer: 0
-  m_Name: touch1
+  m_Name: touch2.1
   m_TagString: Untagged
   m_Icon: {fileID: -6431860639581277017, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -157,7 +157,6 @@ GameObject:
   - component: {fileID: 203185915}
   - component: {fileID: 203185921}
   - component: {fileID: 203185920}
-  - component: {fileID: 203185919}
   - component: {fileID: 203185918}
   - component: {fileID: 203185917}
   - component: {fileID: 203185916}
@@ -175,7 +174,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 203185914}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1800003, y: 0.71130526, z: 0}
+  m_LocalPosition: {x: 1.1800003, y: 0.2, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 954595987}
@@ -196,11 +195,11 @@ MonoBehaviour:
   facingRight: 0
   speed: 5
   touchList:
-  - {fileID: 556733460}
-  - {fileID: 576881448}
+  - {fileID: 1540933522}
+  - {fileID: 1671280660}
   touched: 0
-  currentTouch: {fileID: 556733460}
-  targetTouch: {fileID: 576881448}
+  currentTouch: {fileID: 1540933522}
+  targetTouch: {fileID: 1671280660}
 --- !u!61 &203185917
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -231,27 +230,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.42}
   serializedVersion: 2
   m_Radius: 0.2
---- !u!50 &203185919
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5000000, guid: 87a2357765801c34292d6718d8b4d770,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 203185914}
-  m_BodyType: 0
-  m_Simulated: 0
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 1
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 6
 --- !u!95 &203185920
 Animator:
   serializedVersion: 3
@@ -334,7 +312,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 448697451}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1800003, y: 0.71130526, z: 0}
+  m_LocalPosition: {x: 1.1800003, y: 0.2, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 1197335078}
@@ -356,11 +334,11 @@ MonoBehaviour:
   facingRight: 0
   speed: 5
   touchList:
-  - {fileID: 556733460}
-  - {fileID: 576881448}
+  - {fileID: 122109155}
+  - {fileID: 152322362}
   touched: 0
-  currentTouch: {fileID: 556733460}
-  targetTouch: {fileID: 576881448}
+  currentTouch: {fileID: 122109155}
+  targetTouch: {fileID: 152322362}
 --- !u!61 &448697454
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -619,7 +597,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 507265566}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1800003, y: 0.71130526, z: 0}
+  m_LocalPosition: {x: 1.1800003, y: 0.2, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 1297011670}
@@ -677,7 +655,7 @@ GameObject:
   m_Component:
   - component: {fileID: 556733460}
   m_Layer: 0
-  m_Name: touch0
+  m_Name: touch1.0
   m_TagString: Untagged
   m_Icon: {fileID: -6431860639581277017, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -705,7 +683,7 @@ GameObject:
   m_Component:
   - component: {fileID: 576881448}
   m_Layer: 0
-  m_Name: touch1
+  m_Name: touch1.1
   m_TagString: Untagged
   m_Icon: {fileID: -6431860639581277017, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -789,7 +767,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 954595986}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.42, y: 1.85, z: 0}
+  m_LocalPosition: {x: 29.42, y: 2.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1671280660}
@@ -1080,7 +1058,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1297011669}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.42, y: -2.11, z: 0}
+  m_LocalPosition: {x: 29.42, y: -1.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 576881448}
@@ -1098,7 +1076,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1540933522}
   m_Layer: 0
-  m_Name: touch0
+  m_Name: touch3.0
   m_TagString: Untagged
   m_Icon: {fileID: -6431860639581277017, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1126,7 +1104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1671280660}
   m_Layer: 0
-  m_Name: touch1
+  m_Name: touch3.1
   m_TagString: Untagged
   m_Icon: {fileID: -6431860639581277017, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1167,7 +1145,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1950089112}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.42, y: -0.05, z: 0}
+  m_LocalPosition: {x: 29.42, y: 0.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 152322362}
