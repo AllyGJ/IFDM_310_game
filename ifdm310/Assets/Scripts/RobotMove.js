@@ -5,11 +5,13 @@ var facingRight = false;
 public var speed:float;
 
 var touchList: Transform[];
-var touched = 0f;
+var touched = 1;
 
 var currentTouch: Transform;
 var targetTouch: Transform;
 
+var walkToLeft = true;
+private var walking = true;
 
 
 function Start () {
@@ -26,11 +28,13 @@ function Update () {
 		{
 			targetTouch = touchList[touched];
 		}
-		move();
+
+		move(); 
+
 	}
 
 	//connects animation to horizontal speed of robot
-	anim.SetFloat("Speed", Mathf.Abs(moveH));
+	if(walking) anim.SetFloat("Speed", Mathf.Abs(moveH));
 
 	//Flips robot after it hits it's target
      if(transform.position.x <= targetTouch.position.x && !facingRight)
@@ -42,19 +46,37 @@ function Update () {
 function move()
 {
 	var step = speed * Time.deltaTime;
-	transform.position = Vector3.MoveTowards(transform.position, targetTouch.position, step);
-	if(transform.position == targetTouch.position)
-         {
-           	currentTouch = targetTouch;
-            targetTouch = touchList[touched];
 
-            //facingRight = !facingRight;
-            Flip();
+	if(walking) transform.position = Vector3.MoveTowards(transform.position, targetTouch.position, step);
 
-            if(touched == 0) touched = 1;
-            else touched = 0;
 
-         }
+	 if(transform.position == targetTouch.position)
+    {    
+
+    	if(targetTouch == touchList[1]){
+    		print("touched halfway");
+    	 	scanRoom();
+    	 }
+    		
+    	if(walkToLeft){
+    		touched++;
+    	}
+    	else touched--;
+
+    	if(touched == touchList.length-1 || touched == 0) walkToLeft = !walkToLeft;
+
+        currentTouch = targetTouch;
+        targetTouch = touchList[touched];
+
+     }
+}
+
+function scanRoom(){
+	walking = false;
+	anim.SetFloat("Speed", 0.0);
+
+	yield WaitForSeconds (8);
+	walking = true;
 }
 
 function Flip()
