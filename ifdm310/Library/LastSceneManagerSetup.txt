@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Street1.unity
+- path: Assets/Scenes/CutScene1.unity
   isLoaded: 1
   isActive: 1
