@@ -85,4 +85,5 @@
 -r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll'
 -i:UnityEditor
 'Assets/Scripts/GirlMove.js'
+'Assets/Scripts/MenuCTRL.js'
 'Assets/Scripts/RobotMove.js'
