@@ -87,3 +87,7 @@
 'Assets/Scripts/GirlMove.js'
 'Assets/Scripts/MenuCTRL.js'
 'Assets/Scripts/RobotMove.js'
+'Assets/Scripts/cameraMove.js'
+'Assets/Scripts/scaleSize.js'
+'Assets/Scripts/timMove.js'
+'Assets/Video.js'
