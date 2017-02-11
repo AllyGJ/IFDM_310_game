@@ -1,18 +1,13 @@
 ﻿#pragma strict
 
-public var hoverY: float;
+private var y0:float;
+private var amplitude = 0.5;
+private var speed = 1;
 
 function Start () {
-	
+	y0 = transform.position.y;
 }
 
 function Update () {
-	hover();
-}
-
-function hover(){
-	transform.position.y += hoverY;
-	yield WaitForSeconds (1);
-	transform.position.y -= hoverY;
-	yield WaitForSeconds (1);
+	transform.position.y = y0 + amplitude*Mathf.Sin(speed*Time.time);
 }

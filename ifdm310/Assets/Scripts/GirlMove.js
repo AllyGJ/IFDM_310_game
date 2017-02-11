@@ -7,6 +7,7 @@ public var scale:float;
 
 public var rb:Rigidbody2D;
 
+private var moving = false;
 
 function Start () {
 	rb = GetComponent.<Rigidbody2D>();	
@@ -17,7 +18,12 @@ function Update () {
 	var moveH = Input.GetAxis("Horizontal");
 	var moveV = Input.GetAxis("Vertical");
 	//transform.Translate(moveH,moveV,0);
-	rb.velocity = new Vector2(moveH*speed, moveV*speed);
+
+
+		
+		rb.velocity = new Vector2(moveH*speed, moveV*speed);
+
+
 
 	//Facing right way
      if(moveH < 0 && facingRight)

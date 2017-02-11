@@ -1,15 +1,13 @@
 ﻿#pragma strict
 
-public var floor:GameObject; 
-public var player:GameObject;
 private var maxY:float; //highest y-value of floor
 private var minY:float; //lowest y-value of floor 
 
-public var scale:float;
+private var scale=0.05;
 private var z = scale;
 
-private var minScale = 3;
-private var maxScale = -3; 
+private var minScale = 1;
+private var maxScale = -1.5; 
 
 
 function Start () {
@@ -29,13 +27,13 @@ function Update () {
 	}
 	else z = 0;
 
-	player.transform.position.z += z;
+	transform.position.z += z;
 
-	if(player.transform.position.z > minScale){
-		player.transform.position.z = minScale;
+	if(transform.position.z > minScale){
+		transform.position.z = minScale;
 	}
-	else if(player.transform.position.z < maxScale){
-		player.transform.position.z = maxScale;
+	else if(transform.position.z < maxScale){
+		transform.position.z = maxScale;
 	}
 
 

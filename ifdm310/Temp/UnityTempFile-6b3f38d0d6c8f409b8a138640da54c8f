@@ -90,4 +90,5 @@
 'Assets/Scripts/cameraMove.js'
 'Assets/Scripts/scaleSize.js'
 'Assets/Scripts/timFollow.js'
+'Assets/Scripts/timHover.js'
 'Assets/Video.js'
