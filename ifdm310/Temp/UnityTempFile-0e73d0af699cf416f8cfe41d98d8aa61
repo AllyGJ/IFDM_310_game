@@ -86,6 +86,7 @@
 -i:UnityEditor
 'Assets/Scripts/GirlMove.js'
 'Assets/Scripts/MenuCTRL.js'
+'Assets/Scripts/PRCollision.js'
 'Assets/Scripts/RobotMove.js'
 'Assets/Scripts/cameraMove.js'
 'Assets/Scripts/scaleSize.js'

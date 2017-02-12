@@ -1,16 +1,55 @@
 ﻿#pragma strict
 
-public var objToFollow: GameObject;
+public var ob: GameObject;
 
-private var offset = 4;
+private var offset = 3;
+private var y0:float;
+private var amplitude = 1;
+private var speed = 0.05;
+
+var facingRight = true;
+
+function Start(){
+	y0 = transform.position.y;	
+}
 
 function Update () {
-	follow(objToFollow);
+	var moveH = Input.GetAxis("Horizontal");
+	var moveV = Input.GetAxis("Vertical");
+
+
+	lerpX(offset);
+
+
+	//flipping sprite
+	if(moveH < 0 && facingRight){
+         Flip();
+         offset = Mathf.Abs(offset);
+     }
+     else if(moveH > 0 && !facingRight){
+         Flip();
+         offset = -Mathf.Abs(offset);
+
+     }
 
 }
 
-function follow(ob:GameObject)
-{
-	transform.position.x = ob.transform.position.x + offset;
-	transform.position.y = ob.transform.position.y + offset;
+//moves T1M over to right/lefy side of girl when flipped
+function lerpX(offset : int){
+	var endPos = new Vector3(ob.transform.position.x + offset,transform.position.y, transform.position.z);
+	transform.position = Vector3.Lerp(transform.position,endPos, speed);
 }
+
+
+function Flip()
+ {
+     facingRight = !facingRight;
+     var theScale = transform.localScale;
+     theScale.x *= -1;
+     transform.localScale = theScale;
+
+ }
+
+
+
+
