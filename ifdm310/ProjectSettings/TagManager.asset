@@ -51,6 +51,9 @@ TagManager:
   - name: Player
     uniqueID: 126507883
     locked: 0
+  - name: Hiding
+    uniqueID: 2435201785
+    locked: 0
   - name: Robots
     uniqueID: 735792725
     locked: 0

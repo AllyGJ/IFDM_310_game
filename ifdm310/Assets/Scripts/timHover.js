@@ -10,5 +10,7 @@ function Start () {
 }
 
 function Update () {
-	transform.position.y = (y0 + amplitude * Mathf.Sin(speed*Time.time)) + ob.transform.position.y ;
+	
+	transform.position.y = (y0 + amplitude * Mathf.Sin(speed*Time.time)) + (ob.transform.position.y*0.75) ;
+
 }
