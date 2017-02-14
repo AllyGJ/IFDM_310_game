@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 50808574730146196}
   - component: {fileID: 58191923847105136}
   - component: {fileID: 114307672226654280}
+  - component: {fileID: 114345712370343894}
   m_Layer: 10
   m_Name: Robot2
   m_TagString: Robot
@@ -231,6 +232,20 @@ MonoBehaviour:
   - {fileID: 4854014963609990}
   currentTouch: {fileID: 4073948720069544}
   targetTouch: {fileID: 4203380574137178}
+--- !u!114 &114345712370343894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1577087393934508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be2cc16a890024f2fa2e2839e6e8a998, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  girlCol: {fileID: 0}
+  frontLayer: Robots
+  backLayer: Background
 --- !u!212 &212717932343600446
 SpriteRenderer:
   m_ObjectHideFlags: 1
