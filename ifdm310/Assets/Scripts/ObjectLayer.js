@@ -3,6 +3,9 @@
 public var girlCol: Collider2D;
 private var gcY:float;
 
+public var frontLayer: String;
+public var backLayer: String;
+
 private var obColY:float;
 
 function Start () {
@@ -14,10 +17,10 @@ function Update () {
 
 	if(gcY > obColY) //Girl is behind
 	{
-		GetComponent.<Renderer>().sortingLayerName = "Hiding";
+		GetComponent.<Renderer>().sortingLayerName = frontLayer;
 	}
 	else //Girl is infront
 	{
-		GetComponent.<Renderer>().sortingLayerName = "Background";
+		GetComponent.<Renderer>().sortingLayerName = backLayer;
 	}
 }
