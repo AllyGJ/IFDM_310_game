@@ -6,14 +6,17 @@ private var gcY:float;
 public var frontLayer: String;
 public var backLayer: String;
 
+public var obBox: Collider2D;
+public var obEdge: EdgeCollider2D;
 private var obColY:float;
 
 function Start () {
-	obColY = GetComponent.<Collider2D>().bounds.center.y;
+	if(obBox == null) obColY = obEdge.bounds.center.y;
+	else if(obEdge == null) obColY = obBox.bounds.center.y;
 }
 
 function Update () {
-	gcY = girlCol.GetComponent.<Collider2D>().bounds.center.y;
+	gcY = girlCol.bounds.center.y;
 
 	if(gcY > obColY) //Girl is behind
 	{

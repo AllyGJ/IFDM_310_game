@@ -8,6 +8,7 @@ TagManager:
   - Line
   - Platform
   - Robot
+  - Light
   layers:
   - Default
   - TransparentFX
@@ -50,6 +51,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 126507883
+    locked: 0
+  - name: Light
+    uniqueID: 3624905669
     locked: 0
   - name: Hiding
     uniqueID: 2435201785
