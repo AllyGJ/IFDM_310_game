@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 public var scaredMeter: UnityEngine.UI.Slider;
-public var lightCol: PolygonCollider2D;
+public var lightCol: PolygonCollider2D[];
 
 private var happy = 100;
 private var inLight = false;
@@ -32,19 +32,23 @@ function Update(){
 
 function OnTriggerEnter2D(Col: Collider2D)
 {
-	if(Col == lightCol)
-	{
-		inLight = true;
+	for(var light : PolygonCollider2D in lightCol){
+		if(Col == light)
+		{	
+			inLight = true;
 
+		}
 	}
 }
 
 function OnTriggerExit2D(Col: Collider2D)
 {
-	if(Col == lightCol)
-	{
-		inLight = false;
+	for(var light : PolygonCollider2D in lightCol){
+		if(Col == light)
+		{	
+			inLight = false;
 
+		}
 	}
 }
 

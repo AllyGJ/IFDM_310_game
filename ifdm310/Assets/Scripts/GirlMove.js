@@ -21,7 +21,7 @@ function Update () {
 
 
 		
-		rb.velocity = new Vector2(moveH*speed, moveV*speed);
+	rb.velocity = new Vector2(moveH*speed, moveV*speed);
 
 
 
