@@ -1,6 +1,12 @@
 ﻿#pragma strict
 
 var anim: Animator;
+var beam1: GameObject;
+var beam2: GameObject;
+
+private var b1: Animator;
+private var b2: Animator;
+
 var facingRight = false;
 public var speed:float;
 
@@ -16,6 +22,10 @@ private var walking = true;
 
 function Start () {
 	anim = GetComponent(Animator);
+//	b1 = beam1.GetComponent(Animator);
+
+	beam1.GetComponent.<Renderer>().enabled = false;
+	beam2.GetComponent.<Renderer>().enabled = false;
 }
 
 function Update () {
@@ -79,11 +89,15 @@ function move()
 function scanRoom(){
 	walking = false;
 	anim.SetFloat("Speed", 0.0);
-
-	/* Once we have the light beam eye-scanner animation, it will go here */
+	//beam.SetBool("search", true);
+	beam1.GetComponent.<Renderer>().enabled = true;
+	beam2.GetComponent.<Renderer>().enabled = true;
 
 	yield WaitForSeconds (8);
 	walking = true;
+	//beam.SetBool("search", false);
+	beam1.GetComponent.<Renderer>().enabled = false;
+	beam2.GetComponent.<Renderer>().enabled = false;
 }
 
 //Flips sprite across y-axis
