@@ -9,6 +9,8 @@ TagManager:
   - Platform
   - Robot
   - Light
+  - lazerBeam
+  - scan
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - Ground
   - Player
   - Robots
-  - 
+  - Background
   - 
   - 
   - 
@@ -63,4 +65,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 3953762813
+    locked: 0
+  - name: 
+    uniqueID: 3444334353
     locked: 0

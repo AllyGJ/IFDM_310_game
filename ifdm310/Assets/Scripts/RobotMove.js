@@ -1,29 +1,22 @@
 ﻿#pragma strict
 
-var anim: Animator;
-var beam1: GameObject;
-var beam2: GameObject;
-
-private var b1: Animator;
-private var b2: Animator;
-
-var facingRight = false;
 public var speed:float;
+public var backNForth: boolean;
+public var followPath: boolean;
+public var touchList: Transform[];
+public var currentTouch: Transform;
+public var targetTouch: Transform;
+public var beam1: GameObject;
+public var beam2: GameObject;
 
-var touchList: Transform[];
 private var touched = 1;
-
-var currentTouch: Transform;
-var targetTouch: Transform;
-
-private var walkToLeft = true;
 private var walking = true;
-
+private var walkToLeft = true;
+private var anim: Animator;
+private var facingRight = false;
 
 function Start () {
 	anim = GetComponent(Animator);
-//	b1 = beam1.GetComponent(Animator);
-
 	beam1.GetComponent.<Renderer>().enabled = false;
 	beam2.GetComponent.<Renderer>().enabled = false;
 }
@@ -31,7 +24,9 @@ function Start () {
 function Update () {
 	var moveH = Time.deltaTime * speed;
 
-	//Check which points touched
+	//connects animation to horizontal speed of robot
+	 anim.SetFloat("Speed", Mathf.Abs(moveH));
+
 	if(transform.position != targetTouch.position)
 	{
 		if(targetTouch == null)
@@ -39,66 +34,18 @@ function Update () {
 			targetTouch = touchList[touched];
 		}
 
-		move(); 
-
+	
+		if(backNForth) simpleToNFro();
+		else if(followPath) oneByOne();
 	}
 
-	//connects animation to horizontal speed of robot
-	if(walking) anim.SetFloat("Speed", Mathf.Abs(moveH));
-
-	//Flips robot after it hits it's target
-     if(transform.position.x <= targetTouch.position.x && !facingRight)
+	if(transform.position.x < targetTouch.position.x && !facingRight)
          Flip();
-     else if(transform.position.x >= targetTouch.position.x && facingRight)
+     else if(transform.position.x > targetTouch.position.x && facingRight)
          Flip();
+
 }
 
-function move()
-{
-	var step = speed * Time.deltaTime;
-
-	//Make robot move towards target
-	if(walking) transform.position = Vector3.MoveTowards(transform.position, targetTouch.position, step);
-
-	//What happens when robot reaches target
-	 if(transform.position == targetTouch.position)
-    {    
-   		//If it gets to the pause target, robot pauses to scan room
-    	if(targetTouch == touchList[1]){
-    		print("scanning room");
-    	 	scanRoom();
-    	 }
-
-    	//Keeps track of which way the robot should be touching targets
-    	//Goes 1, 2, 3, 2, 1, 2, 3, etc.
-    	if(walkToLeft){
-    		touched++;
-    	}
-    	else touched--;
-
-    	//Checks for end targets and makes robot walk other direction
-    	if(touched == touchList.length-1 || touched == 0) walkToLeft = !walkToLeft;
-
-    	//Switches out targets once touched
-        currentTouch = targetTouch;
-        targetTouch = touchList[touched];
-
-     }
-}
-
-function scanRoom(){
-	walking = false;
-	anim.SetFloat("Speed", 0.0);
-	//beam.SetBool("search", true);
-	beam1.GetComponent.<Renderer>().enabled = true;
-	beam2.GetComponent.<Renderer>().enabled = true;
-
-	yield WaitForSeconds (8);
-	walking = true;
-	//beam.SetBool("search", false);
-	beam1.GetComponent.<Renderer>().enabled = false;
-	beam2.GetComponent.<Renderer>().enabled = false;
-}
 
 //Flips sprite across y-axis
 function Flip()
@@ -108,3 +55,68 @@ function Flip()
      theScale.x *= -1;
      transform.localScale = theScale;
  }
+
+ //Incremental path touches
+ function simpleToNFro()
+ {
+ 	var step = speed * Time.deltaTime;
+ 
+	//Make robot move towards target
+	transform.position = Vector3.MoveTowards(transform.position, targetTouch.position, step);
+	
+
+	//What happens when robot reaches target
+	if(transform.position == targetTouch.position)
+   	{    
+   	    //If it gets to the pause target, robot pauses to scan room
+    	if(targetTouch.CompareTag("scan")){
+   	 		scanRoom();
+   	 	}
+
+   	    //Keeps track of which way the robot should be touching targets
+   	    //Goes 1, 2, 3, 2, 1, 2, 3, etc.
+    	if(walkToLeft){
+   			touched++;
+   		}
+   		else touched--;
+
+    	//Checks for end targets and makes robot walk other direction
+   		if(touched == touchList.length-1 || touched == 0) walkToLeft = !walkToLeft;
+
+    	//Switches out targets once touched
+   		currentTouch = targetTouch;
+    	targetTouch = touchList[touched];
+
+    }
+
+ }
+
+ //Circular path touches
+ private function oneByOne()
+{
+	var step = speed * Time.deltaTime;
+	transform.position = Vector3.MoveTowards(transform.position, targetTouch.position, step);
+
+	if(transform.position == targetTouch.position){
+		if(targetTouch.CompareTag("scan")){
+   	 		scanRoom();
+   	 	}
+  
+   	 	touched++;
+   	 	if(touched == touchList.length) touched = 0;
+
+   	 	currentTouch = targetTouch;
+   	 	targetTouch = touchList[touched];
+	}
+
+}
+
+private function scanRoom(){
+	beam1.GetComponent.<Renderer>().enabled = true;
+	beam2.GetComponent.<Renderer>().enabled = true;
+
+	yield WaitForSeconds (5);
+
+	beam1.GetComponent.<Renderer>().enabled = false;
+	beam2.GetComponent.<Renderer>().enabled = false;
+}

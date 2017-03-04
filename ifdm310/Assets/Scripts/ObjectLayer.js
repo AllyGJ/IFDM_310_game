@@ -8,11 +8,14 @@ public var backLayer: String;
 
 public var obBox: Collider2D;
 public var obEdge: EdgeCollider2D;
+public var obPoly: PolygonCollider2D;
+
 private var obColY:float;
 
 function Start () {
-	if(obBox == null) obColY = obEdge.bounds.center.y;
-	else if(obEdge == null) obColY = obBox.bounds.center.y;
+	if(obBox == null && obPoly == null) obColY = obEdge.bounds.center.y;
+	else if(obEdge == null && obPoly == null) obColY = obBox.bounds.center.y;
+	else if(obBox == null && obEdge == null) obColY = obPoly.bounds.extents.y;
 }
 
 function Update () {
