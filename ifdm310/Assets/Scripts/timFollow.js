@@ -20,6 +20,7 @@ function Update () {
 
 	lerpX(offset);
 
+	GetComponent.<Renderer>().sortingLayerName = ob.GetComponent.<Renderer>().sortingLayerName;
 
 	//flipping sprite
 	if(moveH < 0 && facingRight){

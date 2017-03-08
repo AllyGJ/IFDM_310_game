@@ -54,6 +54,15 @@ TagManager:
   - name: Player
     uniqueID: 126507883
     locked: 0
+  - name: Layer3
+    uniqueID: 3820576339
+    locked: 0
+  - name: Layer2
+    uniqueID: 3396031725
+    locked: 0
+  - name: Layer1
+    uniqueID: 3444334353
+    locked: 0
   - name: Light
     uniqueID: 3624905669
     locked: 0
@@ -65,7 +74,4 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 3953762813
-    locked: 0
-  - name: 
-    uniqueID: 3444334353
     locked: 0
