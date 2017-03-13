@@ -1,18 +1,17 @@
 ﻿#pragma strict
 
-public var ob:GameObject;
-public var minx: GameObject;
-public var maxx: GameObject;
-public var miny: GameObject;
-public var maxy: GameObject;
-
+private var ob:GameObject;
+private var minx: GameObject;
+private var maxx: GameObject;
+private var miny: GameObject;
+private var maxy: GameObject;
 private var MinX: float;
 private var MaxX: float;
 private var MinY: float;
 private var MaxY: float;
 
 function Start(){
-	
+	ob = GameObject.Find("girl");
 	grabBounds();
 
 }
