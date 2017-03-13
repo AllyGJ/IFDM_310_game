@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4579092371023460}
   - component: {fileID: 212299135724133444}
   - component: {fileID: 61786557417689484}
-  - component: {fileID: 114605549946317714}
   m_Layer: 8
   m_Name: trashPile
   m_TagString: Untagged
@@ -56,23 +55,6 @@ BoxCollider2D:
   m_Offset: {x: -0.049999237, y: -0.8337943}
   serializedVersion: 2
   m_Size: {x: 3.442182, y: 0.62512237}
---- !u!114 &114605549946317714
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1162654910674558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be2cc16a890024f2fa2e2839e6e8a998, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  girlCol: {fileID: 0}
-  frontLayer: Hiding
-  backLayer: Background
-  obBox: {fileID: 0}
-  obEdge: {fileID: 0}
-  obPoly: {fileID: 0}
 --- !u!212 &212299135724133444
 SpriteRenderer:
   m_ObjectHideFlags: 1

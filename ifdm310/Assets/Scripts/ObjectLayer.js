@@ -1,7 +1,9 @@
 ﻿#pragma strict
 
 public var girlCol: Collider2D;
+public var robotCol: Collider2D;
 private var gcY:float;
+private var roboY:float;
 
 public var frontLayer: String;
 public var backLayer: String;
@@ -20,6 +22,7 @@ function Start () {
 
 function Update () {
 	gcY = girlCol.bounds.center.y;
+//	if(roboY != null) roboY = robotCol;
 
 	if(gcY > obColY) //Girl is behind
 	{

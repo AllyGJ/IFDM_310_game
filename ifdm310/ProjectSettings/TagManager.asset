@@ -11,6 +11,8 @@ TagManager:
   - Light
   - lazerBeam
   - scan
+  - LBound
+  - RBound
   layers:
   - Default
   - TransparentFX
@@ -51,9 +53,6 @@ TagManager:
   - name: Background
     uniqueID: 3721431811
     locked: 0
-  - name: Player
-    uniqueID: 126507883
-    locked: 0
   - name: Layer3
     uniqueID: 3820576339
     locked: 0
@@ -62,15 +61,6 @@ TagManager:
     locked: 0
   - name: Layer1
     uniqueID: 3444334353
-    locked: 0
-  - name: Light
-    uniqueID: 3624905669
-    locked: 0
-  - name: Hiding
-    uniqueID: 2435201785
-    locked: 0
-  - name: Robots
-    uniqueID: 735792725
     locked: 0
   - name: UI
     uniqueID: 3953762813
