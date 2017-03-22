@@ -2,12 +2,23 @@
 
 public var ob: GameObject;
 
-private var offset = 3;
+private var offset = 5;
 private var y0:float;
 private var amplitude = 1;
 private var speed = 0.05;
 
 var facingRight = true;
+
+public static var instance = null;
+
+function Awake(){
+
+	if(instance == null) instance = this;
+	else if(instance != null)  Destroy(gameObject);
+
+	DontDestroyOnLoad(this);
+
+}
 
 function Start(){
 	y0 = transform.position.y;	
@@ -37,7 +48,7 @@ function Update () {
 
 //moves T1M over to right/lefy side of girl when flipped
 function lerpX(offset : int){
-	var endPos = new Vector3(ob.transform.position.x + offset,transform.position.y, transform.position.z);
+	var endPos = new Vector3(ob.transform.position.x + offset,transform.position.y + 2, transform.position.z);
 	transform.position = Vector3.Lerp(transform.position,endPos, speed);
 }
 

@@ -1,67 +1,110 @@
 ﻿#pragma strict
 
 private var girl: GameObject;
+private var t1m: GameObject;
  var leftBound: GameObject; //leftmost bound of a scene
  var rightBound: GameObject; //rightmost bound of a scene
 
 private var scene = new LoadScene();
-private var leftScene:String;
-private var rightScene:String;
-private var sceneNum = 0;
-private var sceneDecreased = false;
-private var update:UpdateFields;
+ var leftScene:String;
+ var rightScene:String;
+ var sceneNum = 0;
+ var backwards = false;
+
+private var floorOb:ChangeFloorSize;
+
+var spawn1:GameObject;
+var spawn2:GameObject;
+
+var currentScene:Scene;
+var newScene:boolean;
 
 function Start(){
 	girl=GameObject.Find("girl");
+	t1m = GameObject.Find("t1m");
 
-	update = GetComponent(UpdateFields);
 
-	leftBound = GameObject.Find("Background/Floor/Bounds/leftBound");
-	rightBound = GameObject.Find("Background/Floor/Bounds/rightBound");
+	leftBound = GameObject.Find("Floor/Bounds/leftBound");
+	rightBound = GameObject.Find("Floor/Bounds/rightBound");
+
+	floorOb = GameObject.Find("Floor").GetComponent(ChangeFloorSize);
 
 	leftScene = null;
 	rightScene = "Street1";
 
+	spawn1 = GameObject.Find("spawnPos1");
+	spawn2 = GameObject.Find("spawnPos2");
+
+	girl.transform.position = spawn1.transform.position;
+	t1m.transform.position = spawn2.transform.position;
+
+	currentScene = SceneManager.GetActiveScene();
+
 }
 
 function Update () {
-
-	leftBound = GameObject.Find("Background/Floor/Bounds/leftBound");
-	rightBound = GameObject.Find("Background/Floor/Bounds/rightBound");
-
+	
 	if(leftBound != null && girl.transform.position.x < leftBound.transform.position.x){
-		sceneNum--;
-		scene.loadScene(leftScene);
-		updateScenes();
-		//girl.transform.position.x = rightBound.transform.position.x - 1;
-											  
+		scene.loadScene(leftScene);	
+		newScene = true;					  
 	}
 
 	else if(rightBound != null && girl.transform.position.x > rightBound.transform.position.x){
-		sceneNum++;
 		scene.loadScene(rightScene);
-		updateScenes();		
-		//girl.transform.position.x = leftBound.transform.position.x + 1;
+		newScene = true;
 	}
 
+	currentScene = SceneManager.GetActiveScene();
 
+	if(newScene){
+	if(currentScene.name == leftScene ){
+		backwards = true;
+		updateScenes();				
+	}
+	else if(currentScene.name == rightScene){
+		backwards = false;
+		updateScenes();
+	}
+	}
+	newScene = false;
 
 }
 
 function updateScenes(){
-	if(sceneNum == 0){
+	leftBound = GameObject.Find("Floor/Bounds/leftBound");
+	rightBound = GameObject.Find("Floor/Bounds/rightBound");
+	spawn1 = GameObject.Find("spawnPos1");
+	spawn2 = GameObject.Find("spawnPos2");
+
+	if(currentScene.name == "Forest"){
 		leftScene = null;
 		rightScene = "Street1";
-		//update.changeValues(true,false,false);
+		floorOb.resizeFloor(20,5.5);
+
 	}
-	else if(sceneNum == 1){
+	else if(currentScene.name == "Street1"){
 		leftScene = "Forest";
 		rightScene = "FinalStage";
-		//update.changeValues(false,true,false);
+		floorOb.resizeFloor(40,5.5);
+
 	}
-	else if(sceneNum == 2){
+	else if(currentScene.name == "FinalStage"){
 		leftScene = "Street1";
-		//update.changeValues(false,false,true);
+		rightScene = null;
+
 	}
 
+
+	if(backwards) {
+		girl.transform.position.x = spawn2.transform.position.x;
+		girl.transform.position.y = spawn2.transform.position.y;
+	}
+	else {
+		girl.transform.position.x = spawn1.transform.position.x;
+		girl.transform.position.y = spawn1.transform.position.y;
+	}
+}
+
+function wait(sec:int){
+	yield WaitForSeconds(sec);
 }

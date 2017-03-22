@@ -8,58 +8,54 @@ private var inLight = false;
 
 private var timer = 0;
 
+private var gameStarted = false;
+
 function Update(){
-	timer++;
+	if(gameStarted){
+		timer++;
 
-	if(timer % 20 == 0){ //slow down how quickly she dies
+		if(timer % 20 == 0){ //slow down how quickly she dies
 
-		if(inLight){
-			if(happy < 100) happy+=3;
-		}
-		else{
-			if(happy > 0) {
-				happy--;
-			}else if(happy <= 0){
-				print("Too scared to go on!");
-				//exit game
+			if(inLight){
+				if(happy < 100) happy+=3;
 			}
+			else{
+				if(happy > 0) {
+					happy--;
+				}else if(happy <= 0){
+					print("Too scared to go on!");
+					//exit game
+				}
 		
-		}
+			}
 
-		scaredMeter.value = happy;
+			scaredMeter.value = happy;
+		}
 	}
 }
 
-function OnTriggerEnter2D(Col: Collider2D)
+private function OnTriggerEnter2D(Col: Collider2D)
 {
-//	for(var light : PolygonCollider2D in lightCol){
-//		if(Col == light)
-		if(Col.CompareTag("Light"))
-		{	
-			inLight = true;
-
-		}
-	//}
+		
+	if(Col.CompareTag("Light"))
+	{	
+		inLight = true;
+	}
+	
 }
 
-function OnTriggerExit2D(Col: Collider2D)
+private function OnTriggerExit2D(Col: Collider2D)
 {
-//	for(var light : PolygonCollider2D in lightCol){
-//		if(Col == light)
-		if(Col.CompareTag("Light"))
-		{	
-			inLight = false;
 
-		}
-	//}
+	if(Col.CompareTag("Light"))	{	
+		inLight = false;
+
+	}
+	
 }
 
-//public function setNumLights(size:int){
-//	lightCol = new PolygonCollider2D[size];
-//}
-
-//public function addLights(){
-//	lightCol.Add(GameObject.FindWithTag("Light").collider2D);
-//}
+public function setGameStarted(val:boolean){
+	gameStarted = val;
+}
 
 

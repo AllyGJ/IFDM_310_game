@@ -25,9 +25,9 @@ GameObject:
   - component: {fileID: 50113036321249370}
   - component: {fileID: 114919224852504476}
   - component: {fileID: 114402619663196994}
-  - component: {fileID: 114495881291449352}
   - component: {fileID: 114867246863067084}
-  - component: {fileID: 114298685155841698}
+  - component: {fileID: 114637243458252668}
+  - component: {fileID: 95924086384089092}
   m_Layer: 9
   m_Name: girl
   m_TagString: Player
@@ -42,8 +42,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1153914016861694}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 53.24919, y: -3.56, z: 0}
-  m_LocalScale: {x: 0.08, y: 0.08, z: 0.25}
+  m_LocalPosition: {x: -62.8, y: 1.89, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -79,22 +79,26 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -1.3772295, y: -19.441067}
+  m_Offset: {x: -0.0134340925, y: -0.69}
   serializedVersion: 2
-  m_Size: {x: 18.222002, y: 7.6750546}
---- !u!114 &114298685155841698
-MonoBehaviour:
+  m_Size: {x: 0.9193947, y: 1}
+--- !u!95 &95924086384089092
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1153914016861694}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32a115d6dae0744b9b3adca16b34c950, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftBound: {fileID: 0}
-  rightBound: {fileID: 0}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 88c98595f7701457a8ef9ada2b6a95a5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114402619663196994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -106,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bdb22c129b54445e85168b0166d11da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114495881291449352
+--- !u!114 &114637243458252668
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -118,12 +122,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaredMeter: {fileID: 0}
-  lightCol:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &114867246863067084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,8 +147,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
+  rightImg: {fileID: 21300002, guid: ba2da7c7a221f48bd984b5ee057c4d0d, type: 3}
+  leftImg: {fileID: 21300000, guid: ba2da7c7a221f48bd984b5ee057c4d0d, type: 3}
   facingRight: 1
-  speed: 8
+  speed: 18
   scale: 0.1
   rb: {fileID: 50113036321249370}
 --- !u!114 &114919224852504476
@@ -195,7 +195,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -898935571
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: de15ec543ff1e4b41bfe725f3a7d23d4, type: 3}
+  m_Sprite: {fileID: 21300002, guid: ba2da7c7a221f48bd984b5ee057c4d0d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0

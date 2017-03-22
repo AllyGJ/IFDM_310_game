@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212045658616784834}
   - component: {fileID: 60915083656632604}
   m_Layer: 0
-  m_Name: lightBeam1
+  m_Name: lightBeam7
   m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,8 +82,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1536490533110444}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.997, y: 2.098, z: -1.2237576}
-  m_LocalScale: {x: 0.1, y: 0.19999999, z: 1}
+  m_LocalPosition: {x: 23.42, y: 2.24, z: -1.2626}
+  m_LocalScale: {x: 0.13137163, y: 0.26274323, z: 1.3137163}
   m_Children:
   - {fileID: 4969724226486188}
   - {fileID: 4624606151583346}

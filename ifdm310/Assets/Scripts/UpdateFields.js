@@ -6,14 +6,12 @@ private var level1:boolean;
 private var level2:boolean;
 private var level3:boolean;
 
-private var lights: ScaredMeter;
 
 function Start () {
 	level1 = true;
 	level2 = false;
 	level3 = false;
 
-	lights = girl.GetComponent(ScaredMeter);
 }
 
 function Update () {
