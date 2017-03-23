@@ -250,6 +250,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114637243458252668, guid: 8eaf7ab5fb5504c88a368a02f587aece,
+        type: 2}
+      propertyPath: scaredMeter
+      value: 
+      objectReference: {fileID: 1869377621}
     - target: {fileID: 114867246863067084, guid: 8eaf7ab5fb5504c88a368a02f587aece,
         type: 2}
       propertyPath: layer1_2
@@ -260,11 +265,11 @@ Prefab:
       propertyPath: layer2_3
       value: 
       objectReference: {fileID: 861484066}
-    - target: {fileID: 114637243458252668, guid: 8eaf7ab5fb5504c88a368a02f587aece,
+    - target: {fileID: 114912700750087794, guid: 8eaf7ab5fb5504c88a368a02f587aece,
         type: 2}
-      propertyPath: scaredMeter
+      propertyPath: anim
       value: 
-      objectReference: {fileID: 1869377621}
+      objectReference: {fileID: 1216194435}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8eaf7ab5fb5504c88a368a02f587aece, type: 2}
   m_IsPrefabParent: 0
@@ -451,7 +456,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4308383296105588, guid: 83f1376ccb8dd435ca0c7a63396dee19, type: 2}
       propertyPath: m_LocalScale.y
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4084223221327890, guid: 83f1376ccb8dd435ca0c7a63396dee19, type: 2}
       propertyPath: m_LocalPosition.y
@@ -459,7 +464,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4096659307015744, guid: 83f1376ccb8dd435ca0c7a63396dee19, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.4
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4293191263243362, guid: 83f1376ccb8dd435ca0c7a63396dee19, type: 2}
       propertyPath: m_LocalPosition.y
@@ -467,7 +472,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4477186489615712, guid: 83f1376ccb8dd435ca0c7a63396dee19, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.766
+      value: -3.674
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83f1376ccb8dd435ca0c7a63396dee19, type: 2}
@@ -475,6 +480,11 @@ Prefab:
 --- !u!1 &1216194434 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1153914016861694, guid: 8eaf7ab5fb5504c88a368a02f587aece,
+    type: 2}
+  m_PrefabInternal: {fileID: 664967066}
+--- !u!95 &1216194435 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95924086384089092, guid: 8eaf7ab5fb5504c88a368a02f587aece,
     type: 2}
   m_PrefabInternal: {fileID: 664967066}
 --- !u!1 &1247624683

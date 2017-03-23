@@ -1,8 +1,6 @@
 ﻿#pragma strict
 
 public var anim: Animator;
-public var rightImg: Sprite;
-public var leftImg: Sprite;
 
 public var facingRight = true;
 public var speed:float;
@@ -25,7 +23,6 @@ function Awake(){
 
 function Start () {
 	rb = GetComponent.<Rigidbody2D>();	
-	GetComponent(SpriteRenderer).sprite = rightImg;
 	anim = GetComponent(Animator);
 }
 
@@ -36,20 +33,19 @@ function Update () {
 
 	rb.velocity = new Vector2(moveH*speed, moveV*speed);
 
+	if(Mathf.Abs(rb.velocity.x) > 0) anim.SetFloat("Speed",Mathf.Abs(rb.velocity.x));
+	else if(Mathf.Abs(rb.velocity.y) > 0) anim.SetFloat("Speed",Mathf.Abs(rb.velocity.y));
+	else anim.SetFloat("Speed",0);
 
-	anim.SetFloat("SpeedH",Mathf.Abs(rb.velocity.x));
-	anim.SetFloat("SpeedV",Mathf.Abs(rb.velocity.y));
 
 
 	//Facing right way
     if(moveH > 0 && facingRight){
-    //	GetComponent(SpriteRenderer).sprite = rightImg;
     	anim.SetBool("facingRight", facingRight);
         Flip();
     }
     else if(moveH < 0 && !facingRight){
     	anim.SetBool("facingRight", facingRight);
-     	//GetComponent(SpriteRenderer).sprite = leftImg;
         Flip();
     }
 }
@@ -57,10 +53,6 @@ function Update () {
 function Flip()
  {
      facingRight = !facingRight;
-//     var theScale = transform.localScale;
-//     theScale.x *= -1;
-//     transform.localScale = theScale;
-     //GetComponent(SpriteRenderer).flipX = true;
  }
 
 

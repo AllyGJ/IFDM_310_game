@@ -44,12 +44,12 @@ function Start(){
 
 function Update () {
 	
-	if(leftBound != null && girl.transform.position.x < leftBound.transform.position.x){
+	if(leftScene != null && girl.transform.position.x < leftBound.transform.position.x){
 		scene.loadScene(leftScene);	
 		newScene = true;					  
 	}
 
-	else if(rightBound != null && girl.transform.position.x > rightBound.transform.position.x){
+	else if(rightScene != null && girl.transform.position.x > rightBound.transform.position.x){
 		scene.loadScene(rightScene);
 		newScene = true;
 	}
@@ -79,13 +79,13 @@ function updateScenes(){
 	if(currentScene.name == "Forest"){
 		leftScene = null;
 		rightScene = "Street1";
-		floorOb.resizeFloor(20,5.5);
+		floorOb.resizeFloor(20,6);
 
 	}
 	else if(currentScene.name == "Street1"){
 		leftScene = "Forest";
 		rightScene = "FinalStage";
-		floorOb.resizeFloor(40,5.5);
+		floorOb.resizeFloor(40,6);
 
 	}
 	else if(currentScene.name == "FinalStage"){
@@ -98,10 +98,14 @@ function updateScenes(){
 	if(backwards) {
 		girl.transform.position.x = spawn2.transform.position.x;
 		girl.transform.position.y = spawn2.transform.position.y;
+		t1m.transform.position.x = spawn2.transform.position.x + 1;
+		t1m.transform.position.y = spawn2.transform.position.y;
 	}
 	else {
 		girl.transform.position.x = spawn1.transform.position.x;
 		girl.transform.position.y = spawn1.transform.position.y;
+		t1m.transform.position.x = spawn1.transform.position.x - 1;
+		t1m.transform.position.y = spawn1.transform.position.y;
 	}
 }
 
