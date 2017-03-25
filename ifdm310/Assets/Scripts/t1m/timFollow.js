@@ -56,9 +56,9 @@ function lerpX(offset : int){
 function Flip()
  {
      facingRight = !facingRight;
-     var theScale = transform.localScale;
-     theScale.x *= -1;
-     transform.localScale = theScale;
+//     var theScale = transform.localScale;
+//     theScale.x *= -1;
+//     transform.localScale = theScale;
 
  }
 

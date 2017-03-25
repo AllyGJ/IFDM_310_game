@@ -32,8 +32,8 @@ function Start(){
 	ob = GameObject.Find("girl");
 	grabBounds();
 
-	//current.fieldOfView = maxFov;
-	current.fieldOfView = 45;
+	current.fieldOfView = maxFov;
+	//current.fieldOfView = 45;
 }
 
 function Update () {
@@ -43,7 +43,7 @@ function Update () {
 									 Mathf.Clamp(transform.position.y, MinY, MaxY),
 									 transform.position.z);
 
-		//zoom();
+		zoom();
 		follow(ob);
 	
 
