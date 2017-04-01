@@ -19,7 +19,9 @@ function Start () {
 	t1m = GameObject.Find("t1m");
 	cam = GameObject.Find("camera");
 	girlBubble = GameObject.Find("girl/girlBubble").GetComponent(Animator);
-	timBubble = GameObject.Find("t1m/timBubble").GetComponent(Animator);
+	print("Reached here");
+	timBubble = GameObject.Find("timBubble").GetComponent(Animator);
+
 
 	followScript = t1m.GetComponent(TimFollow);
 	followScript.enabled = false;

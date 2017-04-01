@@ -6,9 +6,9 @@ private var button:GameObject;
 function Start(){
 	button = this.gameObject;
 }
-function changeText(words:String){
-	GetComponentInChildren(Text).text = words;
-}
+//function changeText(words:String){
+//	GetComponentInChildren(Text).text = words;
+//}
 
 function changeLocation(x:float, y:float){
 	transform.position.x = x;
