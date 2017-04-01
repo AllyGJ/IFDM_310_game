@@ -23,7 +23,7 @@ function Update(){
 			else{
 				if(happy > 0) {
 					happy--;
-					if(happy <= 30) timTalkMeter = true; 
+					if(happy <= 90) timTalkMeter = true; 
 					else timTalkMeter = false;
 			
 				}else if(happy <= 0){

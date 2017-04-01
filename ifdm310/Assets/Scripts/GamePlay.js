@@ -6,9 +6,13 @@ private var cam:GameObject;
 
 private var followScript: TimFollow;
 private var girlScript: GirlMove;
+
 private var girlBubble: Animator;
-private var timBubble: Animator;
+private var timBubbleAnim: Animator;
+private var timTalk: TimTalk;
+
 private var scaredMeter: ScaredMeter;
+private var doneScaredSpeech = false;
 
 private var dialogue = true;
 
@@ -19,8 +23,8 @@ function Start () {
 	t1m = GameObject.Find("t1m");
 	cam = GameObject.Find("camera");
 	girlBubble = GameObject.Find("girl/girlBubble").GetComponent(Animator);
-	print("Reached here");
-	timBubble = GameObject.Find("timBubble").GetComponent(Animator);
+	timBubbleAnim = GameObject.Find("timBubble").GetComponent(Animator);
+	timTalk = GameObject.Find("timBubble").GetComponent(TimTalk);
 
 
 	followScript = t1m.GetComponent(TimFollow);
@@ -31,6 +35,7 @@ function Start () {
 
 	scaredMeter = girl.GetComponent(ScaredMeter);
 
+	timBubbleAnim.enabled = false;
 
 }
 
@@ -46,20 +51,21 @@ function Update () {
 			StartCoroutine("beginDialogue");
 
 		}else{
-
-			StartCoroutine("startGame");
+			if(timTalk.introOver()) StartCoroutine("startGame");
 		}
 
 		randomDialogue();
+
 	}
 
 }
 
 function startGame(){
-	yield WaitForSeconds(35);
+	//yield WaitForSeconds(35);
 	followScript.enabled = true;
 	girlScript.enabled = true;
-	scaredMeter.setGameStarted(true);												
+	scaredMeter.setGameStarted(true);
+	timBubbleAnim.enabled = true;												
 }
 
 function beginDialogue(){
@@ -68,22 +74,24 @@ function beginDialogue(){
 	dialogue = false;
 
 	girlBubble.SetBool("mom",false);
-	timBubble.SetBool("intro",true);
 
-
-	yield WaitForSeconds(20);
-	timBubble.SetBool("intro",false);
-	dialogue = false;
 	yield;
 }
 
 function randomDialogue()
 {
-	if(scaredMeter.getMeterDialogue()) timBubble.SetBool("scared",true);
-	else timBubble.SetBool("scared",false);
+	if(scaredMeter.getMeterDialogue()) {
+		timBubbleAnim.SetBool("scared",true);
+	}
+
+	yield WaitForSeconds(2);
+	timBubbleAnim.SetBool("scared",false); 
+		
+
+	
+
 }
 
-function wait(secs:float){
-	yield WaitForSeconds(secs);
-}
+
+
 
