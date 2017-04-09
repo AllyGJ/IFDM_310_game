@@ -1,6 +1,7 @@
 ﻿#pragma strict
 
 public var anim: Animator;
+private var timTalk: TimTalk;
 
 public var facingRight = true;
 public var speed:float;
@@ -24,6 +25,7 @@ function Awake(){
 function Start () {
 	rb = GetComponent.<Rigidbody2D>();	
 	anim = GetComponent(Animator);
+	timTalk = GameObject.Find("timBubble").GetComponent(TimTalk);
 }
 
 function Update () {
@@ -53,6 +55,19 @@ function Update () {
 function Flip()
  {
      facingRight = !facingRight;
+ }
+
+ function OnTriggerEnter2D(col:Collider2D){
+ 	if(col.gameObject.tag == "bossLevel"){
+ 		print("entering boss level");
+ 		timTalk.bossTalk(true);
+ 	}
+ }
+ /**********************************************************************/
+
+ public function setGirlSpeed(hor:float, ver:float){
+ 	rb.velocity = new Vector2(hor, ver);
+ 	anim.SetFloat("Speed",0);
  }
 
 

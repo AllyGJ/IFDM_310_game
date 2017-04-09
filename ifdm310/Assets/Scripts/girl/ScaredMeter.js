@@ -10,6 +10,7 @@ private var timer = 0;
 
 private var gameStarted = false;
 private var timTalkMeter = false;
+private var shown = false;
 
 function Update(){
 	if(gameStarted){
@@ -23,8 +24,13 @@ function Update(){
 			else{
 				if(happy > 0) {
 					happy--;
-					if(happy <= 90) timTalkMeter = true; 
-					else timTalkMeter = false;
+					if(shown) timTalkMeter = false;
+					if(happy <= 20 && shown == false) {
+						print("show dialogue");
+						timTalkMeter = true; 
+						shown = true;
+					}
+
 			
 				}else if(happy <= 0){
 					print("Too scared to go on!");
@@ -58,6 +64,8 @@ private function OnTriggerExit2D(Col: Collider2D)
 	
 }
 
+/***********************************************************************/
+
 public function setGameStarted(val:boolean){
 	gameStarted = val;
 }
@@ -67,4 +75,12 @@ public function getMeterDialogue()
 	return timTalkMeter;
 }
 
+public function setMeter(num:int){
+	happy = num;
+}
+
+public function showBar(val:boolean){
+	print("hiding bar");
+	scaredMeter.gameObject.SetActive(val);
+}
 

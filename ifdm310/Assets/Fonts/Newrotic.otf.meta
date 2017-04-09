@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 16a448f4776614a95a42361f9a6a8f58
+timeCreated: 1491104226
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Newrotic
+  fontNames:
+  - Newrotic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 09ccb3b559e5045b1989f4c00497e58e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

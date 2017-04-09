@@ -13,6 +13,6 @@ function OnTriggerEnter2D(Col: Collider2D)
 	if(Col.CompareTag("Robot") || Col.CompareTag("lazerBeam"))
 	{
 		print("DEAD");
-		deathWindow.showDeathWindow(true);
+		deathWindow.show(true);
 	}
 }

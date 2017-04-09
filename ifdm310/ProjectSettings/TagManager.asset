@@ -13,6 +13,7 @@ TagManager:
   - scan
   - LBound
   - RBound
+  - bossLevel
   layers:
   - Default
   - TransparentFX
@@ -49,6 +50,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: floor
+    uniqueID: 4184688373
     locked: 0
   - name: Background
     uniqueID: 3721431811

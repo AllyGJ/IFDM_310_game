@@ -5,7 +5,7 @@
 public var movie: MovieTexture;
 
 function Start () {
-	GetComponent.<Renderer>().material.mainTexture = movie as MovieTexture;
+	GetComponent.<Renderer>().material.mainTexture = movie;
 	movie.Play();
 }
 

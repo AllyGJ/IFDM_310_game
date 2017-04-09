@@ -10,10 +10,13 @@ private var ob:GameObject;
 public static var instance = null;
 
 public var current:Camera;
-private var minFov = 45f;
+private var minFov = 35f;
+private var medFov = 50f;
 private var maxFov = 90f;
 
 public var ready = false;
+public var zoomO = false;
+public var zoomI = false;
 
 
 function Awake(){
@@ -37,7 +40,9 @@ function Start(){
 function Update () {
 	grabBounds();
 
-	if(!ready) StartCoroutine("zoom");
+	if(!ready || zoomI) StartCoroutine("zoomIn",minFov);
+
+	if(zoomO) StartCoroutine("zoomOut", medFov);
 
 	follow(ob);
 
@@ -62,10 +67,28 @@ private function grabBounds(){
 
 }
 
-private function zoom(){
+private function zoomIn(min:float){
 	yield WaitForSeconds(2);
-	if(current.fieldOfView > minFov) current.fieldOfView -= 0.2;
-	else if(current.fieldOfView <= minFov) ready = true;
+	if(current.fieldOfView > min) current.fieldOfView -= 0.2;
+	else if(current.fieldOfView <= min) ready = true;
+	zoomI = false;
+}
+
+private function zoomOut(max:float){
+	yield WaitForSeconds(1);
+	if(current.fieldOfView < max) current.fieldOfView += 0.2;
+	zoomO = false;
+}
+/*****************************************************************************/
+
+public function setZoomOut(val:boolean)
+{
+	zoomO = val;
+}
+
+public function setZoomIn(val:boolean)
+{
+	zoomI = val;
 }
 
 public function getCamStatus(){

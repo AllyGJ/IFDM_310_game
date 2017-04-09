@@ -19,6 +19,7 @@ var spawn1:GameObject;
 private var currentScene: Scene;
 private var newScene: boolean;
 
+
 function Start(){
 	scene = GetComponent(LoadScene);
 
@@ -93,12 +94,13 @@ function updateScenes(){
 	else if(currentScene.name == "Street1"){
 		leftScene = "Forest";
 		rightScene = "FinalStage";
-		floorOb.resizeFloor(40,6);
+		floorOb.resizeFloor(60,6);
 	
 	}
 	else if(currentScene.name == "FinalStage"){
 		leftScene = "Street1";
 		rightScene = null;
+		floorOb.resizeFloor(50,6);
 
 	}
 
@@ -116,8 +118,24 @@ function updateScenes(){
 		t1m.transform.position.y = spawn1.transform.position.y;
 	}
 
+}
+
+/**************************************************************************/
+public function getCurScene(){
+	return currentScene.name;
+}
+
+
+public function restartLevel()
+{
+	var meter = GameObject.Find("girl").GetComponent(ScaredMeter);
+	meter.setMeter(60);
+
+	girl.transform.position.x = spawn1.transform.position.x;
+	girl.transform.position.y = spawn1.transform.position.y;
+	t1m.transform.position.x = spawn1.transform.position.x - 1;
+	t1m.transform.position.y = spawn1.transform.position.y;
 
 
 }
-
 

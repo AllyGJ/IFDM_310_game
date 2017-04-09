@@ -8,8 +8,9 @@ private var followScript: TimFollow;
 private var girlScript: GirlMove;
 
 private var girlBubble: Animator;
-private var timBubbleAnim: Animator;
+//private var timBubbleAnim: Animator;
 private var timTalk: TimTalk;
+private var levelManager: NextLevel;
 
 private var scaredMeter: ScaredMeter;
 private var doneScaredSpeech = false;
@@ -19,11 +20,12 @@ private var dialogue = true;
 private var timer:float;
 
 function Start () {
+	levelManager = this.GetComponent(NextLevel);
 	girl = GameObject.Find("girl");
 	t1m = GameObject.Find("t1m");
 	cam = GameObject.Find("camera");
 	girlBubble = GameObject.Find("girl/girlBubble").GetComponent(Animator);
-	timBubbleAnim = GameObject.Find("timBubble").GetComponent(Animator);
+	//timBubbleAnim = GameObject.Find("timBubble").GetComponent(Animator);
 	timTalk = GameObject.Find("timBubble").GetComponent(TimTalk);
 
 
@@ -35,7 +37,7 @@ function Start () {
 
 	scaredMeter = girl.GetComponent(ScaredMeter);
 
-	timBubbleAnim.enabled = false;
+	//timBubbleAnim.enabled = false;
 
 }
 
@@ -54,26 +56,26 @@ function Update () {
 			if(timTalk.introOver()) StartCoroutine("startGame");
 		}
 
+		if(levelManager.getCurScene == "FinalStage") scaredMeter.showBar(false);
+
+		checkForImpDiag();
 		randomDialogue();
+
+
 
 	}
 
 }
 
 function startGame(){
-	//yield WaitForSeconds(35);
 	followScript.enabled = true;
 	girlScript.enabled = true;
-	scaredMeter.setGameStarted(true);
-	timBubbleAnim.enabled = true;												
+	scaredMeter.setGameStarted(true);										
 }
 
 function beginDialogue(){
-	girlBubble.SetBool("mom",true);
 	yield WaitForSeconds(5);
 	dialogue = false;
-
-	girlBubble.SetBool("mom",false);
 
 	yield;
 }
@@ -81,15 +83,19 @@ function beginDialogue(){
 function randomDialogue()
 {
 	if(scaredMeter.getMeterDialogue()) {
-		timBubbleAnim.SetBool("scared",true);
+		timTalk.scaredTalk(true);
 	}
 
-	yield WaitForSeconds(2);
-	timBubbleAnim.SetBool("scared",false); 
-		
 
-	
 
+}
+
+function checkForImpDiag(){
+	if(timTalk.getLevelFlag()){
+		girlScript.setGirlSpeed(0,0);
+		girlScript.enabled = false;
+		scaredMeter.setGameStarted(false);
+	}
 }
 
 

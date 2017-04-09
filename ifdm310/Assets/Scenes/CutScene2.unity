@@ -143,15 +143,15 @@ Camera:
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.03
+    x: -0.23
     y: -0.03
     width: 1.5
     height: 1.13
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 11.4
   field of view: 60
   orthographic: 1
-  orthographic size: 7.6426473
+  orthographic size: 5.18
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -211,7 +211,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 927983d60e50e4a42b4b23139c59bc0b, type: 2}
+  - {fileID: 2100000, guid: 20ea00f8696ef4555802095969514440, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -257,7 +257,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1194522309}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: 0.03, y: 0.06, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.0323956, y: 1, z: 1.0123639}
   m_Children: []
   m_Father: {fileID: 0}
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec9990e1c92c42a2a5122a1487c69dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movie: {fileID: 15200000, guid: 239b5cba4e7c54679b3fe7d5895f762e, type: 3}
+  movie: {fileID: 15200000, guid: a9492d0138bbe46929409e1a840d9536, type: 3}
 --- !u!82 &1194522315
 AudioSource:
   m_ObjectHideFlags: 0

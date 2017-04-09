@@ -1,8 +1,12 @@
 ﻿#pragma strict
 
+
 public static var instance = null;
 
 public var deadWindow: GameObject;
+
+private var level: NextLevel;
+
 
 function Awake(){
 
@@ -16,19 +20,23 @@ function Awake(){
 
 function Start () {
 	deadWindow.SetActive(false);
+	level = GameObject.Find("GameManager").GetComponent(NextLevel);
 }
+//
+//function Update () {
+//	
+//}
 
-function Update () {
-	
-}
+/**********************************************************************/
 
-
-public function showDeathWindow(val : boolean)
+public function show(val : boolean)
 {
 	deadWindow.SetActive(val);
 }
 
 public function startOver(){
+	show(false);
+	level.restartLevel();
 
 }
 
