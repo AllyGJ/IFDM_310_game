@@ -1,4 +1,5 @@
 ﻿#pragma strict
+import UnityEngine.UI;
 
 private var girl:GameObject;
 private var t1m:GameObject;
@@ -11,6 +12,7 @@ private var girlBubble: Animator;
 //private var timBubbleAnim: Animator;
 private var timTalk: TimTalk;
 private var levelManager: NextLevel;
+private var brianTalk: BrianTalk;
 
 private var scaredMeter: ScaredMeter;
 private var doneScaredSpeech = false;
@@ -18,15 +20,18 @@ private var doneScaredSpeech = false;
 private var dialogue = true;
 
 private var timer:float;
+private var menuB:Button;
 
 function Start () {
-	levelManager = this.GetComponent(NextLevel);
+	levelManager = gameObject.GetComponent(NextLevel);
 	girl = GameObject.Find("girl");
 	t1m = GameObject.Find("t1m");
 	cam = GameObject.Find("camera");
 	girlBubble = GameObject.Find("girl/girlBubble").GetComponent(Animator);
 	//timBubbleAnim = GameObject.Find("timBubble").GetComponent(Animator);
 	timTalk = GameObject.Find("timBubble").GetComponent(TimTalk);
+	menuB = GameObject.Find("MenuButton").GetComponent(Button);
+	menuB.interactable = false;
 
 
 	followScript = t1m.GetComponent(TimFollow);
@@ -56,11 +61,16 @@ function Update () {
 			if(timTalk.introOver()) StartCoroutine("startGame");
 		}
 
-		if(levelManager.getCurScene == "FinalStage") scaredMeter.showBar(false);
+
+		if(levelManager.getLvl()) {
+			print("REACHED FINALSTAGE");
+			scaredMeter.showBar(false);
+			brianTalk = GameObject.Find("BrianBubble").GetComponent(BrianTalk);
+			brianTalk.startTalk(true);
+		}
 
 		checkForImpDiag();
 		randomDialogue();
-
 
 
 	}
@@ -68,9 +78,12 @@ function Update () {
 }
 
 function startGame(){
+	yield WaitForSeconds(1);
 	followScript.enabled = true;
 	girlScript.enabled = true;
-	scaredMeter.setGameStarted(true);										
+	scaredMeter.setGameStarted(true);
+	menuB.interactable = true;	
+										
 }
 
 function beginDialogue(){
@@ -87,7 +100,6 @@ function randomDialogue()
 	}
 
 
-
 }
 
 function checkForImpDiag(){
@@ -98,6 +110,15 @@ function checkForImpDiag(){
 	}
 }
 
+/************************************************************************/
+public function enableScripts(){
+	girlScript.enabled = true;
+	scaredMeter.enabled = true;
+}
 
+public function disableScripts(){
+	girlScript.enabled = false;
+	scaredMeter.enabled = false;
+}
 
 

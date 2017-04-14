@@ -13,6 +13,7 @@ public var current:Camera;
 private var minFov = 35f;
 private var medFov = 50f;
 private var maxFov = 90f;
+private var pan = false;
 
 public var ready = false;
 public var zoomO = false;
@@ -44,8 +45,7 @@ function Update () {
 
 	if(zoomO) StartCoroutine("zoomOut", medFov);
 
-	follow(ob);
-
+	if(!pan) follow(ob);
 }
 
 function follow(ob:GameObject)
@@ -53,8 +53,6 @@ function follow(ob:GameObject)
 	transform.position.x = Mathf.Clamp(ob.transform.position.x, MinX, MaxX);
 	transform.position.y = Mathf.Clamp(ob.transform.position.y, MinY, MaxY);
 
-//	transform.position.x = ob.transform.position.x;
-//	transform.position.y = ob.transform.position.y;
 }
 
 
@@ -67,15 +65,15 @@ private function grabBounds(){
 
 }
 
-private function zoomIn(min:float){
-	yield WaitForSeconds(2);
+public function zoomIn(min:float){
+	yield WaitForSeconds(1);
 	if(current.fieldOfView > min) current.fieldOfView -= 0.2;
 	else if(current.fieldOfView <= min) ready = true;
 	zoomI = false;
 }
 
-private function zoomOut(max:float){
-	yield WaitForSeconds(1);
+public function zoomOut(max:float){
+	yield WaitForSeconds(.8);
 	if(current.fieldOfView < max) current.fieldOfView += 0.2;
 	zoomO = false;
 }
@@ -95,5 +93,19 @@ public function getCamStatus(){
 	return ready;
 }
 
+public function panCam(newPos:Vector3, speed:int){
+	pan = true;
+	var step = speed*Time.deltaTime;
+	//yield WaitForSeconds(1);
+	transform.position = Vector3.MoveTowards(transform.position, newPos, step); 
+}
 
+public function stopPan()
+{
+	pan = false;
+}
+
+public function getCamPos(){
+	return transform.position;
+}
 

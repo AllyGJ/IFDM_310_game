@@ -72,3 +72,7 @@ public function getRB()
 	return rightBound;
 	
 }
+
+public function changeY(y:float){
+	transform.position.y = y;
+}

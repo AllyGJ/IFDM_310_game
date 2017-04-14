@@ -2,26 +2,30 @@
 
 private var girl: GameObject;
 private var t1m: GameObject;
- var leftBound: GameObject; //leftmost bound of a scene
- var rightBound: GameObject; //rightmost bound of a scene
+private var leftBound: GameObject; //leftmost bound of a scene
+private var rightBound: GameObject; //rightmost bound of a scene
 
 private var scene: LoadScene; 
- var leftScene:String;
- var rightScene:String;
+private var leftScene:String;
+private var rightScene:String;
 private var sceneNum = 0;
 private var backwards = false;
+private var lastLvl = false;
 
 private var floorOb:floorManager;
 
-var spawn1:GameObject;
- var spawn2:GameObject;
+private var spawn1:GameObject;
+private var spawn2:GameObject;
 
 private var currentScene: Scene;
 private var newScene: boolean;
 
+private var leaves:GameObject;
+
 
 function Start(){
 	scene = GetComponent(LoadScene);
+	leaves = GameObject.Find("canvas/Leaves");
 
 	girl=GameObject.Find("girl");
 	t1m = GameObject.Find("t1m");
@@ -88,20 +92,23 @@ function updateScenes(){
 	if(currentScene.name == "Forest"){
 		leftScene = null;
 		rightScene = "Street1";
+		leaves.SetActive(true);
 		floorOb.resizeFloor(20,6);
-
+		lastLvl = false;
 	}
 	else if(currentScene.name == "Street1"){
 		leftScene = "Forest";
 		rightScene = "FinalStage";
+		leaves.SetActive(false);
 		floorOb.resizeFloor(60,6);
-	
+		lastLvl = false;
 	}
 	else if(currentScene.name == "FinalStage"){
 		leftScene = "Street1";
 		rightScene = null;
+		leaves.SetActive(false);
 		floorOb.resizeFloor(50,6);
-
+		lastLvl = true;
 	}
 
 
@@ -125,11 +132,14 @@ public function getCurScene(){
 	return currentScene.name;
 }
 
+public function getLvl(){
+	return lastLvl;
+}
 
 public function restartLevel()
 {
 	var meter = GameObject.Find("girl").GetComponent(ScaredMeter);
-	meter.setMeter(60);
+	meter.setMeter(99);
 
 	girl.transform.position.x = spawn1.transform.position.x;
 	girl.transform.position.y = spawn1.transform.position.y;

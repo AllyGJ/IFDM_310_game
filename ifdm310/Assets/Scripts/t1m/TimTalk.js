@@ -8,13 +8,15 @@ public var intro: Sprite[];
 public var lightTalk: Sprite[];
 public var bossChat: Sprite[];
 
+
  var index = 1;
 
 
- var introIsOver = false;
+ var introIsOver = true; //change back when done testing
  var scared = false;
  var firstBubble = true;
  var lastLevel = false;
+
 
 public static var instance = null;
 
@@ -69,7 +71,7 @@ function Update () {
 		}
 
 		//Scared speech
-		if(scared){
+		else if(scared){
 			firstBubble = false;
 			if(index >= lightTalk.length) {
 				GetComponent(SpriteRenderer).sprite = empty;
@@ -82,7 +84,7 @@ function Update () {
 			}
 		}
 
-		if(lastLevel){
+		else if(lastLevel){
 			firstBubble = false;
 			if(index >= bossChat.length) {
 				GetComponent(SpriteRenderer).sprite = empty;
@@ -115,4 +117,5 @@ public function bossTalk(val:boolean){
 public function getLevelFlag(){
 	return lastLevel;
 }
- 
+
+

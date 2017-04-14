@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1934415490764972}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.09, y: 3.39, z: -25}
+  m_LocalPosition: {x: 0, y: 0, z: -25}
   m_LocalScale: {x: 0.19505365, y: 0.1950536, z: 0.1950536}
   m_Children: []
   m_Father: {fileID: 0}
@@ -53,16 +53,16 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.18366133, g: 0.23940907, b: 0.31617647, a: 0}
+  m_BackGroundColor: {r: 0.030655283, g: 0.030655283, b: 0.19852942, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 50
-  field of view: 44
+  field of view: 46
   orthographic: 0
   orthographic size: 21.467468
   m_Depth: 0
@@ -103,11 +103,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989b826a37b0e4ecd8c414f7e6687c7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ob: {fileID: 0}
-  minx: {fileID: 0}
-  maxx: {fileID: 0}
-  miny: {fileID: 0}
-  maxy: {fileID: 0}
+  MinX: 0
+  MaxX: 0
+  MinY: 0
+  MaxY: 0
+  current: {fileID: 20851546304905484}
+  ready: 0
+  zoomO: 0
+  zoomI: 0
 --- !u!124 &124648080846792190
 Behaviour:
   m_ObjectHideFlags: 1
