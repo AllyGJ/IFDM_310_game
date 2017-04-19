@@ -11,6 +11,8 @@ public var brianChat: Sprite[];
  private var girl: GameObject;
  private var tim: GameObject;
  private var tAnim:Animator;
+var lasers: GameObject[];
+var lScripts: ShootLasers[];
 
  private var panToBrian = false;
  private var panToGirl = false;
@@ -24,12 +26,24 @@ function Start () {
 	cam = GameObject.Find("camera").GetComponent(cameraMove);
 	girl = GameObject.Find("girl");
 	tim = GameObject.Find("t1m");
+	lasers = GameObject.FindGameObjectsWithTag("lazerBox");
+	//laserScripts();
+
 	tAnim = tim.GetComponent(Animator);
 	GetComponent(SpriteRenderer).sprite = brianChat[0];
 }
 
+//private function laserScripts(){
+//	var index = 0;
+//	for(var l in lasers){
+//		lScripts[index] = l.GetComponent(ShootLasers);
+//		index++;
+//	}
+//}
+
 function Update () {
-	
+	tAnim = tim.GetComponent(Animator);
+
 	if(panToBrian && Time.time < nextTime){
 		showBrian();
 	}
@@ -48,9 +62,8 @@ function Update () {
 			GetComponent(SpriteRenderer).sprite = brianChat[index];
 			index = 11;
 
-			StartCoroutine("timExplodes");//timExplodes();
-
-					
+			timExplodes();
+		
 		}
 
 		if(removeTim && Time.time > nextTime){
@@ -58,7 +71,12 @@ function Update () {
 			nextTime = Time.time + 5;
 		}
 
-		if(done) cam.stopPan();
+		if(done){ 
+			cam.stopPan();
+			girl.GetComponent(GirlMove).setConveyor(true);
+			//turnOnLazers();
+
+		}
 
 		panToGirl = false;
 	}
@@ -100,33 +118,35 @@ private function showBrian(){
 private function showGirl(){
 	var camPos = cam.getCamPos();
 	yield WaitForSeconds(1);
-	cam.zoomIn(50);	
+	cam.zoomIn(60);	
 	cam.panCam(new Vector3(girl.transform.position.x,girl.transform.position.y,camPos.z),100);
 }
 
 private function timExplodes(){
-	yield WaitForSeconds(2);
-
+	
 	//show him exploding
-	tAnim.SetBool("explode", true);
-
+	tAnim.SetTrigger("explode");
+	print("Tim Explodes");
 
 	timDies = false;
 	panToBrian = true;
 
-	yield WaitForSeconds(2);
 	nextTime = Time.time + 10;
 	removeTim=true;
-
 
 }
 
 private function stopExplosion(){
-	yield WaitForSeconds(1);
-	tAnim.SetBool("explode", false);
 	tAnim.enabled = false;
-	Destroy(tim);
+	//Destroy(tim);
+	tim.SetActive(false);
 }
+
+//private function turnOnLazers(){
+//	for(var l in lScripts){
+//		l.turnOnLasers(true);
+//	}
+//}
 
 public function startTalk(val:boolean){
 	talk = val;

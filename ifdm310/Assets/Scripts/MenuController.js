@@ -3,7 +3,7 @@ import UnityEngine.SceneManagement;
 
 private var load : LoadScene; 
 private var music = true;
-private var volume = 100;
+private var volume:float;
 
 private var slide: Slider;
 
@@ -46,8 +46,11 @@ function openWindow(window:GameObject){
 
 function setMusic(tog: Toggle){
 	music = tog.isOn;
+	SoundManager.instance.TurnOn(music);
 }
 
 function setVolume(slide: Slider){
 	volume = slide.value;
+	//print(volume);
+	SoundManager.instance.SetVolume(volume);
 }

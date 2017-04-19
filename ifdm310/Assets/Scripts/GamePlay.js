@@ -13,6 +13,7 @@ private var girlBubble: Animator;
 private var timTalk: TimTalk;
 private var levelManager: NextLevel;
 private var brianTalk: BrianTalk;
+private var startBrian = true;
 
 private var scaredMeter: ScaredMeter;
 private var doneScaredSpeech = false;
@@ -62,11 +63,12 @@ function Update () {
 		}
 
 
-		if(levelManager.getLvl()) {
+		if(levelManager.getLvl() && startBrian) {
 			print("REACHED FINALSTAGE");
 			scaredMeter.showBar(false);
 			brianTalk = GameObject.Find("BrianBubble").GetComponent(BrianTalk);
 			brianTalk.startTalk(true);
+			startBrian = false;
 		}
 
 		checkForImpDiag();

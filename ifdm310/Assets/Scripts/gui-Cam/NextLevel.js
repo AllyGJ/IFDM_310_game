@@ -21,11 +21,14 @@ private var currentScene: Scene;
 private var newScene: boolean;
 
 private var leaves:GameObject;
+private var gears:GameObject;
 
 
 function Start(){
 	scene = GetComponent(LoadScene);
 	leaves = GameObject.Find("canvas/Leaves");
+	gears = GameObject.Find("canvas/Gears");
+	gears.SetActive(false);
 
 	girl=GameObject.Find("girl");
 	t1m = GameObject.Find("t1m");
@@ -93,6 +96,7 @@ function updateScenes(){
 		leftScene = null;
 		rightScene = "Street1";
 		leaves.SetActive(true);
+		gears.SetActive(false);
 		floorOb.resizeFloor(20,6);
 		lastLvl = false;
 	}
@@ -100,6 +104,7 @@ function updateScenes(){
 		leftScene = "Forest";
 		rightScene = "FinalStage";
 		leaves.SetActive(false);
+		gears.SetActive(true);
 		floorOb.resizeFloor(60,6);
 		lastLvl = false;
 	}
@@ -107,6 +112,7 @@ function updateScenes(){
 		leftScene = "Street1";
 		rightScene = null;
 		leaves.SetActive(false);
+		gears.SetActive(false);
 		floorOb.resizeFloor(50,6);
 		lastLvl = true;
 	}
