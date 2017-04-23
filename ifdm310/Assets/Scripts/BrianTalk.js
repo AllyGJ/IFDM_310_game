@@ -42,7 +42,7 @@ function Start () {
 //}
 
 function Update () {
-	tAnim = tim.GetComponent(Animator);
+	
 
 	if(panToBrian && Time.time < nextTime){
 		showBrian();
@@ -123,7 +123,7 @@ private function showGirl(){
 }
 
 private function timExplodes(){
-	
+	tAnim = tim.GetComponent(Animator);
 	//show him exploding
 	tAnim.SetTrigger("explode");
 	print("Tim Explodes");

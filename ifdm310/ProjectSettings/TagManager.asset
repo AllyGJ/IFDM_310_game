@@ -17,6 +17,8 @@ TagManager:
   - lazerBox
   - backwards
   - fwd
+  - redbutton
+  - spikes
   layers:
   - Default
   - TransparentFX

@@ -1,0 +1,2993 @@
+fileFormatVersion: 2
+guid: 987727352cdd84c6fbb9439d1279a1ce
+timeCreated: 1492807178
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: arm_part1
+    100002: arm_part2
+    100004: arm_part3
+    100006: base
+    100008: btm_jntCNT
+    100010: claw
+    100012: conveyor
+    100014: conveyor 1
+    100016: conveyor10
+    100018: conveyor10 1
+    100020: conveyor11
+    100022: conveyor11 1
+    100024: conveyor12
+    100026: conveyor12 1
+    100028: conveyor2
+    100030: conveyor2 1
+    100032: conveyor3
+    100034: conveyor3 1
+    100036: conveyor4
+    100038: conveyor4 1
+    100040: conveyor5
+    100042: conveyor5 1
+    100044: conveyor6
+    100046: conveyor6 1
+    100048: conveyor7
+    100050: conveyor7 1
+    100052: conveyor8
+    100054: conveyor8 1
+    100056: conveyor9
+    100058: conveyor9 1
+    100060: conyevor_type10
+    100062: conyevor_type11
+    100064: conyevor_type12
+    100066: conyevor_type13
+    100068: conyevor_type14
+    100070: conyevor_type15
+    100072: conyevor_type16
+    100074: conyevor_type17
+    100076: conyevor_type18
+    100078: conyevor_type19
+    100080: conyevor_type2
+    100082: conyevor_type2 1
+    100084: conyevor_type2 10
+    100086: conyevor_type2 11
+    100088: conyevor_type2 12
+    100090: conyevor_type2 13
+    100092: conyevor_type2 14
+    100094: conyevor_type2 15
+    100096: conyevor_type2 16
+    100098: conyevor_type2 17
+    100100: conyevor_type2 18
+    100102: conyevor_type2 19
+    100104: conyevor_type2 2
+    100106: conyevor_type2 20
+    100108: conyevor_type2 21
+    100110: conyevor_type2 22
+    100112: conyevor_type2 23
+    100114: conyevor_type2 3
+    100116: conyevor_type2 4
+    100118: conyevor_type2 5
+    100120: conyevor_type2 6
+    100122: conyevor_type2 7
+    100124: conyevor_type2 8
+    100126: conyevor_type2 9
+    100128: conyevor_type20
+    100130: conyevor_type21
+    100132: conyevor_type22
+    100134: conyevor_type3
+    100136: conyevor_type4
+    100138: conyevor_type5
+    100140: conyevor_type6
+    100142: conyevor_type7
+    100144: conyevor_type8
+    100146: conyevor_type9
+    100148: crane
+    100150: crane2:arm_part1
+    100152: crane2:arm_part2
+    100154: crane2:arm_part3
+    100156: crane2:base
+    100158: crane2:btm_jntCNT
+    100160: crane2:claw
+    100162: crane2:crane
+    100164: crane2:crane_CNT
+    100166: crane2:crane_geo
+    100168: crane2:garbber_rightCNT
+    100170: crane2:grab_left1
+    100172: crane2:grab_left2
+    100174: crane2:grab_left3
+    100176: crane2:grab_left4
+    100178: crane2:grab_right1
+    100180: crane2:grab_right2
+    100182: crane2:grab_right3
+    100184: crane2:grab_right4
+    100186: crane2:grabber_left
+    100188: crane2:grabber_leftCNT
+    100190: crane2:grabber_right
+    100192: crane2:joint_rotor4
+    100194: crane2:joint_rotor5
+    100196: crane2:joint_rotor6
+    100198: crane2:mid_jntCNT
+    100200: crane2:placementCNT
+    100202: crane2:support_beam1
+    100204: crane2:support_beam2
+    100206: crane2:support_beam3
+    100208: crane2:support_rotor1
+    100210: crane2:support_rotor2
+    100212: crane2:support_rotor3
+    100214: crane2:support_rotor4
+    100216: crane2:top_jntCNT
+    100218: crane_CNT
+    100220: crane_geo
+    100222: cryo_Jar
+    100224: //RootNode
+    100226: garbber_rightCNT
+    100228: grab_left1
+    100230: grab_left2
+    100232: grab_left3
+    100234: grab_left4
+    100236: grab_right1
+    100238: grab_right2
+    100240: grab_right3
+    100242: grab_right4
+    100244: grabber_left
+    100246: grabber_leftCNT
+    100248: grabber_right
+    100250: Jar
+    100252: Jar1
+    100254: Jar10
+    100256: Jar11
+    100258: Jar12
+    100260: Jar13
+    100262: Jar14
+    100264: Jar15
+    100266: Jar16
+    100268: Jar17
+    100270: Jar18
+    100272: Jar19
+    100274: Jar2
+    100276: Jar20
+    100278: Jar21
+    100280: Jar22
+    100282: Jar23
+    100284: Jar24
+    100286: Jar25
+    100288: Jar26
+    100290: Jar27
+    100292: Jar28
+    100294: Jar29
+    100296: Jar3
+    100298: Jar30
+    100300: Jar31
+    100302: Jar32
+    100304: Jar33
+    100306: Jar34
+    100308: Jar35
+    100310: Jar36
+    100312: Jar37
+    100314: Jar38
+    100316: Jar39
+    100318: Jar4
+    100320: Jar40
+    100322: Jar41
+    100324: Jar42
+    100326: Jar43
+    100328: Jar44
+    100330: Jar45
+    100332: Jar46
+    100334: Jar47
+    100336: Jar48
+    100338: Jar49
+    100340: Jar5
+    100342: Jar50
+    100344: Jar51
+    100346: Jar52
+    100348: Jar53
+    100350: Jar54
+    100352: Jar55
+    100354: Jar56
+    100356: Jar57
+    100358: Jar58
+    100360: Jar59
+    100362: Jar6
+    100364: Jar60
+    100366: Jar61
+    100368: Jar62
+    100370: Jar63
+    100372: Jar64
+    100374: Jar65
+    100376: Jar66
+    100378: Jar67
+    100380: Jar68
+    100382: Jar69
+    100384: Jar7
+    100386: Jar70
+    100388: Jar72
+    100390: Jar73
+    100392: Jar74
+    100394: Jar8
+    100396: Jar9
+    100398: joint_rotor4
+    100400: joint_rotor5
+    100402: joint_rotor6
+    100404: mid_jntCNT
+    100406: persp1
+    100408: placementCNT
+    100410: plain_gd
+    100412: rollers
+    100414: rollers 1
+    100416: rollers 10
+    100418: rollers 11
+    100420: rollers 12
+    100422: rollers 13
+    100424: rollers 14
+    100426: rollers 15
+    100428: rollers 16
+    100430: rollers 17
+    100432: rollers 18
+    100434: rollers 19
+    100436: rollers 2
+    100438: rollers 20
+    100440: rollers 21
+    100442: rollers 22
+    100444: rollers 23
+    100446: rollers 24
+    100448: rollers 25
+    100450: rollers 26
+    100452: rollers 27
+    100454: rollers 28
+    100456: rollers 29
+    100458: rollers 3
+    100460: rollers 30
+    100462: rollers 31
+    100464: rollers 32
+    100466: rollers 33
+    100468: rollers 34
+    100470: rollers 35
+    100472: rollers 36
+    100474: rollers 37
+    100476: rollers 38
+    100478: rollers 39
+    100480: rollers 4
+    100482: rollers 40
+    100484: rollers 41
+    100486: rollers 42
+    100488: rollers 43
+    100490: rollers 5
+    100492: rollers 6
+    100494: rollers 7
+    100496: rollers 8
+    100498: rollers 9
+    100500: rollers1
+    100502: rollers1 1
+    100504: rollers1 10
+    100506: rollers1 11
+    100508: rollers1 12
+    100510: rollers1 13
+    100512: rollers1 14
+    100514: rollers1 15
+    100516: rollers1 16
+    100518: rollers1 17
+    100520: rollers1 18
+    100522: rollers1 19
+    100524: rollers1 2
+    100526: rollers1 20
+    100528: rollers1 21
+    100530: rollers1 22
+    100532: rollers1 23
+    100534: rollers1 24
+    100536: rollers1 25
+    100538: rollers1 26
+    100540: rollers1 27
+    100542: rollers1 28
+    100544: rollers1 29
+    100546: rollers1 3
+    100548: rollers1 30
+    100550: rollers1 31
+    100552: rollers1 32
+    100554: rollers1 33
+    100556: rollers1 34
+    100558: rollers1 35
+    100560: rollers1 36
+    100562: rollers1 37
+    100564: rollers1 38
+    100566: rollers1 39
+    100568: rollers1 4
+    100570: rollers1 40
+    100572: rollers1 41
+    100574: rollers1 42
+    100576: rollers1 43
+    100578: rollers1 5
+    100580: rollers1 6
+    100582: rollers1 7
+    100584: rollers1 8
+    100586: rollers1 9
+    100588: rollers2
+    100590: rollers2 1
+    100592: rollers2 10
+    100594: rollers2 11
+    100596: rollers2 12
+    100598: rollers2 13
+    100600: rollers2 14
+    100602: rollers2 15
+    100604: rollers2 16
+    100606: rollers2 17
+    100608: rollers2 18
+    100610: rollers2 19
+    100612: rollers2 2
+    100614: rollers2 20
+    100616: rollers2 21
+    100618: rollers2 22
+    100620: rollers2 23
+    100622: rollers2 24
+    100624: rollers2 25
+    100626: rollers2 26
+    100628: rollers2 27
+    100630: rollers2 28
+    100632: rollers2 29
+    100634: rollers2 3
+    100636: rollers2 30
+    100638: rollers2 31
+    100640: rollers2 32
+    100642: rollers2 33
+    100644: rollers2 34
+    100646: rollers2 35
+    100648: rollers2 36
+    100650: rollers2 37
+    100652: rollers2 38
+    100654: rollers2 39
+    100656: rollers2 4
+    100658: rollers2 40
+    100660: rollers2 41
+    100662: rollers2 42
+    100664: rollers2 43
+    100666: rollers2 5
+    100668: rollers2 6
+    100670: rollers2 7
+    100672: rollers2 8
+    100674: rollers2 9
+    100676: rollers3
+    100678: rollers3 1
+    100680: rollers3 10
+    100682: rollers3 11
+    100684: rollers3 12
+    100686: rollers3 13
+    100688: rollers3 14
+    100690: rollers3 15
+    100692: rollers3 16
+    100694: rollers3 17
+    100696: rollers3 18
+    100698: rollers3 19
+    100700: rollers3 2
+    100702: rollers3 20
+    100704: rollers3 21
+    100706: rollers3 22
+    100708: rollers3 23
+    100710: rollers3 24
+    100712: rollers3 25
+    100714: rollers3 26
+    100716: rollers3 27
+    100718: rollers3 28
+    100720: rollers3 29
+    100722: rollers3 3
+    100724: rollers3 30
+    100726: rollers3 31
+    100728: rollers3 32
+    100730: rollers3 33
+    100732: rollers3 34
+    100734: rollers3 35
+    100736: rollers3 36
+    100738: rollers3 37
+    100740: rollers3 38
+    100742: rollers3 39
+    100744: rollers3 4
+    100746: rollers3 40
+    100748: rollers3 41
+    100750: rollers3 42
+    100752: rollers3 43
+    100754: rollers3 5
+    100756: rollers3 6
+    100758: rollers3 7
+    100760: rollers3 8
+    100762: rollers3 9
+    100764: rollers4
+    100766: rollers4 1
+    100768: rollers4 10
+    100770: rollers4 11
+    100772: rollers4 12
+    100774: rollers4 13
+    100776: rollers4 14
+    100778: rollers4 15
+    100780: rollers4 16
+    100782: rollers4 17
+    100784: rollers4 18
+    100786: rollers4 19
+    100788: rollers4 2
+    100790: rollers4 20
+    100792: rollers4 21
+    100794: rollers4 22
+    100796: rollers4 23
+    100798: rollers4 24
+    100800: rollers4 25
+    100802: rollers4 26
+    100804: rollers4 27
+    100806: rollers4 28
+    100808: rollers4 29
+    100810: rollers4 3
+    100812: rollers4 30
+    100814: rollers4 31
+    100816: rollers4 32
+    100818: rollers4 33
+    100820: rollers4 34
+    100822: rollers4 35
+    100824: rollers4 36
+    100826: rollers4 37
+    100828: rollers4 38
+    100830: rollers4 39
+    100832: rollers4 4
+    100834: rollers4 40
+    100836: rollers4 41
+    100838: rollers4 42
+    100840: rollers4 43
+    100842: rollers4 5
+    100844: rollers4 6
+    100846: rollers4 7
+    100848: rollers4 8
+    100850: rollers4 9
+    100852: rollers5
+    100854: rollers5 1
+    100856: rollers5 10
+    100858: rollers5 11
+    100860: rollers5 12
+    100862: rollers5 13
+    100864: rollers5 14
+    100866: rollers5 15
+    100868: rollers5 16
+    100870: rollers5 17
+    100872: rollers5 18
+    100874: rollers5 19
+    100876: rollers5 2
+    100878: rollers5 20
+    100880: rollers5 21
+    100882: rollers5 22
+    100884: rollers5 23
+    100886: rollers5 24
+    100888: rollers5 25
+    100890: rollers5 26
+    100892: rollers5 27
+    100894: rollers5 28
+    100896: rollers5 29
+    100898: rollers5 3
+    100900: rollers5 30
+    100902: rollers5 31
+    100904: rollers5 32
+    100906: rollers5 33
+    100908: rollers5 34
+    100910: rollers5 35
+    100912: rollers5 36
+    100914: rollers5 37
+    100916: rollers5 38
+    100918: rollers5 39
+    100920: rollers5 4
+    100922: rollers5 40
+    100924: rollers5 41
+    100926: rollers5 42
+    100928: rollers5 43
+    100930: rollers5 5
+    100932: rollers5 6
+    100934: rollers5 7
+    100936: rollers5 8
+    100938: rollers5 9
+    100940: rollers6
+    100942: rollers6 1
+    100944: rollers6 10
+    100946: rollers6 11
+    100948: rollers6 12
+    100950: rollers6 13
+    100952: rollers6 14
+    100954: rollers6 15
+    100956: rollers6 16
+    100958: rollers6 17
+    100960: rollers6 18
+    100962: rollers6 19
+    100964: rollers6 2
+    100966: rollers6 20
+    100968: rollers6 21
+    100970: rollers6 22
+    100972: rollers6 23
+    100974: rollers6 24
+    100976: rollers6 25
+    100978: rollers6 26
+    100980: rollers6 27
+    100982: rollers6 28
+    100984: rollers6 29
+    100986: rollers6 3
+    100988: rollers6 30
+    100990: rollers6 31
+    100992: rollers6 32
+    100994: rollers6 33
+    100996: rollers6 34
+    100998: rollers6 35
+    101000: rollers6 36
+    101002: rollers6 37
+    101004: rollers6 38
+    101006: rollers6 39
+    101008: rollers6 4
+    101010: rollers6 40
+    101012: rollers6 41
+    101014: rollers6 42
+    101016: rollers6 43
+    101018: rollers6 5
+    101020: rollers6 6
+    101022: rollers6 7
+    101024: rollers6 8
+    101026: rollers6 9
+    101028: rollers7
+    101030: rollers7 1
+    101032: rollers7 10
+    101034: rollers7 11
+    101036: rollers7 12
+    101038: rollers7 13
+    101040: rollers7 14
+    101042: rollers7 15
+    101044: rollers7 16
+    101046: rollers7 17
+    101048: rollers7 18
+    101050: rollers7 19
+    101052: rollers7 2
+    101054: rollers7 20
+    101056: rollers7 21
+    101058: rollers7 22
+    101060: rollers7 23
+    101062: rollers7 24
+    101064: rollers7 25
+    101066: rollers7 26
+    101068: rollers7 27
+    101070: rollers7 28
+    101072: rollers7 29
+    101074: rollers7 3
+    101076: rollers7 30
+    101078: rollers7 31
+    101080: rollers7 32
+    101082: rollers7 33
+    101084: rollers7 34
+    101086: rollers7 35
+    101088: rollers7 36
+    101090: rollers7 37
+    101092: rollers7 38
+    101094: rollers7 39
+    101096: rollers7 4
+    101098: rollers7 40
+    101100: rollers7 41
+    101102: rollers7 42
+    101104: rollers7 43
+    101106: rollers7 5
+    101108: rollers7 6
+    101110: rollers7 7
+    101112: rollers7 8
+    101114: rollers7 9
+    101116: rollers8
+    101118: rollers8 1
+    101120: rollers8 10
+    101122: rollers8 11
+    101124: rollers8 12
+    101126: rollers8 13
+    101128: rollers8 14
+    101130: rollers8 15
+    101132: rollers8 16
+    101134: rollers8 17
+    101136: rollers8 18
+    101138: rollers8 19
+    101140: rollers8 2
+    101142: rollers8 20
+    101144: rollers8 21
+    101146: rollers8 22
+    101148: rollers8 23
+    101150: rollers8 24
+    101152: rollers8 25
+    101154: rollers8 26
+    101156: rollers8 27
+    101158: rollers8 28
+    101160: rollers8 29
+    101162: rollers8 3
+    101164: rollers8 30
+    101166: rollers8 31
+    101168: rollers8 32
+    101170: rollers8 33
+    101172: rollers8 34
+    101174: rollers8 35
+    101176: rollers8 36
+    101178: rollers8 37
+    101180: rollers8 38
+    101182: rollers8 39
+    101184: rollers8 4
+    101186: rollers8 40
+    101188: rollers8 41
+    101190: rollers8 42
+    101192: rollers8 43
+    101194: rollers8 5
+    101196: rollers8 6
+    101198: rollers8 7
+    101200: rollers8 8
+    101202: rollers8 9
+    101204: roof
+    101206: row1
+    101208: row2
+    101210: row3
+    101212: row4
+    101214: row5
+    101216: support_beam1
+    101218: support_beam2
+    101220: support_beam3
+    101222: support_rotor1
+    101224: support_rotor2
+    101226: support_rotor3
+    101228: support_rotor4
+    101230: top_jntCNT
+    101232: wall
+    400000: arm_part1
+    400002: arm_part2
+    400004: arm_part3
+    400006: base
+    400008: btm_jntCNT
+    400010: claw
+    400012: conveyor
+    400014: conveyor 1
+    400016: conveyor10
+    400018: conveyor10 1
+    400020: conveyor11
+    400022: conveyor11 1
+    400024: conveyor12
+    400026: conveyor12 1
+    400028: conveyor2
+    400030: conveyor2 1
+    400032: conveyor3
+    400034: conveyor3 1
+    400036: conveyor4
+    400038: conveyor4 1
+    400040: conveyor5
+    400042: conveyor5 1
+    400044: conveyor6
+    400046: conveyor6 1
+    400048: conveyor7
+    400050: conveyor7 1
+    400052: conveyor8
+    400054: conveyor8 1
+    400056: conveyor9
+    400058: conveyor9 1
+    400060: conyevor_type10
+    400062: conyevor_type11
+    400064: conyevor_type12
+    400066: conyevor_type13
+    400068: conyevor_type14
+    400070: conyevor_type15
+    400072: conyevor_type16
+    400074: conyevor_type17
+    400076: conyevor_type18
+    400078: conyevor_type19
+    400080: conyevor_type2
+    400082: conyevor_type2 1
+    400084: conyevor_type2 10
+    400086: conyevor_type2 11
+    400088: conyevor_type2 12
+    400090: conyevor_type2 13
+    400092: conyevor_type2 14
+    400094: conyevor_type2 15
+    400096: conyevor_type2 16
+    400098: conyevor_type2 17
+    400100: conyevor_type2 18
+    400102: conyevor_type2 19
+    400104: conyevor_type2 2
+    400106: conyevor_type2 20
+    400108: conyevor_type2 21
+    400110: conyevor_type2 22
+    400112: conyevor_type2 23
+    400114: conyevor_type2 3
+    400116: conyevor_type2 4
+    400118: conyevor_type2 5
+    400120: conyevor_type2 6
+    400122: conyevor_type2 7
+    400124: conyevor_type2 8
+    400126: conyevor_type2 9
+    400128: conyevor_type20
+    400130: conyevor_type21
+    400132: conyevor_type22
+    400134: conyevor_type3
+    400136: conyevor_type4
+    400138: conyevor_type5
+    400140: conyevor_type6
+    400142: conyevor_type7
+    400144: conyevor_type8
+    400146: conyevor_type9
+    400148: crane
+    400150: crane2:arm_part1
+    400152: crane2:arm_part2
+    400154: crane2:arm_part3
+    400156: crane2:base
+    400158: crane2:btm_jntCNT
+    400160: crane2:claw
+    400162: crane2:crane
+    400164: crane2:crane_CNT
+    400166: crane2:crane_geo
+    400168: crane2:garbber_rightCNT
+    400170: crane2:grab_left1
+    400172: crane2:grab_left2
+    400174: crane2:grab_left3
+    400176: crane2:grab_left4
+    400178: crane2:grab_right1
+    400180: crane2:grab_right2
+    400182: crane2:grab_right3
+    400184: crane2:grab_right4
+    400186: crane2:grabber_left
+    400188: crane2:grabber_leftCNT
+    400190: crane2:grabber_right
+    400192: crane2:joint_rotor4
+    400194: crane2:joint_rotor5
+    400196: crane2:joint_rotor6
+    400198: crane2:mid_jntCNT
+    400200: crane2:placementCNT
+    400202: crane2:support_beam1
+    400204: crane2:support_beam2
+    400206: crane2:support_beam3
+    400208: crane2:support_rotor1
+    400210: crane2:support_rotor2
+    400212: crane2:support_rotor3
+    400214: crane2:support_rotor4
+    400216: crane2:top_jntCNT
+    400218: crane_CNT
+    400220: crane_geo
+    400222: cryo_Jar
+    400224: //RootNode
+    400226: garbber_rightCNT
+    400228: grab_left1
+    400230: grab_left2
+    400232: grab_left3
+    400234: grab_left4
+    400236: grab_right1
+    400238: grab_right2
+    400240: grab_right3
+    400242: grab_right4
+    400244: grabber_left
+    400246: grabber_leftCNT
+    400248: grabber_right
+    400250: Jar
+    400252: Jar1
+    400254: Jar10
+    400256: Jar11
+    400258: Jar12
+    400260: Jar13
+    400262: Jar14
+    400264: Jar15
+    400266: Jar16
+    400268: Jar17
+    400270: Jar18
+    400272: Jar19
+    400274: Jar2
+    400276: Jar20
+    400278: Jar21
+    400280: Jar22
+    400282: Jar23
+    400284: Jar24
+    400286: Jar25
+    400288: Jar26
+    400290: Jar27
+    400292: Jar28
+    400294: Jar29
+    400296: Jar3
+    400298: Jar30
+    400300: Jar31
+    400302: Jar32
+    400304: Jar33
+    400306: Jar34
+    400308: Jar35
+    400310: Jar36
+    400312: Jar37
+    400314: Jar38
+    400316: Jar39
+    400318: Jar4
+    400320: Jar40
+    400322: Jar41
+    400324: Jar42
+    400326: Jar43
+    400328: Jar44
+    400330: Jar45
+    400332: Jar46
+    400334: Jar47
+    400336: Jar48
+    400338: Jar49
+    400340: Jar5
+    400342: Jar50
+    400344: Jar51
+    400346: Jar52
+    400348: Jar53
+    400350: Jar54
+    400352: Jar55
+    400354: Jar56
+    400356: Jar57
+    400358: Jar58
+    400360: Jar59
+    400362: Jar6
+    400364: Jar60
+    400366: Jar61
+    400368: Jar62
+    400370: Jar63
+    400372: Jar64
+    400374: Jar65
+    400376: Jar66
+    400378: Jar67
+    400380: Jar68
+    400382: Jar69
+    400384: Jar7
+    400386: Jar70
+    400388: Jar72
+    400390: Jar73
+    400392: Jar74
+    400394: Jar8
+    400396: Jar9
+    400398: joint_rotor4
+    400400: joint_rotor5
+    400402: joint_rotor6
+    400404: mid_jntCNT
+    400406: persp1
+    400408: placementCNT
+    400410: plain_gd
+    400412: rollers
+    400414: rollers 1
+    400416: rollers 10
+    400418: rollers 11
+    400420: rollers 12
+    400422: rollers 13
+    400424: rollers 14
+    400426: rollers 15
+    400428: rollers 16
+    400430: rollers 17
+    400432: rollers 18
+    400434: rollers 19
+    400436: rollers 2
+    400438: rollers 20
+    400440: rollers 21
+    400442: rollers 22
+    400444: rollers 23
+    400446: rollers 24
+    400448: rollers 25
+    400450: rollers 26
+    400452: rollers 27
+    400454: rollers 28
+    400456: rollers 29
+    400458: rollers 3
+    400460: rollers 30
+    400462: rollers 31
+    400464: rollers 32
+    400466: rollers 33
+    400468: rollers 34
+    400470: rollers 35
+    400472: rollers 36
+    400474: rollers 37
+    400476: rollers 38
+    400478: rollers 39
+    400480: rollers 4
+    400482: rollers 40
+    400484: rollers 41
+    400486: rollers 42
+    400488: rollers 43
+    400490: rollers 5
+    400492: rollers 6
+    400494: rollers 7
+    400496: rollers 8
+    400498: rollers 9
+    400500: rollers1
+    400502: rollers1 1
+    400504: rollers1 10
+    400506: rollers1 11
+    400508: rollers1 12
+    400510: rollers1 13
+    400512: rollers1 14
+    400514: rollers1 15
+    400516: rollers1 16
+    400518: rollers1 17
+    400520: rollers1 18
+    400522: rollers1 19
+    400524: rollers1 2
+    400526: rollers1 20
+    400528: rollers1 21
+    400530: rollers1 22
+    400532: rollers1 23
+    400534: rollers1 24
+    400536: rollers1 25
+    400538: rollers1 26
+    400540: rollers1 27
+    400542: rollers1 28
+    400544: rollers1 29
+    400546: rollers1 3
+    400548: rollers1 30
+    400550: rollers1 31
+    400552: rollers1 32
+    400554: rollers1 33
+    400556: rollers1 34
+    400558: rollers1 35
+    400560: rollers1 36
+    400562: rollers1 37
+    400564: rollers1 38
+    400566: rollers1 39
+    400568: rollers1 4
+    400570: rollers1 40
+    400572: rollers1 41
+    400574: rollers1 42
+    400576: rollers1 43
+    400578: rollers1 5
+    400580: rollers1 6
+    400582: rollers1 7
+    400584: rollers1 8
+    400586: rollers1 9
+    400588: rollers2
+    400590: rollers2 1
+    400592: rollers2 10
+    400594: rollers2 11
+    400596: rollers2 12
+    400598: rollers2 13
+    400600: rollers2 14
+    400602: rollers2 15
+    400604: rollers2 16
+    400606: rollers2 17
+    400608: rollers2 18
+    400610: rollers2 19
+    400612: rollers2 2
+    400614: rollers2 20
+    400616: rollers2 21
+    400618: rollers2 22
+    400620: rollers2 23
+    400622: rollers2 24
+    400624: rollers2 25
+    400626: rollers2 26
+    400628: rollers2 27
+    400630: rollers2 28
+    400632: rollers2 29
+    400634: rollers2 3
+    400636: rollers2 30
+    400638: rollers2 31
+    400640: rollers2 32
+    400642: rollers2 33
+    400644: rollers2 34
+    400646: rollers2 35
+    400648: rollers2 36
+    400650: rollers2 37
+    400652: rollers2 38
+    400654: rollers2 39
+    400656: rollers2 4
+    400658: rollers2 40
+    400660: rollers2 41
+    400662: rollers2 42
+    400664: rollers2 43
+    400666: rollers2 5
+    400668: rollers2 6
+    400670: rollers2 7
+    400672: rollers2 8
+    400674: rollers2 9
+    400676: rollers3
+    400678: rollers3 1
+    400680: rollers3 10
+    400682: rollers3 11
+    400684: rollers3 12
+    400686: rollers3 13
+    400688: rollers3 14
+    400690: rollers3 15
+    400692: rollers3 16
+    400694: rollers3 17
+    400696: rollers3 18
+    400698: rollers3 19
+    400700: rollers3 2
+    400702: rollers3 20
+    400704: rollers3 21
+    400706: rollers3 22
+    400708: rollers3 23
+    400710: rollers3 24
+    400712: rollers3 25
+    400714: rollers3 26
+    400716: rollers3 27
+    400718: rollers3 28
+    400720: rollers3 29
+    400722: rollers3 3
+    400724: rollers3 30
+    400726: rollers3 31
+    400728: rollers3 32
+    400730: rollers3 33
+    400732: rollers3 34
+    400734: rollers3 35
+    400736: rollers3 36
+    400738: rollers3 37
+    400740: rollers3 38
+    400742: rollers3 39
+    400744: rollers3 4
+    400746: rollers3 40
+    400748: rollers3 41
+    400750: rollers3 42
+    400752: rollers3 43
+    400754: rollers3 5
+    400756: rollers3 6
+    400758: rollers3 7
+    400760: rollers3 8
+    400762: rollers3 9
+    400764: rollers4
+    400766: rollers4 1
+    400768: rollers4 10
+    400770: rollers4 11
+    400772: rollers4 12
+    400774: rollers4 13
+    400776: rollers4 14
+    400778: rollers4 15
+    400780: rollers4 16
+    400782: rollers4 17
+    400784: rollers4 18
+    400786: rollers4 19
+    400788: rollers4 2
+    400790: rollers4 20
+    400792: rollers4 21
+    400794: rollers4 22
+    400796: rollers4 23
+    400798: rollers4 24
+    400800: rollers4 25
+    400802: rollers4 26
+    400804: rollers4 27
+    400806: rollers4 28
+    400808: rollers4 29
+    400810: rollers4 3
+    400812: rollers4 30
+    400814: rollers4 31
+    400816: rollers4 32
+    400818: rollers4 33
+    400820: rollers4 34
+    400822: rollers4 35
+    400824: rollers4 36
+    400826: rollers4 37
+    400828: rollers4 38
+    400830: rollers4 39
+    400832: rollers4 4
+    400834: rollers4 40
+    400836: rollers4 41
+    400838: rollers4 42
+    400840: rollers4 43
+    400842: rollers4 5
+    400844: rollers4 6
+    400846: rollers4 7
+    400848: rollers4 8
+    400850: rollers4 9
+    400852: rollers5
+    400854: rollers5 1
+    400856: rollers5 10
+    400858: rollers5 11
+    400860: rollers5 12
+    400862: rollers5 13
+    400864: rollers5 14
+    400866: rollers5 15
+    400868: rollers5 16
+    400870: rollers5 17
+    400872: rollers5 18
+    400874: rollers5 19
+    400876: rollers5 2
+    400878: rollers5 20
+    400880: rollers5 21
+    400882: rollers5 22
+    400884: rollers5 23
+    400886: rollers5 24
+    400888: rollers5 25
+    400890: rollers5 26
+    400892: rollers5 27
+    400894: rollers5 28
+    400896: rollers5 29
+    400898: rollers5 3
+    400900: rollers5 30
+    400902: rollers5 31
+    400904: rollers5 32
+    400906: rollers5 33
+    400908: rollers5 34
+    400910: rollers5 35
+    400912: rollers5 36
+    400914: rollers5 37
+    400916: rollers5 38
+    400918: rollers5 39
+    400920: rollers5 4
+    400922: rollers5 40
+    400924: rollers5 41
+    400926: rollers5 42
+    400928: rollers5 43
+    400930: rollers5 5
+    400932: rollers5 6
+    400934: rollers5 7
+    400936: rollers5 8
+    400938: rollers5 9
+    400940: rollers6
+    400942: rollers6 1
+    400944: rollers6 10
+    400946: rollers6 11
+    400948: rollers6 12
+    400950: rollers6 13
+    400952: rollers6 14
+    400954: rollers6 15
+    400956: rollers6 16
+    400958: rollers6 17
+    400960: rollers6 18
+    400962: rollers6 19
+    400964: rollers6 2
+    400966: rollers6 20
+    400968: rollers6 21
+    400970: rollers6 22
+    400972: rollers6 23
+    400974: rollers6 24
+    400976: rollers6 25
+    400978: rollers6 26
+    400980: rollers6 27
+    400982: rollers6 28
+    400984: rollers6 29
+    400986: rollers6 3
+    400988: rollers6 30
+    400990: rollers6 31
+    400992: rollers6 32
+    400994: rollers6 33
+    400996: rollers6 34
+    400998: rollers6 35
+    401000: rollers6 36
+    401002: rollers6 37
+    401004: rollers6 38
+    401006: rollers6 39
+    401008: rollers6 4
+    401010: rollers6 40
+    401012: rollers6 41
+    401014: rollers6 42
+    401016: rollers6 43
+    401018: rollers6 5
+    401020: rollers6 6
+    401022: rollers6 7
+    401024: rollers6 8
+    401026: rollers6 9
+    401028: rollers7
+    401030: rollers7 1
+    401032: rollers7 10
+    401034: rollers7 11
+    401036: rollers7 12
+    401038: rollers7 13
+    401040: rollers7 14
+    401042: rollers7 15
+    401044: rollers7 16
+    401046: rollers7 17
+    401048: rollers7 18
+    401050: rollers7 19
+    401052: rollers7 2
+    401054: rollers7 20
+    401056: rollers7 21
+    401058: rollers7 22
+    401060: rollers7 23
+    401062: rollers7 24
+    401064: rollers7 25
+    401066: rollers7 26
+    401068: rollers7 27
+    401070: rollers7 28
+    401072: rollers7 29
+    401074: rollers7 3
+    401076: rollers7 30
+    401078: rollers7 31
+    401080: rollers7 32
+    401082: rollers7 33
+    401084: rollers7 34
+    401086: rollers7 35
+    401088: rollers7 36
+    401090: rollers7 37
+    401092: rollers7 38
+    401094: rollers7 39
+    401096: rollers7 4
+    401098: rollers7 40
+    401100: rollers7 41
+    401102: rollers7 42
+    401104: rollers7 43
+    401106: rollers7 5
+    401108: rollers7 6
+    401110: rollers7 7
+    401112: rollers7 8
+    401114: rollers7 9
+    401116: rollers8
+    401118: rollers8 1
+    401120: rollers8 10
+    401122: rollers8 11
+    401124: rollers8 12
+    401126: rollers8 13
+    401128: rollers8 14
+    401130: rollers8 15
+    401132: rollers8 16
+    401134: rollers8 17
+    401136: rollers8 18
+    401138: rollers8 19
+    401140: rollers8 2
+    401142: rollers8 20
+    401144: rollers8 21
+    401146: rollers8 22
+    401148: rollers8 23
+    401150: rollers8 24
+    401152: rollers8 25
+    401154: rollers8 26
+    401156: rollers8 27
+    401158: rollers8 28
+    401160: rollers8 29
+    401162: rollers8 3
+    401164: rollers8 30
+    401166: rollers8 31
+    401168: rollers8 32
+    401170: rollers8 33
+    401172: rollers8 34
+    401174: rollers8 35
+    401176: rollers8 36
+    401178: rollers8 37
+    401180: rollers8 38
+    401182: rollers8 39
+    401184: rollers8 4
+    401186: rollers8 40
+    401188: rollers8 41
+    401190: rollers8 42
+    401192: rollers8 43
+    401194: rollers8 5
+    401196: rollers8 6
+    401198: rollers8 7
+    401200: rollers8 8
+    401202: rollers8 9
+    401204: roof
+    401206: row1
+    401208: row2
+    401210: row3
+    401212: row4
+    401214: row5
+    401216: support_beam1
+    401218: support_beam2
+    401220: support_beam3
+    401222: support_rotor1
+    401224: support_rotor2
+    401226: support_rotor3
+    401228: support_rotor4
+    401230: top_jntCNT
+    401232: wall
+    2300000: arm_part1
+    2300002: arm_part2
+    2300004: arm_part3
+    2300006: base
+    2300008: conyevor_type10
+    2300010: conyevor_type11
+    2300012: conyevor_type12
+    2300014: conyevor_type13
+    2300016: conyevor_type14
+    2300018: conyevor_type15
+    2300020: conyevor_type16
+    2300022: conyevor_type17
+    2300024: conyevor_type18
+    2300026: conyevor_type19
+    2300028: conyevor_type2
+    2300030: conyevor_type2 1
+    2300032: conyevor_type2 10
+    2300034: conyevor_type2 11
+    2300036: conyevor_type2 12
+    2300038: conyevor_type2 13
+    2300040: conyevor_type2 14
+    2300042: conyevor_type2 15
+    2300044: conyevor_type2 16
+    2300046: conyevor_type2 17
+    2300048: conyevor_type2 18
+    2300050: conyevor_type2 19
+    2300052: conyevor_type2 2
+    2300054: conyevor_type2 20
+    2300056: conyevor_type2 21
+    2300058: conyevor_type2 22
+    2300060: conyevor_type2 23
+    2300062: conyevor_type2 3
+    2300064: conyevor_type2 4
+    2300066: conyevor_type2 5
+    2300068: conyevor_type2 6
+    2300070: conyevor_type2 7
+    2300072: conyevor_type2 8
+    2300074: conyevor_type2 9
+    2300076: conyevor_type20
+    2300078: conyevor_type21
+    2300080: conyevor_type22
+    2300082: conyevor_type3
+    2300084: conyevor_type4
+    2300086: conyevor_type5
+    2300088: conyevor_type6
+    2300090: conyevor_type7
+    2300092: conyevor_type8
+    2300094: conyevor_type9
+    2300096: crane2:arm_part1
+    2300098: crane2:arm_part2
+    2300100: crane2:arm_part3
+    2300102: crane2:base
+    2300104: crane2:grab_left1
+    2300106: crane2:grab_left2
+    2300108: crane2:grab_left3
+    2300110: crane2:grab_left4
+    2300112: crane2:grab_right1
+    2300114: crane2:grab_right2
+    2300116: crane2:grab_right3
+    2300118: crane2:grab_right4
+    2300120: crane2:joint_rotor4
+    2300122: crane2:joint_rotor5
+    2300124: crane2:joint_rotor6
+    2300126: crane2:support_beam1
+    2300128: crane2:support_beam2
+    2300130: crane2:support_beam3
+    2300132: crane2:support_rotor1
+    2300134: crane2:support_rotor2
+    2300136: crane2:support_rotor3
+    2300138: crane2:support_rotor4
+    2300140: grab_left1
+    2300142: grab_left2
+    2300144: grab_left3
+    2300146: grab_left4
+    2300148: grab_right1
+    2300150: grab_right2
+    2300152: grab_right3
+    2300154: grab_right4
+    2300156: Jar
+    2300158: Jar1
+    2300160: Jar10
+    2300162: Jar11
+    2300164: Jar12
+    2300166: Jar13
+    2300168: Jar14
+    2300170: Jar15
+    2300172: Jar16
+    2300174: Jar17
+    2300176: Jar18
+    2300178: Jar19
+    2300180: Jar2
+    2300182: Jar20
+    2300184: Jar21
+    2300186: Jar22
+    2300188: Jar23
+    2300190: Jar24
+    2300192: Jar25
+    2300194: Jar26
+    2300196: Jar27
+    2300198: Jar28
+    2300200: Jar29
+    2300202: Jar3
+    2300204: Jar30
+    2300206: Jar31
+    2300208: Jar32
+    2300210: Jar33
+    2300212: Jar34
+    2300214: Jar35
+    2300216: Jar36
+    2300218: Jar37
+    2300220: Jar38
+    2300222: Jar39
+    2300224: Jar4
+    2300226: Jar40
+    2300228: Jar41
+    2300230: Jar42
+    2300232: Jar43
+    2300234: Jar44
+    2300236: Jar45
+    2300238: Jar46
+    2300240: Jar47
+    2300242: Jar48
+    2300244: Jar49
+    2300246: Jar5
+    2300248: Jar50
+    2300250: Jar51
+    2300252: Jar52
+    2300254: Jar53
+    2300256: Jar54
+    2300258: Jar55
+    2300260: Jar56
+    2300262: Jar57
+    2300264: Jar58
+    2300266: Jar59
+    2300268: Jar6
+    2300270: Jar60
+    2300272: Jar61
+    2300274: Jar62
+    2300276: Jar63
+    2300278: Jar64
+    2300280: Jar65
+    2300282: Jar66
+    2300284: Jar67
+    2300286: Jar68
+    2300288: Jar69
+    2300290: Jar7
+    2300292: Jar70
+    2300294: Jar72
+    2300296: Jar73
+    2300298: Jar74
+    2300300: Jar8
+    2300302: Jar9
+    2300304: joint_rotor4
+    2300306: joint_rotor5
+    2300308: joint_rotor6
+    2300310: plain_gd
+    2300312: rollers
+    2300314: rollers 1
+    2300316: rollers 10
+    2300318: rollers 11
+    2300320: rollers 12
+    2300322: rollers 13
+    2300324: rollers 14
+    2300326: rollers 15
+    2300328: rollers 16
+    2300330: rollers 17
+    2300332: rollers 18
+    2300334: rollers 19
+    2300336: rollers 2
+    2300338: rollers 20
+    2300340: rollers 21
+    2300342: rollers 22
+    2300344: rollers 23
+    2300346: rollers 24
+    2300348: rollers 25
+    2300350: rollers 26
+    2300352: rollers 27
+    2300354: rollers 28
+    2300356: rollers 29
+    2300358: rollers 3
+    2300360: rollers 30
+    2300362: rollers 31
+    2300364: rollers 32
+    2300366: rollers 33
+    2300368: rollers 34
+    2300370: rollers 35
+    2300372: rollers 36
+    2300374: rollers 37
+    2300376: rollers 38
+    2300378: rollers 39
+    2300380: rollers 4
+    2300382: rollers 40
+    2300384: rollers 41
+    2300386: rollers 42
+    2300388: rollers 43
+    2300390: rollers 5
+    2300392: rollers 6
+    2300394: rollers 7
+    2300396: rollers 8
+    2300398: rollers 9
+    2300400: rollers1
+    2300402: rollers1 1
+    2300404: rollers1 10
+    2300406: rollers1 11
+    2300408: rollers1 12
+    2300410: rollers1 13
+    2300412: rollers1 14
+    2300414: rollers1 15
+    2300416: rollers1 16
+    2300418: rollers1 17
+    2300420: rollers1 18
+    2300422: rollers1 19
+    2300424: rollers1 2
+    2300426: rollers1 20
+    2300428: rollers1 21
+    2300430: rollers1 22
+    2300432: rollers1 23
+    2300434: rollers1 24
+    2300436: rollers1 25
+    2300438: rollers1 26
+    2300440: rollers1 27
+    2300442: rollers1 28
+    2300444: rollers1 29
+    2300446: rollers1 3
+    2300448: rollers1 30
+    2300450: rollers1 31
+    2300452: rollers1 32
+    2300454: rollers1 33
+    2300456: rollers1 34
+    2300458: rollers1 35
+    2300460: rollers1 36
+    2300462: rollers1 37
+    2300464: rollers1 38
+    2300466: rollers1 39
+    2300468: rollers1 4
+    2300470: rollers1 40
+    2300472: rollers1 41
+    2300474: rollers1 42
+    2300476: rollers1 43
+    2300478: rollers1 5
+    2300480: rollers1 6
+    2300482: rollers1 7
+    2300484: rollers1 8
+    2300486: rollers1 9
+    2300488: rollers2
+    2300490: rollers2 1
+    2300492: rollers2 10
+    2300494: rollers2 11
+    2300496: rollers2 12
+    2300498: rollers2 13
+    2300500: rollers2 14
+    2300502: rollers2 15
+    2300504: rollers2 16
+    2300506: rollers2 17
+    2300508: rollers2 18
+    2300510: rollers2 19
+    2300512: rollers2 2
+    2300514: rollers2 20
+    2300516: rollers2 21
+    2300518: rollers2 22
+    2300520: rollers2 23
+    2300522: rollers2 24
+    2300524: rollers2 25
+    2300526: rollers2 26
+    2300528: rollers2 27
+    2300530: rollers2 28
+    2300532: rollers2 29
+    2300534: rollers2 3
+    2300536: rollers2 30
+    2300538: rollers2 31
+    2300540: rollers2 32
+    2300542: rollers2 33
+    2300544: rollers2 34
+    2300546: rollers2 35
+    2300548: rollers2 36
+    2300550: rollers2 37
+    2300552: rollers2 38
+    2300554: rollers2 39
+    2300556: rollers2 4
+    2300558: rollers2 40
+    2300560: rollers2 41
+    2300562: rollers2 42
+    2300564: rollers2 43
+    2300566: rollers2 5
+    2300568: rollers2 6
+    2300570: rollers2 7
+    2300572: rollers2 8
+    2300574: rollers2 9
+    2300576: rollers3
+    2300578: rollers3 1
+    2300580: rollers3 10
+    2300582: rollers3 11
+    2300584: rollers3 12
+    2300586: rollers3 13
+    2300588: rollers3 14
+    2300590: rollers3 15
+    2300592: rollers3 16
+    2300594: rollers3 17
+    2300596: rollers3 18
+    2300598: rollers3 19
+    2300600: rollers3 2
+    2300602: rollers3 20
+    2300604: rollers3 21
+    2300606: rollers3 22
+    2300608: rollers3 23
+    2300610: rollers3 24
+    2300612: rollers3 25
+    2300614: rollers3 26
+    2300616: rollers3 27
+    2300618: rollers3 28
+    2300620: rollers3 29
+    2300622: rollers3 3
+    2300624: rollers3 30
+    2300626: rollers3 31
+    2300628: rollers3 32
+    2300630: rollers3 33
+    2300632: rollers3 34
+    2300634: rollers3 35
+    2300636: rollers3 36
+    2300638: rollers3 37
+    2300640: rollers3 38
+    2300642: rollers3 39
+    2300644: rollers3 4
+    2300646: rollers3 40
+    2300648: rollers3 41
+    2300650: rollers3 42
+    2300652: rollers3 43
+    2300654: rollers3 5
+    2300656: rollers3 6
+    2300658: rollers3 7
+    2300660: rollers3 8
+    2300662: rollers3 9
+    2300664: rollers4
+    2300666: rollers4 1
+    2300668: rollers4 10
+    2300670: rollers4 11
+    2300672: rollers4 12
+    2300674: rollers4 13
+    2300676: rollers4 14
+    2300678: rollers4 15
+    2300680: rollers4 16
+    2300682: rollers4 17
+    2300684: rollers4 18
+    2300686: rollers4 19
+    2300688: rollers4 2
+    2300690: rollers4 20
+    2300692: rollers4 21
+    2300694: rollers4 22
+    2300696: rollers4 23
+    2300698: rollers4 24
+    2300700: rollers4 25
+    2300702: rollers4 26
+    2300704: rollers4 27
+    2300706: rollers4 28
+    2300708: rollers4 29
+    2300710: rollers4 3
+    2300712: rollers4 30
+    2300714: rollers4 31
+    2300716: rollers4 32
+    2300718: rollers4 33
+    2300720: rollers4 34
+    2300722: rollers4 35
+    2300724: rollers4 36
+    2300726: rollers4 37
+    2300728: rollers4 38
+    2300730: rollers4 39
+    2300732: rollers4 4
+    2300734: rollers4 40
+    2300736: rollers4 41
+    2300738: rollers4 42
+    2300740: rollers4 43
+    2300742: rollers4 5
+    2300744: rollers4 6
+    2300746: rollers4 7
+    2300748: rollers4 8
+    2300750: rollers4 9
+    2300752: rollers5
+    2300754: rollers5 1
+    2300756: rollers5 10
+    2300758: rollers5 11
+    2300760: rollers5 12
+    2300762: rollers5 13
+    2300764: rollers5 14
+    2300766: rollers5 15
+    2300768: rollers5 16
+    2300770: rollers5 17
+    2300772: rollers5 18
+    2300774: rollers5 19
+    2300776: rollers5 2
+    2300778: rollers5 20
+    2300780: rollers5 21
+    2300782: rollers5 22
+    2300784: rollers5 23
+    2300786: rollers5 24
+    2300788: rollers5 25
+    2300790: rollers5 26
+    2300792: rollers5 27
+    2300794: rollers5 28
+    2300796: rollers5 29
+    2300798: rollers5 3
+    2300800: rollers5 30
+    2300802: rollers5 31
+    2300804: rollers5 32
+    2300806: rollers5 33
+    2300808: rollers5 34
+    2300810: rollers5 35
+    2300812: rollers5 36
+    2300814: rollers5 37
+    2300816: rollers5 38
+    2300818: rollers5 39
+    2300820: rollers5 4
+    2300822: rollers5 40
+    2300824: rollers5 41
+    2300826: rollers5 42
+    2300828: rollers5 43
+    2300830: rollers5 5
+    2300832: rollers5 6
+    2300834: rollers5 7
+    2300836: rollers5 8
+    2300838: rollers5 9
+    2300840: rollers6
+    2300842: rollers6 1
+    2300844: rollers6 10
+    2300846: rollers6 11
+    2300848: rollers6 12
+    2300850: rollers6 13
+    2300852: rollers6 14
+    2300854: rollers6 15
+    2300856: rollers6 16
+    2300858: rollers6 17
+    2300860: rollers6 18
+    2300862: rollers6 19
+    2300864: rollers6 2
+    2300866: rollers6 20
+    2300868: rollers6 21
+    2300870: rollers6 22
+    2300872: rollers6 23
+    2300874: rollers6 24
+    2300876: rollers6 25
+    2300878: rollers6 26
+    2300880: rollers6 27
+    2300882: rollers6 28
+    2300884: rollers6 29
+    2300886: rollers6 3
+    2300888: rollers6 30
+    2300890: rollers6 31
+    2300892: rollers6 32
+    2300894: rollers6 33
+    2300896: rollers6 34
+    2300898: rollers6 35
+    2300900: rollers6 36
+    2300902: rollers6 37
+    2300904: rollers6 38
+    2300906: rollers6 39
+    2300908: rollers6 4
+    2300910: rollers6 40
+    2300912: rollers6 41
+    2300914: rollers6 42
+    2300916: rollers6 43
+    2300918: rollers6 5
+    2300920: rollers6 6
+    2300922: rollers6 7
+    2300924: rollers6 8
+    2300926: rollers6 9
+    2300928: rollers7
+    2300930: rollers7 1
+    2300932: rollers7 10
+    2300934: rollers7 11
+    2300936: rollers7 12
+    2300938: rollers7 13
+    2300940: rollers7 14
+    2300942: rollers7 15
+    2300944: rollers7 16
+    2300946: rollers7 17
+    2300948: rollers7 18
+    2300950: rollers7 19
+    2300952: rollers7 2
+    2300954: rollers7 20
+    2300956: rollers7 21
+    2300958: rollers7 22
+    2300960: rollers7 23
+    2300962: rollers7 24
+    2300964: rollers7 25
+    2300966: rollers7 26
+    2300968: rollers7 27
+    2300970: rollers7 28
+    2300972: rollers7 29
+    2300974: rollers7 3
+    2300976: rollers7 30
+    2300978: rollers7 31
+    2300980: rollers7 32
+    2300982: rollers7 33
+    2300984: rollers7 34
+    2300986: rollers7 35
+    2300988: rollers7 36
+    2300990: rollers7 37
+    2300992: rollers7 38
+    2300994: rollers7 39
+    2300996: rollers7 4
+    2300998: rollers7 40
+    2301000: rollers7 41
+    2301002: rollers7 42
+    2301004: rollers7 43
+    2301006: rollers7 5
+    2301008: rollers7 6
+    2301010: rollers7 7
+    2301012: rollers7 8
+    2301014: rollers7 9
+    2301016: rollers8
+    2301018: rollers8 1
+    2301020: rollers8 10
+    2301022: rollers8 11
+    2301024: rollers8 12
+    2301026: rollers8 13
+    2301028: rollers8 14
+    2301030: rollers8 15
+    2301032: rollers8 16
+    2301034: rollers8 17
+    2301036: rollers8 18
+    2301038: rollers8 19
+    2301040: rollers8 2
+    2301042: rollers8 20
+    2301044: rollers8 21
+    2301046: rollers8 22
+    2301048: rollers8 23
+    2301050: rollers8 24
+    2301052: rollers8 25
+    2301054: rollers8 26
+    2301056: rollers8 27
+    2301058: rollers8 28
+    2301060: rollers8 29
+    2301062: rollers8 3
+    2301064: rollers8 30
+    2301066: rollers8 31
+    2301068: rollers8 32
+    2301070: rollers8 33
+    2301072: rollers8 34
+    2301074: rollers8 35
+    2301076: rollers8 36
+    2301078: rollers8 37
+    2301080: rollers8 38
+    2301082: rollers8 39
+    2301084: rollers8 4
+    2301086: rollers8 40
+    2301088: rollers8 41
+    2301090: rollers8 42
+    2301092: rollers8 43
+    2301094: rollers8 5
+    2301096: rollers8 6
+    2301098: rollers8 7
+    2301100: rollers8 8
+    2301102: rollers8 9
+    2301104: roof
+    2301106: support_beam1
+    2301108: support_beam2
+    2301110: support_beam3
+    2301112: support_rotor1
+    2301114: support_rotor2
+    2301116: support_rotor3
+    2301118: support_rotor4
+    2301120: wall
+    3300000: arm_part1
+    3300002: arm_part2
+    3300004: arm_part3
+    3300006: base
+    3300008: conyevor_type10
+    3300010: conyevor_type11
+    3300012: conyevor_type12
+    3300014: conyevor_type13
+    3300016: conyevor_type14
+    3300018: conyevor_type15
+    3300020: conyevor_type16
+    3300022: conyevor_type17
+    3300024: conyevor_type18
+    3300026: conyevor_type19
+    3300028: conyevor_type2
+    3300030: conyevor_type2 1
+    3300032: conyevor_type2 10
+    3300034: conyevor_type2 11
+    3300036: conyevor_type2 12
+    3300038: conyevor_type2 13
+    3300040: conyevor_type2 14
+    3300042: conyevor_type2 15
+    3300044: conyevor_type2 16
+    3300046: conyevor_type2 17
+    3300048: conyevor_type2 18
+    3300050: conyevor_type2 19
+    3300052: conyevor_type2 2
+    3300054: conyevor_type2 20
+    3300056: conyevor_type2 21
+    3300058: conyevor_type2 22
+    3300060: conyevor_type2 23
+    3300062: conyevor_type2 3
+    3300064: conyevor_type2 4
+    3300066: conyevor_type2 5
+    3300068: conyevor_type2 6
+    3300070: conyevor_type2 7
+    3300072: conyevor_type2 8
+    3300074: conyevor_type2 9
+    3300076: conyevor_type20
+    3300078: conyevor_type21
+    3300080: conyevor_type22
+    3300082: conyevor_type3
+    3300084: conyevor_type4
+    3300086: conyevor_type5
+    3300088: conyevor_type6
+    3300090: conyevor_type7
+    3300092: conyevor_type8
+    3300094: conyevor_type9
+    3300096: crane2:arm_part1
+    3300098: crane2:arm_part2
+    3300100: crane2:arm_part3
+    3300102: crane2:base
+    3300104: crane2:grab_left1
+    3300106: crane2:grab_left2
+    3300108: crane2:grab_left3
+    3300110: crane2:grab_left4
+    3300112: crane2:grab_right1
+    3300114: crane2:grab_right2
+    3300116: crane2:grab_right3
+    3300118: crane2:grab_right4
+    3300120: crane2:joint_rotor4
+    3300122: crane2:joint_rotor5
+    3300124: crane2:joint_rotor6
+    3300126: crane2:support_beam1
+    3300128: crane2:support_beam2
+    3300130: crane2:support_beam3
+    3300132: crane2:support_rotor1
+    3300134: crane2:support_rotor2
+    3300136: crane2:support_rotor3
+    3300138: crane2:support_rotor4
+    3300140: grab_left1
+    3300142: grab_left2
+    3300144: grab_left3
+    3300146: grab_left4
+    3300148: grab_right1
+    3300150: grab_right2
+    3300152: grab_right3
+    3300154: grab_right4
+    3300156: Jar
+    3300158: Jar1
+    3300160: Jar10
+    3300162: Jar11
+    3300164: Jar12
+    3300166: Jar13
+    3300168: Jar14
+    3300170: Jar15
+    3300172: Jar16
+    3300174: Jar17
+    3300176: Jar18
+    3300178: Jar19
+    3300180: Jar2
+    3300182: Jar20
+    3300184: Jar21
+    3300186: Jar22
+    3300188: Jar23
+    3300190: Jar24
+    3300192: Jar25
+    3300194: Jar26
+    3300196: Jar27
+    3300198: Jar28
+    3300200: Jar29
+    3300202: Jar3
+    3300204: Jar30
+    3300206: Jar31
+    3300208: Jar32
+    3300210: Jar33
+    3300212: Jar34
+    3300214: Jar35
+    3300216: Jar36
+    3300218: Jar37
+    3300220: Jar38
+    3300222: Jar39
+    3300224: Jar4
+    3300226: Jar40
+    3300228: Jar41
+    3300230: Jar42
+    3300232: Jar43
+    3300234: Jar44
+    3300236: Jar45
+    3300238: Jar46
+    3300240: Jar47
+    3300242: Jar48
+    3300244: Jar49
+    3300246: Jar5
+    3300248: Jar50
+    3300250: Jar51
+    3300252: Jar52
+    3300254: Jar53
+    3300256: Jar54
+    3300258: Jar55
+    3300260: Jar56
+    3300262: Jar57
+    3300264: Jar58
+    3300266: Jar59
+    3300268: Jar6
+    3300270: Jar60
+    3300272: Jar61
+    3300274: Jar62
+    3300276: Jar63
+    3300278: Jar64
+    3300280: Jar65
+    3300282: Jar66
+    3300284: Jar67
+    3300286: Jar68
+    3300288: Jar69
+    3300290: Jar7
+    3300292: Jar70
+    3300294: Jar72
+    3300296: Jar73
+    3300298: Jar74
+    3300300: Jar8
+    3300302: Jar9
+    3300304: joint_rotor4
+    3300306: joint_rotor5
+    3300308: joint_rotor6
+    3300310: plain_gd
+    3300312: rollers
+    3300314: rollers 1
+    3300316: rollers 10
+    3300318: rollers 11
+    3300320: rollers 12
+    3300322: rollers 13
+    3300324: rollers 14
+    3300326: rollers 15
+    3300328: rollers 16
+    3300330: rollers 17
+    3300332: rollers 18
+    3300334: rollers 19
+    3300336: rollers 2
+    3300338: rollers 20
+    3300340: rollers 21
+    3300342: rollers 22
+    3300344: rollers 23
+    3300346: rollers 24
+    3300348: rollers 25
+    3300350: rollers 26
+    3300352: rollers 27
+    3300354: rollers 28
+    3300356: rollers 29
+    3300358: rollers 3
+    3300360: rollers 30
+    3300362: rollers 31
+    3300364: rollers 32
+    3300366: rollers 33
+    3300368: rollers 34
+    3300370: rollers 35
+    3300372: rollers 36
+    3300374: rollers 37
+    3300376: rollers 38
+    3300378: rollers 39
+    3300380: rollers 4
+    3300382: rollers 40
+    3300384: rollers 41
+    3300386: rollers 42
+    3300388: rollers 43
+    3300390: rollers 5
+    3300392: rollers 6
+    3300394: rollers 7
+    3300396: rollers 8
+    3300398: rollers 9
+    3300400: rollers1
+    3300402: rollers1 1
+    3300404: rollers1 10
+    3300406: rollers1 11
+    3300408: rollers1 12
+    3300410: rollers1 13
+    3300412: rollers1 14
+    3300414: rollers1 15
+    3300416: rollers1 16
+    3300418: rollers1 17
+    3300420: rollers1 18
+    3300422: rollers1 19
+    3300424: rollers1 2
+    3300426: rollers1 20
+    3300428: rollers1 21
+    3300430: rollers1 22
+    3300432: rollers1 23
+    3300434: rollers1 24
+    3300436: rollers1 25
+    3300438: rollers1 26
+    3300440: rollers1 27
+    3300442: rollers1 28
+    3300444: rollers1 29
+    3300446: rollers1 3
+    3300448: rollers1 30
+    3300450: rollers1 31
+    3300452: rollers1 32
+    3300454: rollers1 33
+    3300456: rollers1 34
+    3300458: rollers1 35
+    3300460: rollers1 36
+    3300462: rollers1 37
+    3300464: rollers1 38
+    3300466: rollers1 39
+    3300468: rollers1 4
+    3300470: rollers1 40
+    3300472: rollers1 41
+    3300474: rollers1 42
+    3300476: rollers1 43
+    3300478: rollers1 5
+    3300480: rollers1 6
+    3300482: rollers1 7
+    3300484: rollers1 8
+    3300486: rollers1 9
+    3300488: rollers2
+    3300490: rollers2 1
+    3300492: rollers2 10
+    3300494: rollers2 11
+    3300496: rollers2 12
+    3300498: rollers2 13
+    3300500: rollers2 14
+    3300502: rollers2 15
+    3300504: rollers2 16
+    3300506: rollers2 17
+    3300508: rollers2 18
+    3300510: rollers2 19
+    3300512: rollers2 2
+    3300514: rollers2 20
+    3300516: rollers2 21
+    3300518: rollers2 22
+    3300520: rollers2 23
+    3300522: rollers2 24
+    3300524: rollers2 25
+    3300526: rollers2 26
+    3300528: rollers2 27
+    3300530: rollers2 28
+    3300532: rollers2 29
+    3300534: rollers2 3
+    3300536: rollers2 30
+    3300538: rollers2 31
+    3300540: rollers2 32
+    3300542: rollers2 33
+    3300544: rollers2 34
+    3300546: rollers2 35
+    3300548: rollers2 36
+    3300550: rollers2 37
+    3300552: rollers2 38
+    3300554: rollers2 39
+    3300556: rollers2 4
+    3300558: rollers2 40
+    3300560: rollers2 41
+    3300562: rollers2 42
+    3300564: rollers2 43
+    3300566: rollers2 5
+    3300568: rollers2 6
+    3300570: rollers2 7
+    3300572: rollers2 8
+    3300574: rollers2 9
+    3300576: rollers3
+    3300578: rollers3 1
+    3300580: rollers3 10
+    3300582: rollers3 11
+    3300584: rollers3 12
+    3300586: rollers3 13
+    3300588: rollers3 14
+    3300590: rollers3 15
+    3300592: rollers3 16
+    3300594: rollers3 17
+    3300596: rollers3 18
+    3300598: rollers3 19
+    3300600: rollers3 2
+    3300602: rollers3 20
+    3300604: rollers3 21
+    3300606: rollers3 22
+    3300608: rollers3 23
+    3300610: rollers3 24
+    3300612: rollers3 25
+    3300614: rollers3 26
+    3300616: rollers3 27
+    3300618: rollers3 28
+    3300620: rollers3 29
+    3300622: rollers3 3
+    3300624: rollers3 30
+    3300626: rollers3 31
+    3300628: rollers3 32
+    3300630: rollers3 33
+    3300632: rollers3 34
+    3300634: rollers3 35
+    3300636: rollers3 36
+    3300638: rollers3 37
+    3300640: rollers3 38
+    3300642: rollers3 39
+    3300644: rollers3 4
+    3300646: rollers3 40
+    3300648: rollers3 41
+    3300650: rollers3 42
+    3300652: rollers3 43
+    3300654: rollers3 5
+    3300656: rollers3 6
+    3300658: rollers3 7
+    3300660: rollers3 8
+    3300662: rollers3 9
+    3300664: rollers4
+    3300666: rollers4 1
+    3300668: rollers4 10
+    3300670: rollers4 11
+    3300672: rollers4 12
+    3300674: rollers4 13
+    3300676: rollers4 14
+    3300678: rollers4 15
+    3300680: rollers4 16
+    3300682: rollers4 17
+    3300684: rollers4 18
+    3300686: rollers4 19
+    3300688: rollers4 2
+    3300690: rollers4 20
+    3300692: rollers4 21
+    3300694: rollers4 22
+    3300696: rollers4 23
+    3300698: rollers4 24
+    3300700: rollers4 25
+    3300702: rollers4 26
+    3300704: rollers4 27
+    3300706: rollers4 28
+    3300708: rollers4 29
+    3300710: rollers4 3
+    3300712: rollers4 30
+    3300714: rollers4 31
+    3300716: rollers4 32
+    3300718: rollers4 33
+    3300720: rollers4 34
+    3300722: rollers4 35
+    3300724: rollers4 36
+    3300726: rollers4 37
+    3300728: rollers4 38
+    3300730: rollers4 39
+    3300732: rollers4 4
+    3300734: rollers4 40
+    3300736: rollers4 41
+    3300738: rollers4 42
+    3300740: rollers4 43
+    3300742: rollers4 5
+    3300744: rollers4 6
+    3300746: rollers4 7
+    3300748: rollers4 8
+    3300750: rollers4 9
+    3300752: rollers5
+    3300754: rollers5 1
+    3300756: rollers5 10
+    3300758: rollers5 11
+    3300760: rollers5 12
+    3300762: rollers5 13
+    3300764: rollers5 14
+    3300766: rollers5 15
+    3300768: rollers5 16
+    3300770: rollers5 17
+    3300772: rollers5 18
+    3300774: rollers5 19
+    3300776: rollers5 2
+    3300778: rollers5 20
+    3300780: rollers5 21
+    3300782: rollers5 22
+    3300784: rollers5 23
+    3300786: rollers5 24
+    3300788: rollers5 25
+    3300790: rollers5 26
+    3300792: rollers5 27
+    3300794: rollers5 28
+    3300796: rollers5 29
+    3300798: rollers5 3
+    3300800: rollers5 30
+    3300802: rollers5 31
+    3300804: rollers5 32
+    3300806: rollers5 33
+    3300808: rollers5 34
+    3300810: rollers5 35
+    3300812: rollers5 36
+    3300814: rollers5 37
+    3300816: rollers5 38
+    3300818: rollers5 39
+    3300820: rollers5 4
+    3300822: rollers5 40
+    3300824: rollers5 41
+    3300826: rollers5 42
+    3300828: rollers5 43
+    3300830: rollers5 5
+    3300832: rollers5 6
+    3300834: rollers5 7
+    3300836: rollers5 8
+    3300838: rollers5 9
+    3300840: rollers6
+    3300842: rollers6 1
+    3300844: rollers6 10
+    3300846: rollers6 11
+    3300848: rollers6 12
+    3300850: rollers6 13
+    3300852: rollers6 14
+    3300854: rollers6 15
+    3300856: rollers6 16
+    3300858: rollers6 17
+    3300860: rollers6 18
+    3300862: rollers6 19
+    3300864: rollers6 2
+    3300866: rollers6 20
+    3300868: rollers6 21
+    3300870: rollers6 22
+    3300872: rollers6 23
+    3300874: rollers6 24
+    3300876: rollers6 25
+    3300878: rollers6 26
+    3300880: rollers6 27
+    3300882: rollers6 28
+    3300884: rollers6 29
+    3300886: rollers6 3
+    3300888: rollers6 30
+    3300890: rollers6 31
+    3300892: rollers6 32
+    3300894: rollers6 33
+    3300896: rollers6 34
+    3300898: rollers6 35
+    3300900: rollers6 36
+    3300902: rollers6 37
+    3300904: rollers6 38
+    3300906: rollers6 39
+    3300908: rollers6 4
+    3300910: rollers6 40
+    3300912: rollers6 41
+    3300914: rollers6 42
+    3300916: rollers6 43
+    3300918: rollers6 5
+    3300920: rollers6 6
+    3300922: rollers6 7
+    3300924: rollers6 8
+    3300926: rollers6 9
+    3300928: rollers7
+    3300930: rollers7 1
+    3300932: rollers7 10
+    3300934: rollers7 11
+    3300936: rollers7 12
+    3300938: rollers7 13
+    3300940: rollers7 14
+    3300942: rollers7 15
+    3300944: rollers7 16
+    3300946: rollers7 17
+    3300948: rollers7 18
+    3300950: rollers7 19
+    3300952: rollers7 2
+    3300954: rollers7 20
+    3300956: rollers7 21
+    3300958: rollers7 22
+    3300960: rollers7 23
+    3300962: rollers7 24
+    3300964: rollers7 25
+    3300966: rollers7 26
+    3300968: rollers7 27
+    3300970: rollers7 28
+    3300972: rollers7 29
+    3300974: rollers7 3
+    3300976: rollers7 30
+    3300978: rollers7 31
+    3300980: rollers7 32
+    3300982: rollers7 33
+    3300984: rollers7 34
+    3300986: rollers7 35
+    3300988: rollers7 36
+    3300990: rollers7 37
+    3300992: rollers7 38
+    3300994: rollers7 39
+    3300996: rollers7 4
+    3300998: rollers7 40
+    3301000: rollers7 41
+    3301002: rollers7 42
+    3301004: rollers7 43
+    3301006: rollers7 5
+    3301008: rollers7 6
+    3301010: rollers7 7
+    3301012: rollers7 8
+    3301014: rollers7 9
+    3301016: rollers8
+    3301018: rollers8 1
+    3301020: rollers8 10
+    3301022: rollers8 11
+    3301024: rollers8 12
+    3301026: rollers8 13
+    3301028: rollers8 14
+    3301030: rollers8 15
+    3301032: rollers8 16
+    3301034: rollers8 17
+    3301036: rollers8 18
+    3301038: rollers8 19
+    3301040: rollers8 2
+    3301042: rollers8 20
+    3301044: rollers8 21
+    3301046: rollers8 22
+    3301048: rollers8 23
+    3301050: rollers8 24
+    3301052: rollers8 25
+    3301054: rollers8 26
+    3301056: rollers8 27
+    3301058: rollers8 28
+    3301060: rollers8 29
+    3301062: rollers8 3
+    3301064: rollers8 30
+    3301066: rollers8 31
+    3301068: rollers8 32
+    3301070: rollers8 33
+    3301072: rollers8 34
+    3301074: rollers8 35
+    3301076: rollers8 36
+    3301078: rollers8 37
+    3301080: rollers8 38
+    3301082: rollers8 39
+    3301084: rollers8 4
+    3301086: rollers8 40
+    3301088: rollers8 41
+    3301090: rollers8 42
+    3301092: rollers8 43
+    3301094: rollers8 5
+    3301096: rollers8 6
+    3301098: rollers8 7
+    3301100: rollers8 8
+    3301102: rollers8 9
+    3301104: roof
+    3301106: support_beam1
+    3301108: support_beam2
+    3301110: support_beam3
+    3301112: support_rotor1
+    3301114: support_rotor2
+    3301116: support_rotor3
+    3301118: support_rotor4
+    3301120: wall
+    4300000: crane2:base
+    4300002: crane2:joint_rotor4
+    4300004: crane2:arm_part1
+    4300006: crane2:joint_rotor5
+    4300008: crane2:arm_part2
+    4300010: crane2:joint_rotor6
+    4300012: crane2:arm_part3
+    4300014: crane2:grab_left1
+    4300016: crane2:grab_left2
+    4300018: crane2:grab_left3
+    4300020: crane2:grab_left4
+    4300022: crane2:support_rotor1
+    4300024: crane2:support_rotor3
+    4300026: crane2:grab_right4
+    4300028: crane2:grab_right3
+    4300030: crane2:grab_right2
+    4300032: crane2:grab_right1
+    4300034: crane2:support_rotor2
+    4300036: crane2:support_rotor4
+    4300038: crane2:support_beam1
+    4300040: crane2:support_beam2
+    4300042: crane2:support_beam3
+    4300044: base
+    4300046: joint_rotor4
+    4300048: arm_part1
+    4300050: joint_rotor5
+    4300052: arm_part2
+    4300054: joint_rotor6
+    4300056: arm_part3
+    4300058: grab_left1
+    4300060: grab_left2
+    4300062: grab_left3
+    4300064: grab_left4
+    4300066: support_rotor1
+    4300068: support_rotor3
+    4300070: grab_right4
+    4300072: grab_right3
+    4300074: grab_right2
+    4300076: grab_right1
+    4300078: support_rotor2
+    4300080: support_rotor4
+    4300082: support_beam1
+    4300084: support_beam2
+    4300086: support_beam3
+    4300088: wall
+    4300090: plain_gd
+    4300092: roof
+    4300094: conyevor_type2
+    4300096: rollers
+    4300098: rollers1
+    4300100: rollers2
+    4300102: rollers3
+    4300104: rollers4
+    4300106: rollers5
+    4300108: rollers6
+    4300110: rollers7
+    4300112: rollers8
+    4300114: conyevor_type2
+    4300116: rollers
+    4300118: rollers1
+    4300120: rollers2
+    4300122: rollers3
+    4300124: rollers4
+    4300126: rollers5
+    4300128: rollers6
+    4300130: rollers7
+    4300132: rollers8
+    4300134: conyevor_type9
+    4300136: rollers
+    4300138: rollers1
+    4300140: rollers2
+    4300142: rollers3
+    4300144: rollers4
+    4300146: rollers5
+    4300148: rollers6
+    4300150: rollers7
+    4300152: rollers8
+    4300154: conyevor_type2
+    4300156: rollers
+    4300158: rollers1
+    4300160: rollers2
+    4300162: rollers3
+    4300164: rollers4
+    4300166: rollers5
+    4300168: rollers6
+    4300170: rollers7
+    4300172: rollers8
+    4300174: conyevor_type2
+    4300176: rollers
+    4300178: rollers1
+    4300180: rollers2
+    4300182: rollers3
+    4300184: rollers4
+    4300186: rollers5
+    4300188: rollers6
+    4300190: rollers7
+    4300192: rollers8
+    4300194: conyevor_type2
+    4300196: rollers
+    4300198: rollers1
+    4300200: rollers2
+    4300202: rollers3
+    4300204: rollers4
+    4300206: rollers5
+    4300208: rollers6
+    4300210: rollers7
+    4300212: rollers8
+    4300214: conyevor_type11
+    4300216: rollers
+    4300218: rollers1
+    4300220: rollers2
+    4300222: rollers3
+    4300224: rollers4
+    4300226: rollers5
+    4300228: rollers6
+    4300230: rollers7
+    4300232: rollers8
+    4300234: conyevor_type16
+    4300236: rollers
+    4300238: rollers1
+    4300240: rollers2
+    4300242: rollers3
+    4300244: rollers4
+    4300246: rollers5
+    4300248: rollers6
+    4300250: rollers7
+    4300252: rollers8
+    4300254: conyevor_type17
+    4300256: rollers
+    4300258: rollers1
+    4300260: rollers2
+    4300262: rollers3
+    4300264: rollers4
+    4300266: rollers5
+    4300268: rollers6
+    4300270: rollers7
+    4300272: rollers8
+    4300274: conyevor_type18
+    4300276: rollers
+    4300278: rollers1
+    4300280: rollers2
+    4300282: rollers3
+    4300284: rollers4
+    4300286: rollers5
+    4300288: rollers6
+    4300290: rollers7
+    4300292: rollers8
+    4300294: conyevor_type19
+    4300296: rollers
+    4300298: rollers1
+    4300300: rollers2
+    4300302: rollers3
+    4300304: rollers4
+    4300306: rollers5
+    4300308: rollers6
+    4300310: rollers7
+    4300312: rollers8
+    4300314: conyevor_type20
+    4300316: rollers
+    4300318: rollers1
+    4300320: rollers2
+    4300322: rollers3
+    4300324: rollers4
+    4300326: rollers5
+    4300328: rollers6
+    4300330: rollers7
+    4300332: rollers8
+    4300334: conyevor_type21
+    4300336: rollers
+    4300338: rollers1
+    4300340: rollers2
+    4300342: rollers3
+    4300344: rollers4
+    4300346: rollers5
+    4300348: rollers6
+    4300350: rollers7
+    4300352: rollers8
+    4300354: conyevor_type22
+    4300356: rollers
+    4300358: rollers1
+    4300360: rollers2
+    4300362: rollers3
+    4300364: rollers4
+    4300366: rollers5
+    4300368: rollers6
+    4300370: rollers7
+    4300372: rollers8
+    4300374: conyevor_type2
+    4300376: rollers
+    4300378: rollers1
+    4300380: rollers2
+    4300382: rollers3
+    4300384: rollers4
+    4300386: rollers5
+    4300388: rollers6
+    4300390: rollers7
+    4300392: rollers8
+    4300394: conyevor_type2
+    4300396: rollers
+    4300398: rollers1
+    4300400: rollers2
+    4300402: rollers3
+    4300404: rollers4
+    4300406: rollers5
+    4300408: rollers6
+    4300410: rollers7
+    4300412: rollers8
+    4300414: conyevor_type12
+    4300416: rollers
+    4300418: rollers1
+    4300420: rollers2
+    4300422: rollers3
+    4300424: rollers4
+    4300426: rollers5
+    4300428: rollers6
+    4300430: rollers7
+    4300432: rollers8
+    4300434: conyevor_type2
+    4300436: rollers
+    4300438: rollers1
+    4300440: rollers2
+    4300442: rollers3
+    4300444: rollers4
+    4300446: rollers5
+    4300448: rollers6
+    4300450: rollers7
+    4300452: rollers8
+    4300454: conyevor_type2
+    4300456: rollers
+    4300458: rollers1
+    4300460: rollers2
+    4300462: rollers3
+    4300464: rollers4
+    4300466: rollers5
+    4300468: rollers6
+    4300470: rollers7
+    4300472: rollers8
+    4300474: conyevor_type2
+    4300476: rollers
+    4300478: rollers1
+    4300480: rollers2
+    4300482: rollers3
+    4300484: rollers4
+    4300486: rollers5
+    4300488: rollers6
+    4300490: rollers7
+    4300492: rollers8
+    4300494: conyevor_type2
+    4300496: rollers
+    4300498: rollers1
+    4300500: rollers2
+    4300502: rollers3
+    4300504: rollers4
+    4300506: rollers5
+    4300508: rollers6
+    4300510: rollers7
+    4300512: rollers8
+    4300514: conyevor_type2
+    4300516: rollers
+    4300518: rollers1
+    4300520: rollers2
+    4300522: rollers3
+    4300524: rollers4
+    4300526: rollers5
+    4300528: rollers6
+    4300530: rollers7
+    4300532: rollers8
+    4300534: conyevor_type10
+    4300536: rollers
+    4300538: rollers1
+    4300540: rollers2
+    4300542: rollers3
+    4300544: rollers4
+    4300546: rollers5
+    4300548: rollers6
+    4300550: rollers7
+    4300552: rollers8
+    4300554: conyevor_type2
+    4300556: rollers
+    4300558: rollers1
+    4300560: rollers2
+    4300562: rollers3
+    4300564: rollers4
+    4300566: rollers5
+    4300568: rollers6
+    4300570: rollers7
+    4300572: rollers8
+    4300574: conyevor_type2
+    4300576: rollers
+    4300578: rollers1
+    4300580: rollers2
+    4300582: rollers3
+    4300584: rollers4
+    4300586: rollers5
+    4300588: rollers6
+    4300590: rollers7
+    4300592: rollers8
+    4300594: conyevor_type2
+    4300596: rollers
+    4300598: rollers1
+    4300600: rollers2
+    4300602: rollers3
+    4300604: rollers4
+    4300606: rollers5
+    4300608: rollers6
+    4300610: rollers7
+    4300612: rollers8
+    4300614: conyevor_type2
+    4300616: rollers
+    4300618: rollers1
+    4300620: rollers2
+    4300622: rollers3
+    4300624: rollers4
+    4300626: rollers5
+    4300628: rollers6
+    4300630: rollers7
+    4300632: rollers8
+    4300634: conyevor_type2
+    4300636: rollers
+    4300638: rollers1
+    4300640: rollers2
+    4300642: rollers3
+    4300644: rollers4
+    4300646: rollers5
+    4300648: rollers6
+    4300650: rollers7
+    4300652: rollers8
+    4300654: conyevor_type13
+    4300656: rollers
+    4300658: rollers1
+    4300660: rollers2
+    4300662: rollers3
+    4300664: rollers4
+    4300666: rollers5
+    4300668: rollers6
+    4300670: rollers7
+    4300672: rollers8
+    4300674: conyevor_type2
+    4300676: rollers
+    4300678: rollers1
+    4300680: rollers2
+    4300682: rollers3
+    4300684: rollers4
+    4300686: rollers5
+    4300688: rollers6
+    4300690: rollers7
+    4300692: rollers8
+    4300694: conyevor_type2
+    4300696: rollers
+    4300698: rollers1
+    4300700: rollers2
+    4300702: rollers3
+    4300704: rollers4
+    4300706: rollers5
+    4300708: rollers6
+    4300710: rollers7
+    4300712: rollers8
+    4300714: conyevor_type14
+    4300716: rollers
+    4300718: rollers1
+    4300720: rollers2
+    4300722: rollers3
+    4300724: rollers4
+    4300726: rollers5
+    4300728: rollers6
+    4300730: rollers7
+    4300732: rollers8
+    4300734: conyevor_type2
+    4300736: rollers
+    4300738: rollers1
+    4300740: rollers2
+    4300742: rollers3
+    4300744: rollers4
+    4300746: rollers5
+    4300748: rollers6
+    4300750: rollers7
+    4300752: rollers8
+    4300754: conyevor_type2
+    4300756: rollers
+    4300758: rollers1
+    4300760: rollers2
+    4300762: rollers3
+    4300764: rollers4
+    4300766: rollers5
+    4300768: rollers6
+    4300770: rollers7
+    4300772: rollers8
+    4300774: conyevor_type2
+    4300776: rollers
+    4300778: rollers1
+    4300780: rollers2
+    4300782: rollers3
+    4300784: rollers4
+    4300786: rollers5
+    4300788: rollers6
+    4300790: rollers7
+    4300792: rollers8
+    4300794: conyevor_type2
+    4300796: rollers
+    4300798: rollers1
+    4300800: rollers2
+    4300802: rollers3
+    4300804: rollers4
+    4300806: rollers5
+    4300808: rollers6
+    4300810: rollers7
+    4300812: rollers8
+    4300814: conyevor_type2
+    4300816: rollers
+    4300818: rollers1
+    4300820: rollers2
+    4300822: rollers3
+    4300824: rollers4
+    4300826: rollers5
+    4300828: rollers6
+    4300830: rollers7
+    4300832: rollers8
+    4300834: conyevor_type3
+    4300836: rollers
+    4300838: rollers1
+    4300840: rollers2
+    4300842: rollers3
+    4300844: rollers4
+    4300846: rollers5
+    4300848: rollers6
+    4300850: rollers7
+    4300852: rollers8
+    4300854: conyevor_type6
+    4300856: rollers
+    4300858: rollers1
+    4300860: rollers2
+    4300862: rollers3
+    4300864: rollers4
+    4300866: rollers5
+    4300868: rollers6
+    4300870: rollers7
+    4300872: rollers8
+    4300874: conyevor_type5
+    4300876: rollers
+    4300878: rollers1
+    4300880: rollers2
+    4300882: rollers3
+    4300884: rollers4
+    4300886: rollers5
+    4300888: rollers6
+    4300890: rollers7
+    4300892: rollers8
+    4300894: conyevor_type4
+    4300896: rollers
+    4300898: rollers1
+    4300900: rollers2
+    4300902: rollers3
+    4300904: rollers4
+    4300906: rollers5
+    4300908: rollers6
+    4300910: rollers7
+    4300912: rollers8
+    4300914: conyevor_type7
+    4300916: rollers
+    4300918: rollers1
+    4300920: rollers2
+    4300922: rollers3
+    4300924: rollers4
+    4300926: rollers5
+    4300928: rollers6
+    4300930: rollers7
+    4300932: rollers8
+    4300934: conyevor_type8
+    4300936: rollers
+    4300938: rollers1
+    4300940: rollers2
+    4300942: rollers3
+    4300944: rollers4
+    4300946: rollers5
+    4300948: rollers6
+    4300950: rollers7
+    4300952: rollers8
+    4300954: conyevor_type15
+    4300956: rollers
+    4300958: rollers1
+    4300960: rollers2
+    4300962: rollers3
+    4300964: rollers4
+    4300966: rollers5
+    4300968: rollers6
+    4300970: rollers7
+    4300972: rollers8
+    4300974: Jar19
+    4300976: Jar
+    4300978: Jar11
+    4300980: Jar12
+    4300982: Jar1
+    4300984: Jar13
+    4300986: Jar14
+    4300988: Jar7
+    4300990: Jar15
+    4300992: Jar16
+    4300994: Jar8
+    4300996: Jar17
+    4300998: Jar18
+    4301000: Jar20
+    4301002: Jar21
+    4301004: Jar22
+    4301006: Jar23
+    4301008: Jar6
+    4301010: Jar9
+    4301012: Jar10
+    4301014: Jar24
+    4301016: Jar25
+    4301018: Jar5
+    4301020: Jar26
+    4301022: Jar27
+    4301024: Jar4
+    4301026: Jar28
+    4301028: Jar29
+    4301030: Jar30
+    4301032: Jar31
+    4301034: Jar2
+    4301036: Jar32
+    4301038: Jar33
+    4301040: Jar3
+    4301042: Jar34
+    4301044: Jar35
+    4301046: Jar36
+    4301048: Jar37
+    4301050: Jar38
+    4301052: Jar39
+    4301054: Jar40
+    4301056: Jar41
+    4301058: Jar42
+    4301060: Jar43
+    4301062: Jar44
+    4301064: Jar45
+    4301066: Jar46
+    4301068: Jar47
+    4301070: Jar48
+    4301072: Jar49
+    4301074: Jar50
+    4301076: Jar51
+    4301078: Jar52
+    4301080: Jar53
+    4301082: Jar54
+    4301084: Jar55
+    4301086: Jar56
+    4301088: Jar58
+    4301090: Jar57
+    4301092: Jar60
+    4301094: Jar59
+    4301096: Jar61
+    4301098: Jar62
+    4301100: Jar63
+    4301102: Jar64
+    4301104: Jar65
+    4301106: Jar66
+    4301108: Jar67
+    4301110: Jar68
+    4301112: Jar69
+    4301114: Jar70
+    4301116: Jar72
+    4301118: Jar73
+    4301120: Jar74
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -22,6 +22,8 @@ private var dialogue = true;
 
 private var timer:float;
 private var menuB:Button;
+private var menuCtrl:MenuController;
+private var menuWin: GameObject;
 
 function Start () {
 	levelManager = gameObject.GetComponent(NextLevel);
@@ -31,7 +33,12 @@ function Start () {
 	girlBubble = GameObject.Find("girl/girlBubble").GetComponent(Animator);
 	//timBubbleAnim = GameObject.Find("timBubble").GetComponent(Animator);
 	timTalk = GameObject.Find("timBubble").GetComponent(TimTalk);
+
+	menuCtrl = GameObject.Find("MenuCTRL").GetComponent(MenuController);
+	menuWin = GameObject.Find("canvas/Menu");
 	menuB = GameObject.Find("MenuButton").GetComponent(Button);
+
+	menuB.onClick.AddListener( function() { menuCtrl.openWindow(menuWin);});
 	menuB.interactable = false;
 
 

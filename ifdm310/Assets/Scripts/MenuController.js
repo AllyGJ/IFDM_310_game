@@ -7,10 +7,10 @@ private var volume:float;
 
 private var slide: Slider;
 
-public static var instance = null;
+public static var menuCtrl = null;
 function Awake(){
-	if(instance == null) instance = this;
-	else if(instance != null)  Destroy(gameObject);
+	if(menuCtrl == null) menuCtrl = this;
+	else if(menuCtrl != null)  Destroy(gameObject);
 
 	DontDestroyOnLoad(this);
 }
@@ -41,7 +41,6 @@ function closeWindow(window:GameObject){
 
 function openWindow(window:GameObject){
 	window.SetActive(true);
-	//print("click!");
 }
 
 function setMusic(tog: Toggle){
@@ -51,6 +50,5 @@ function setMusic(tog: Toggle){
 
 function setVolume(slide: Slider){
 	volume = slide.value;
-	//print(volume);
 	SoundManager.instance.SetVolume(volume);
 }

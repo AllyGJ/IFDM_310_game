@@ -23,8 +23,19 @@ private var newScene: boolean;
 private var leaves:GameObject;
 private var gears:GameObject;
 
+var runGravel: AudioClip;
+var runConcrete: AudioClip;
+var timSounds : AudioClip;
+
 
 function Start(){
+	runGravel = LoadSound("runGravel.mp3");
+	runConcrete = LoadSound("runConcrete.mp3");
+	timSounds = LoadSound("timTalk.mp3");
+	TimTalk.instance.setSound(timSounds);
+
+	GirlMove.instance.setRunSound(runGravel);
+
 	scene = GetComponent(LoadScene);
 	leaves = GameObject.Find("canvas/Leaves");
 	gears = GameObject.Find("canvas/Gears");
@@ -50,6 +61,12 @@ function Start(){
 
 	currentScene = SceneManager.GetActiveScene();
 
+}
+
+@MenuItem("AssetDatabase/LoadAssetExample")
+public static function LoadSound(name: String)
+{
+    return AssetDatabase.LoadAssetAtPath("Assets/Sounds/"+name, AudioClip) as AudioClip;
 }
 
 function Update () {
@@ -99,6 +116,7 @@ function updateScenes(){
 		gears.SetActive(false);
 		floorOb.resizeFloor(20,6);
 		lastLvl = false;
+		GirlMove.instance.setRunSound(runGravel);
 	}
 	else if(currentScene.name == "Street1"){
 		leftScene = "Forest";
@@ -107,6 +125,7 @@ function updateScenes(){
 		gears.SetActive(true);
 		floorOb.resizeFloor(60,6);
 		lastLvl = false;
+		GirlMove.instance.setRunSound(runConcrete);
 	}
 	else if(currentScene.name == "FinalStage"){
 		leftScene = "Street1";
@@ -135,7 +154,7 @@ function updateScenes(){
 
 /**************************************************************************/
 public function getCurScene(){
-	return currentScene.name;
+	return SceneManager.GetActiveScene().name;
 }
 
 public function getLvl(){
@@ -152,6 +171,9 @@ public function restartLevel()
 	t1m.transform.position.x = spawn1.transform.position.x - 1;
 	t1m.transform.position.y = spawn1.transform.position.y;
 
-
 }
+
+
+
+
 

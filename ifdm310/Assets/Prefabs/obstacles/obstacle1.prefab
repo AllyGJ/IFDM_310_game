@@ -239,8 +239,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1831075846700156}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.13, y: 4.7, z: -19.0035}
-  m_LocalScale: {x: 0.6, y: 0.5, z: 0.6739756}
+  m_LocalPosition: {x: 24.61, y: 6.96, z: 0}
+  m_LocalScale: {x: 0.5110295, y: 0.42585787, z: 0.57403564}
   m_Children: []
   m_Father: {fileID: 4989747920077056}
   m_RootOrder: 2
@@ -252,7 +252,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1911059119858422}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.01, y: -6.87, z: -19.0035}
+  m_LocalPosition: {x: 23.01, y: -6.87, z: 0}
   m_LocalScale: {x: 0.6, y: 0.5, z: 0.6739756}
   m_Children: []
   m_Father: {fileID: 4989747920077056}
@@ -308,7 +308,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1925983719198868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -106.1, y: 3.0826888, z: 0}
+  m_LocalPosition: {x: 133.6, y: 2.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4898566570801978}
@@ -365,12 +365,12 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -0.31677157, y: -0.42591968}
-      - {x: -2.2243438, y: -4.696307}
+    - - {x: -6.640147, y: -10.088657}
+      - {x: -5.098618, y: -10.60575}
       - {x: -5.7971983, y: -12.615717}
       - {x: -7.896031, y: -13.130561}
       - {x: -9.69991, y: -12.44535}
-      - {x: -6.003724, y: -7.592543}
+      - {x: -7.7282915, y: -10.147978}
 --- !u!60 &60957066273350734
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -385,12 +385,12 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -0.31677157, y: -0.42591968}
-      - {x: -2.2243438, y: -4.696307}
+    - - {x: -6.7046933, y: -10.715978}
+      - {x: -5.2144284, y: -11.0990095}
       - {x: -5.7971983, y: -12.615717}
       - {x: -7.896031, y: -13.130561}
       - {x: -9.69991, y: -12.44535}
-      - {x: -6.003724, y: -7.592543}
+      - {x: -8.314252, y: -10.870116}
 --- !u!61 &61241981992193652
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -688,7 +688,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -474390957
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fde8fbcf2bafe48cfad7c75187d7359b, type: 3}
   m_Color: {r: 0.7941176, g: 0.7941176, b: 0.7941176, a: 1}
   m_FlipX: 0

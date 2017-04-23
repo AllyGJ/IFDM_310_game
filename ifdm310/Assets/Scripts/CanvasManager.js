@@ -1,17 +1,19 @@
 ﻿#pragma strict
 
 
-public static var instance = null;
+public static var canvas = null;
 
 public var deadWindow: GameObject;
+public var menu: GameObject;
+public var settings: GameObject;
 
 private var level: NextLevel;
 private var game: GamePlay;
 
 function Awake(){
 
-	if(instance == null) instance = this;
-	else if(instance != null)  Destroy(gameObject);
+	if(canvas == null) canvas = this;
+	else if(canvas != null)  Destroy(gameObject);
 
 	DontDestroyOnLoad(this);
 
@@ -20,6 +22,9 @@ function Awake(){
 
 function Start () {
 	deadWindow.SetActive(false);
+	menu.SetActive(false);
+	settings.SetActive(false);
+
 	level = GameObject.Find("GameManager").GetComponent(NextLevel);
 	game = GameObject.Find("GameManager").GetComponent(GamePlay);
 }
@@ -35,6 +40,7 @@ public function show(val : boolean)
 	deadWindow.SetActive(val);
 	pause();
 }
+
 
 public function startOver(){
 	show(false);

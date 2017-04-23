@@ -12,13 +12,15 @@ public var bossChat: Sprite[];
  var index = 1;
 
 
- var introIsOver = true; //change back when done testing
+ var introIsOver = false; 
  var scared = false;
  var firstBubble = true;
  var lastLevel = false;
 
+ private var speakSound:AudioClip;
 
-public static var instance = null;
+
+public static var instance: TimTalk = null;
 
 private var cam : cameraMove;
 
@@ -58,11 +60,13 @@ function Update () {
 
 	    //Introduction speech
 		if(!introIsOver){
+			SoundManager.instance.playSingleTim(speakSound);
 			if(index >= intro.length) {
 				GetComponent(SpriteRenderer).sprite = empty;
 				index = 0;
 				introIsOver = true;
 				cam.setZoomOut(true);
+				SoundManager.instance.efxSource2.Stop();
 			}else{
 				GetComponent(SpriteRenderer).sprite = intro[index];
 				index++;
@@ -72,12 +76,14 @@ function Update () {
 
 		//Scared speech
 		else if(scared){
+			SoundManager.instance.playSingleTim(speakSound);
 			firstBubble = false;
 			if(index >= lightTalk.length) {
 				GetComponent(SpriteRenderer).sprite = empty;
 				index = 0;
 				scared = false;
 				firstBubble = true;
+				SoundManager.instance.efxSource2.Stop();
 			}else{
 				GetComponent(SpriteRenderer).sprite = lightTalk[index];
 				index++;
@@ -85,6 +91,7 @@ function Update () {
 		}
 
 		else if(lastLevel){
+			SoundManager.instance.playSingleTim(speakSound);
 			firstBubble = false;
 			if(index >= bossChat.length) {
 				GetComponent(SpriteRenderer).sprite = empty;
@@ -92,6 +99,7 @@ function Update () {
 				lastLevel = false;
 				firstBubble = true;
 				cam.setZoomOut(true);
+				SoundManager.instance.efxSource2.Stop();
 			}else{
 				GetComponent(SpriteRenderer).sprite = bossChat[index];
 				index++;
@@ -118,4 +126,7 @@ public function getLevelFlag(){
 	return lastLevel;
 }
 
+public function setSound(clip:AudioClip){
+	speakSound = clip;
+}
 

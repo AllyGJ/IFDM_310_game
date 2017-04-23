@@ -1,8 +1,9 @@
 ﻿#pragma strict
 
+
 public var anim: Animator;
 private var timTalk: TimTalk;
-private var deathWindow: CanvasManager;
+private var canvas: CanvasManager;
 
 public var facingRight = true;
 public var speed:float;
@@ -14,7 +15,10 @@ private var moving = false;
 private var extra = 0;
 private var conveyorMove = false;
 
-public static var instance = null;
+public static var instance: GirlMove = null;
+
+private var sound : AudioSource;
+var runSound: AudioClip;
 
 function Awake(){
 
@@ -29,7 +33,9 @@ function Start () {
 	rb = GetComponent.<Rigidbody2D>();	
 	anim = GetComponent(Animator);
 	timTalk = GameObject.Find("timBubble").GetComponent(TimTalk);
-	deathWindow = GameObject.Find("canvas").GetComponent(CanvasManager);
+	canvas = GameObject.Find("canvas").GetComponent(CanvasManager);
+	runSound = GameManager.instance.GetComponent(NextLevel).LoadSound("runGravel.mp3");
+
 }
 
 function Update () {
@@ -39,14 +45,26 @@ function Update () {
 
 	rb.velocity = new Vector2(moveH*speed + extra, moveV*speed);
 
-//	if(Mathf.Abs(rb.velocity.x) > 0) anim.SetFloat("Speed",Mathf.Abs(rb.velocity.x));
-//	else if(Mathf.Abs(rb.velocity.y) > 0) anim.SetFloat("Speed",Mathf.Abs(rb.velocity.y));
-//	else anim.SetFloat("Speed",0);
+//	sound.clip = runSound;
 
-	if(Mathf.Abs(moveH) > 0) anim.SetFloat("Speed",Mathf.Abs(rb.velocity.x));
-	else if(Mathf.Abs(moveV) > 0) anim.SetFloat("Speed",Mathf.Abs(rb.velocity.y));
-	else anim.SetFloat("Speed",0);
+	SoundManager.instance.SetVolEffects(.5);
 
+	if(Mathf.Abs(moveH) > 0) {
+		anim.SetFloat("Speed",Mathf.Abs(rb.velocity.x));
+		moving = true;
+	}
+	else if(Mathf.Abs(moveV) > 0){ 
+		anim.SetFloat("Speed",Mathf.Abs(rb.velocity.y));
+		moving = true;
+	}
+	else {
+		anim.SetFloat("Speed",0);
+		moving = false;
+	}
+
+	if(moving) {
+		SoundManager.instance.playSingleGirl(runSound);
+	}else SoundManager.instance.efxSource1.Stop();
 
 
 	//Facing right way
@@ -65,6 +83,11 @@ function Flip()
      facingRight = !facingRight;
  }
 
+ function loadButtonImg(){
+    var button: Sprite[] = Resources.LoadAll.<Sprite>("redButton");
+    return button[1];
+ }
+
  function OnTriggerEnter2D(col:Collider2D){
  	if(col.gameObject.tag == "bossLevel"){
  		print("entering boss level");
@@ -72,12 +95,23 @@ function Flip()
  	}
 
 
-	if(col.gameObject.tag == "Robot" || col.gameObject.tag == "lazerBeam")
+	if(col.gameObject.tag == "Robot" || col.gameObject.tag == "lazerBeam" || col.gameObject.tag == "spikes")
 	{
 		print("DEAD");
-		deathWindow.show(true);
+		canvas.show(true);
 	}
 
+
+	if(col.gameObject.tag == "redbutton"){
+		col.gameObject.GetComponent.<SpriteRenderer>().sprite = loadButtonImg();
+		var door = GameObject.Find("Foreground/slantedDoor");
+		door.transform.position.y += 10;
+	}
+
+
+}
+
+function OnTriggerStay2D(col: Collider2D){
 	if(conveyorMove){
 		if(col.gameObject.tag == "fwd"){
 			print("moving forwards");
@@ -90,7 +124,6 @@ function Flip()
 			extra = -8;
 		}
 	}
-
 }
 
 function OnTriggerExit2D(col:Collider2D){
@@ -109,5 +142,10 @@ function OnTriggerExit2D(col:Collider2D){
  public function setConveyor(val:boolean){
  	conveyorMove = val;
  }
+
+ public function setRunSound(clip: AudioClip){
+ 	runSound = clip;
+ }
+
 
 
