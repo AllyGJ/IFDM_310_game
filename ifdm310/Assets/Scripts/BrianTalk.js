@@ -11,35 +11,40 @@ public var brianChat: Sprite[];
  private var girl: GameObject;
  private var tim: GameObject;
  private var tAnim:Animator;
-var lasers: GameObject[];
-var lScripts: ShootLasers[];
+
 
  private var panToBrian = false;
  private var panToGirl = false;
  private var timDies = false;
  private var done = false;
- var removeTim = false;
+ private var removeTim = false;
+
+ private var explosion: AudioClip;
+ private var brianSpeak : AudioClip;
+
 
  var nextTime = 0;
 
 function Start () {
+	explosion = LoadSound("explosion.mp3");
+	brianSpeak = LoadSound("brianSpeak.wav");
+
 	cam = GameObject.Find("camera").GetComponent(cameraMove);
 	girl = GameObject.Find("girl");
 	tim = GameObject.Find("t1m");
-	lasers = GameObject.FindGameObjectsWithTag("lazerBox");
-	//laserScripts();
+
+
 
 	tAnim = tim.GetComponent(Animator);
 	GetComponent(SpriteRenderer).sprite = brianChat[0];
 }
 
-//private function laserScripts(){
-//	var index = 0;
-//	for(var l in lasers){
-//		lScripts[index] = l.GetComponent(ShootLasers);
-//		index++;
-//	}
-//}
+@MenuItem("AssetDatabase/LoadAssetExample")
+public static function LoadSound(name: String)
+{
+    return AssetDatabase.LoadAssetAtPath("Assets/Sounds/"+name, AudioClip) as AudioClip;
+}
+
 
 function Update () {
 	
@@ -73,8 +78,7 @@ function Update () {
 
 		if(done){ 
 			cam.stopPan();
-			girl.GetComponent(GirlMove).setConveyor(true);
-			//turnOnLazers();
+			GirlMove.instance.setConveyor(true);
 
 		}
 
@@ -83,7 +87,7 @@ function Update () {
 
 	if(Input.GetKeyDown(KeyCode.Space)){
 		if(talk && repeat){
-			
+			SoundManager.instance.playMainRobot(brianSpeak);
 			if(index >= brianChat.length) {
 				GetComponent(SpriteRenderer).sprite = empty;
 				index = 0;
@@ -112,20 +116,22 @@ private function showBrian(){
 	var camPos = cam.getCamPos();
 	yield WaitForSeconds(1);
 	cam.zoomOut(90);
-	cam.panCam(new Vector3(transform.position.x, camPos.y, camPos.z), 100);
+	cam.panCam(new Vector3(transform.position.x, transform.position.y, camPos.z), 100);
 }
 
 private function showGirl(){
+	SoundManager.instance.mainRobot.Stop();
 	var camPos = cam.getCamPos();
 	yield WaitForSeconds(1);
-	cam.zoomIn(60);	
-	cam.panCam(new Vector3(girl.transform.position.x,girl.transform.position.y,camPos.z),100);
+	cam.zoomIn(75);	
+	cam.panCam(new Vector3(girl.transform.position.x, girl.transform.position.y,camPos.z),100);
 }
 
 private function timExplodes(){
 	tAnim = tim.GetComponent(Animator);
 	//show him exploding
 	tAnim.SetTrigger("explode");
+	SoundManager.instance.playBreakable(explosion);
 	print("Tim Explodes");
 
 	timDies = false;
@@ -138,15 +144,12 @@ private function timExplodes(){
 
 private function stopExplosion(){
 	tAnim.enabled = false;
+	SoundManager.instance.explosions.Stop();
 	//Destroy(tim);
 	tim.SetActive(false);
 }
 
-//private function turnOnLazers(){
-//	for(var l in lScripts){
-//		l.turnOnLasers(true);
-//	}
-//}
+/*************************************************************/
 
 public function startTalk(val:boolean){
 	talk = val;

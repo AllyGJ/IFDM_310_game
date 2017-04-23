@@ -102,7 +102,6 @@ GameObject:
   - component: {fileID: 727848}
   - component: {fileID: 727847}
   - component: {fileID: 727846}
-  - component: {fileID: 727845}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -110,13 +109,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &727845
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 727844}
-  m_Enabled: 1
 --- !u!124 &727846
 Behaviour:
   m_ObjectHideFlags: 0
@@ -344,7 +336,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:

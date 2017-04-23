@@ -26,14 +26,17 @@ private var gears:GameObject;
 var runGravel: AudioClip;
 var runConcrete: AudioClip;
 var timSounds : AudioClip;
+var explosion : AudioClip;
+
 
 
 function Start(){
 	runGravel = LoadSound("runGravel.mp3");
 	runConcrete = LoadSound("runConcrete.mp3");
 	timSounds = LoadSound("timTalk.mp3");
-	TimTalk.instance.setSound(timSounds);
+	explosion = LoadSound("explosion.mp3");
 
+	TimTalk.instance.setSound(timSounds);
 	GirlMove.instance.setRunSound(runGravel);
 
 	scene = GetComponent(LoadScene);
@@ -174,6 +177,8 @@ public function restartLevel()
 }
 
 
-
+public function getExplosion(){
+	return explosion;
+}
 
 

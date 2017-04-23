@@ -50,5 +50,5 @@ function setMusic(tog: Toggle){
 
 function setVolume(slide: Slider){
 	volume = slide.value;
-	SoundManager.instance.SetVolume(volume);
+	SoundManager.instance.SetAllVolume(volume);
 }

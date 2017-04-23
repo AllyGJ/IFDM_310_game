@@ -2,8 +2,12 @@
 
 public static var instance:SoundManager = null;
 
-public var efxSource1: AudioSource;
-public var efxSource2: AudioSource;
+public var girlSound: AudioSource;
+public var mainRobot: AudioSource;
+public var robots: AudioSource;
+public var explosions: AudioSource;
+public var conveyors: AudioSource;
+public var lasers: AudioSource;
 public var musicSource: AudioSource;
 
 function Awake(){
@@ -14,40 +18,87 @@ function Awake(){
 	DontDestroyOnLoad(this);
 }
 
-public function playSingleGirl(clip: AudioClip){
-	if(!efxSource1.isPlaying){
-		efxSource1.clip = clip;
-		efxSource1.Play();
+public function playGirl(clip: AudioClip){
+	if(!girlSound.isPlaying){
+		girlSound.clip = clip;
+		girlSound.Play();
 	}
 }
 
-public function playSingleTim(clip: AudioClip){
-	if(!efxSource2.isPlaying){
-		efxSource2.clip = clip;
-		efxSource2.Play();
+public function playMainRobot(clip: AudioClip){
+	if(!mainRobot.isPlaying){
+		mainRobot.clip = clip;
+		mainRobot.Play();
 	}
 }
 
-public function SetVolume(volume:float){
-	efxSource1.volume = volume;
-	efxSource2.volume = volume;
+public function playBreakable(clip: AudioClip){
+	if(!explosions.isPlaying){
+		explosions.clip = clip;
+		explosions.Play();
+	}
+}
+
+public function playRobotWalk(clip: AudioClip){
+	if(!robots.isPlaying){
+		robots.clip = clip;
+		robots.Play();
+	}
+}
+
+public function playConveyor(clip: AudioClip){
+	if(!conveyors.isPlaying){
+		conveyors.clip = clip;
+		conveyors.Play();
+	}
+}
+
+public function playLasers(clip: AudioClip){
+	if(!lasers.isPlaying){
+		lasers.clip = clip;
+		lasers.Play();
+	}
+}
+public function SetAllVolume(volume:float){
+	var diff = 0.5;
+	girlSound.volume = volume - diff;
+	mainRobot.volume = volume - diff;
+	robots.volume = volume - diff;
+	explosions.volume = volume - diff;
+	conveyors.volume = volume - diff;
+	lasers.volume = volume - diff;
 	musicSource.volume = volume;
 }
 
-public function SetVolEffects(volume:float){
-	efxSource1.volume = volume;
-	efxSource2.volume = volume;
+
+public function changeMusic(clip:AudioClip){
+	musicSource.clip = clip;
 }
 
 public function TurnOn(val:boolean){
 	if(val){
-		efxSource1.Play();
-		efxSource2.Play();
+		girlSound.Play();
+		mainRobot.Play();
+		robots.Play();
+		explosions.Play();
+		conveyors.Play();
+		lasers.Play();
 		musicSource.Play();
 	}
 	else{
-		efxSource1.Pause();
-		efxSource2.Pause();
+		girlSound.Pause();
+		mainRobot.Pause();
+		robots.Pause();
+		explosions.Pause();
+		conveyors.Pause();
+		lasers.Pause();
 		musicSource.Pause();
 	}
 }
+
+public function fadeOut(audio: AudioSource) {
+     if(audio.volume > 0.1)
+     {
+         audio.volume -= 0.4 * Time.deltaTime;
+     }
+ }

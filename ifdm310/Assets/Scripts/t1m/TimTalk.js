@@ -8,16 +8,15 @@ public var intro: Sprite[];
 public var lightTalk: Sprite[];
 public var bossChat: Sprite[];
 
+private var index = 1;
 
- var index = 1;
+private var introIsOver = false; 
+private var scared = false;
+private var firstBubble = true;
+private var lastLevel = false;
 
+private var speakSound:AudioClip;
 
- var introIsOver = false; 
- var scared = false;
- var firstBubble = true;
- var lastLevel = false;
-
- private var speakSound:AudioClip;
 
 
 public static var instance: TimTalk = null;
@@ -60,13 +59,13 @@ function Update () {
 
 	    //Introduction speech
 		if(!introIsOver){
-			SoundManager.instance.playSingleTim(speakSound);
+			SoundManager.instance.playMainRobot(speakSound);
 			if(index >= intro.length) {
 				GetComponent(SpriteRenderer).sprite = empty;
 				index = 0;
 				introIsOver = true;
 				cam.setZoomOut(true);
-				SoundManager.instance.efxSource2.Stop();
+				SoundManager.instance.mainRobot.Stop();
 			}else{
 				GetComponent(SpriteRenderer).sprite = intro[index];
 				index++;
@@ -76,14 +75,14 @@ function Update () {
 
 		//Scared speech
 		else if(scared){
-			SoundManager.instance.playSingleTim(speakSound);
+			SoundManager.instance.playMainRobot(speakSound);
 			firstBubble = false;
 			if(index >= lightTalk.length) {
 				GetComponent(SpriteRenderer).sprite = empty;
 				index = 0;
 				scared = false;
 				firstBubble = true;
-				SoundManager.instance.efxSource2.Stop();
+				SoundManager.instance.mainRobot.Stop();
 			}else{
 				GetComponent(SpriteRenderer).sprite = lightTalk[index];
 				index++;
@@ -91,7 +90,7 @@ function Update () {
 		}
 
 		else if(lastLevel){
-			SoundManager.instance.playSingleTim(speakSound);
+			SoundManager.instance.playMainRobot(speakSound);
 			firstBubble = false;
 			if(index >= bossChat.length) {
 				GetComponent(SpriteRenderer).sprite = empty;
@@ -99,7 +98,7 @@ function Update () {
 				lastLevel = false;
 				firstBubble = true;
 				cam.setZoomOut(true);
-				SoundManager.instance.efxSource2.Stop();
+				SoundManager.instance.mainRobot.Stop();
 			}else{
 				GetComponent(SpriteRenderer).sprite = bossChat[index];
 				index++;

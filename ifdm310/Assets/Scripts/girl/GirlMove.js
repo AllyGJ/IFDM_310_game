@@ -14,11 +14,14 @@ public var rb:Rigidbody2D;
 private var moving = false;
 private var extra = 0;
 private var conveyorMove = false;
+private var brianDead = false;
 
 public static var instance: GirlMove = null;
 
 private var sound : AudioSource;
-var runSound: AudioClip;
+private var runSound: AudioClip;
+private var glassBreak: AudioClip;
+private var conveyor: AudioClip;
 
 function Awake(){
 
@@ -34,8 +37,11 @@ function Start () {
 	anim = GetComponent(Animator);
 	timTalk = GameObject.Find("timBubble").GetComponent(TimTalk);
 	canvas = GameObject.Find("canvas").GetComponent(CanvasManager);
+	glassBreak = GameManager.instance.GetComponent(NextLevel).LoadSound("glassBreak.wav");
 	runSound = GameManager.instance.GetComponent(NextLevel).LoadSound("runGravel.mp3");
+	conveyor = GameManager.instance.GetComponent(NextLevel).LoadSound("conveyor.wav");
 
+	SoundManager.instance.SetAllVolume(1);
 }
 
 function Update () {
@@ -45,9 +51,6 @@ function Update () {
 
 	rb.velocity = new Vector2(moveH*speed + extra, moveV*speed);
 
-//	sound.clip = runSound;
-
-	SoundManager.instance.SetVolEffects(.5);
 
 	if(Mathf.Abs(moveH) > 0) {
 		anim.SetFloat("Speed",Mathf.Abs(rb.velocity.x));
@@ -63,8 +66,8 @@ function Update () {
 	}
 
 	if(moving) {
-		SoundManager.instance.playSingleGirl(runSound);
-	}else SoundManager.instance.efxSource1.Stop();
+		SoundManager.instance.playGirl(runSound);
+	}else SoundManager.instance.girlSound.Stop();
 
 
 	//Facing right way
@@ -90,7 +93,8 @@ function Flip()
 
  function OnTriggerEnter2D(col:Collider2D){
  	if(col.gameObject.tag == "bossLevel"){
- 		print("entering boss level");
+ 		//print("entering boss level");
+ 		SoundManager.instance.girlSound.Stop();
  		timTalk.bossTalk(true);
  	}
 
@@ -104,15 +108,25 @@ function Flip()
 
 	if(col.gameObject.tag == "redbutton"){
 		col.gameObject.GetComponent.<SpriteRenderer>().sprite = loadButtonImg();
-		var door = GameObject.Find("Foreground/slantedDoor");
-		door.transform.position.y += 10;
+		var brian = GameObject.Find("Brian");
+		brian.GetComponent.<SpriteRenderer>().sprite = Resources.Load.<Sprite>("Brian_Broken");
+		if(!brianDead)SoundManager.instance.playBreakable(glassBreak);
+//		var door = GameObject.Find("Foreground/slantedDoor");
+//		door.transform.position.y += 10;
+
+		brianDead = true;
 	}
+
+
+	if(brianDead) finalCutScene();
+
 
 
 }
 
 function OnTriggerStay2D(col: Collider2D){
 	if(conveyorMove){
+		SoundManager.instance.playConveyor(conveyor);
 		if(col.gameObject.tag == "fwd"){
 			print("moving forwards");
 			extra = 8;
@@ -129,8 +143,14 @@ function OnTriggerStay2D(col: Collider2D){
 function OnTriggerExit2D(col:Collider2D){
 	if(col.gameObject.tag == "fwd" || col.gameObject.tag == "backwards"){
 		extra = 0;
+		SoundManager.instance.fadeOut(SoundManager.instance.conveyors);
 	}
 
+}
+
+function finalCutScene(){
+	yield WaitForSeconds(2);
+	GameManager.instance.GetComponent(LoadScene).loadScene("CutScene2");
 }
  /**********************************************************************/
 
