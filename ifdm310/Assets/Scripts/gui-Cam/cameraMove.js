@@ -7,7 +7,7 @@ private var ob:GameObject;
  var MinY: float;
  var MaxY: float;
 
-public static var instance = null;
+public static var instance: CameraMove = null;
 
 public var current:Camera;
 private var minFov = 35f;
@@ -67,14 +67,14 @@ private function grabBounds(){
 
 public function zoomIn(min:float){
 	yield WaitForSeconds(1);
-	if(current.fieldOfView > min) current.fieldOfView -= 0.2;
+	if(current.fieldOfView > min) current.fieldOfView -= 0.3;
 	else if(current.fieldOfView <= min) ready = true;
 	zoomI = false;
 }
 
 public function zoomOut(max:float){
 	yield WaitForSeconds(.8);
-	if(current.fieldOfView < max) current.fieldOfView += 0.2;
+	if(current.fieldOfView < max) current.fieldOfView += 0.3;
 	zoomO = false;
 }
 /*****************************************************************************/

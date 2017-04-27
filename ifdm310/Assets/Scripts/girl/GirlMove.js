@@ -37,11 +37,11 @@ function Start () {
 	anim = GetComponent(Animator);
 	timTalk = GameObject.Find("timBubble").GetComponent(TimTalk);
 	canvas = GameObject.Find("canvas").GetComponent(CanvasManager);
-	glassBreak = GameManager.instance.GetComponent(NextLevel).LoadSound("glassBreak.wav");
-	runSound = GameManager.instance.GetComponent(NextLevel).LoadSound("runGravel.mp3");
-	conveyor = GameManager.instance.GetComponent(NextLevel).LoadSound("conveyor.wav");
+	glassBreak = GameManager.instance.GetComponent(NextLevel).LoadSound("glassBreak");
+	runSound = GameManager.instance.GetComponent(NextLevel).LoadSound("runGravel");
+	conveyor = GameManager.instance.GetComponent(NextLevel).LoadSound("conveyor");
 
-	SoundManager.instance.SetAllVolume(1);
+
 }
 
 function Update () {
@@ -93,16 +93,20 @@ function Flip()
 
  function OnTriggerEnter2D(col:Collider2D){
  	if(col.gameObject.tag == "bossLevel"){
- 		//print("entering boss level");
  		SoundManager.instance.girlSound.Stop();
  		timTalk.bossTalk(true);
  	}
 
 
-	if(col.gameObject.tag == "Robot" || col.gameObject.tag == "lazerBeam" || col.gameObject.tag == "spikes")
+	if(col.gameObject.tag == "Robot")
 	{
 		print("DEAD");
-		canvas.show(true);
+		canvas.show();
+	}
+
+	if(col.gameObject.tag == "lazerBeam" || col.gameObject.tag == "spikes"){
+		print("Ouch!");
+		canvas.showDieByOther();
 	}
 
 
@@ -111,6 +115,7 @@ function Flip()
 		var brian = GameObject.Find("Brian");
 		brian.GetComponent.<SpriteRenderer>().sprite = Resources.Load.<Sprite>("Brian_Broken");
 		if(!brianDead)SoundManager.instance.playBreakable(glassBreak);
+
 //		var door = GameObject.Find("Foreground/slantedDoor");
 //		door.transform.position.y += 10;
 
@@ -118,7 +123,10 @@ function Flip()
 	}
 
 
-	if(brianDead) finalCutScene();
+	if(brianDead) {
+		SoundManager.instance.StopSounds();
+		finalCutScene();
+	}
 
 
 
@@ -150,6 +158,10 @@ function OnTriggerExit2D(col:Collider2D){
 
 function finalCutScene(){
 	yield WaitForSeconds(2);
+	var objects = GameObject.FindObjectsOfType(GameObject);
+ 	for (var o : GameObject in objects) {
+ 		if(o.tag != "soundMan" && o.tag != "menuC") Destroy(o.gameObject);
+ 	}
 	GameManager.instance.GetComponent(LoadScene).loadScene("CutScene2");
 }
  /**********************************************************************/

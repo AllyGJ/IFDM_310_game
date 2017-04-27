@@ -25,13 +25,16 @@ private var menuB:Button;
 private var menuCtrl:MenuController;
 private var menuWin: GameObject;
 
+private var cursor: Texture2D;
+
 function Start () {
+	//SoundManager.instance.SetAllVolume();
+
 	levelManager = gameObject.GetComponent(NextLevel);
 	girl = GameObject.Find("girl");
 	t1m = GameObject.Find("t1m");
 	cam = GameObject.Find("camera");
 	girlBubble = GameObject.Find("girl/girlBubble").GetComponent(Animator);
-	//timBubbleAnim = GameObject.Find("timBubble").GetComponent(Animator);
 	timTalk = GameObject.Find("timBubble").GetComponent(TimTalk);
 
 	menuCtrl = GameObject.Find("MenuCTRL").GetComponent(MenuController);
@@ -50,19 +53,20 @@ function Start () {
 
 	scaredMeter = girl.GetComponent(ScaredMeter);
 
-	//timBubbleAnim.enabled = false;
+	cursor = Resources.Load("hand.png");
+
 
 }
 
 function Update () {
 	timer++;
 
-	if(cam.GetComponent(cameraMove).getCamStatus()){
+	if(CameraMove.instance.getCamStatus()){
 		if(dialogue) {
 			
 			t1m.transform.position = Vector3.Lerp(t1m.transform.position, new Vector3(girl.transform.position.x + 5,
 																					t1m.transform.position.y + 2,
-																					t1m.transform.position.z), 0.02);
+																					t1m.transform.position.z), 0.04);
 			StartCoroutine("beginDialogue");
 
 		}else{
@@ -117,6 +121,17 @@ function checkForImpDiag(){
 		girlScript.enabled = false;
 		scaredMeter.setGameStarted(false);
 	}
+}
+
+function OnMouseOver () {
+	if(gameObject.CompareTag("news")){
+		print("mouse over news");
+		Cursor.SetCursor (cursor, Vector2.zero, CursorMode.Auto);
+	}
+}
+
+function OnMouseExit (){
+	Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 }
 
 /************************************************************************/

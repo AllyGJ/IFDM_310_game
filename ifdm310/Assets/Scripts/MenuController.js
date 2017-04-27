@@ -7,10 +7,11 @@ private var volume:float;
 
 private var slide: Slider;
 
-public static var menuCtrl = null;
+public static var instance:MenuController = null;
+
 function Awake(){
-	if(menuCtrl == null) menuCtrl = this;
-	else if(menuCtrl != null)  Destroy(gameObject);
+	if(instance == null) instance = this;
+	else if(instance != null)  Destroy(gameObject);
 
 	DontDestroyOnLoad(this);
 }
@@ -29,6 +30,7 @@ function Update () {
 
 		else if(curScene == "CutScene2"){
 			load.loadScene("Credits");
+			SoundManager.instance.StopSounds();
 		}
 	}
 
@@ -51,4 +53,8 @@ function setMusic(tog: Toggle){
 function setVolume(slide: Slider){
 	volume = slide.value;
 	SoundManager.instance.SetAllVolume(volume);
+}
+
+public function GetVolume(){
+	return volume;
 }

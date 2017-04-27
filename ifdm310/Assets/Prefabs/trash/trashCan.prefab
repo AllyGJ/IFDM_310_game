@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4870959321559950}
   - component: {fileID: 212859092439191148}
-  - component: {fileID: 61034757229666408}
   m_Layer: 8
   m_Name: trashCan
   m_TagString: Untagged
@@ -34,27 +33,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1924026868636876}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.13, y: 4.7, z: -19.0035}
-  m_LocalScale: {x: 0.6, y: 0.5, z: 0.6739756}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -142.50613, y: -4.8, z: 0}
+  m_LocalScale: {x: 0.5380881, y: 0.5380881, z: 0.5380881}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61034757229666408
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1924026868636876}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: -0.06744745, y: -4.2655687}
-  serializedVersion: 2
-  m_Size: {x: 6.2933774, y: 2.9923048}
 --- !u!212 &212859092439191148
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -84,9 +69,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -474390957
+  m_SortingLayerID: -850632943
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: fde8fbcf2bafe48cfad7c75187d7359b, type: 3}
-  m_Color: {r: 0.7941176, g: 0.7941176, b: 0.7941176, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 7790e62c414dd4590888c3498d16aeed, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

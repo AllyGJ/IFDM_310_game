@@ -23,6 +23,9 @@ private var newScene: boolean;
 private var leaves:GameObject;
 private var gears:GameObject;
 
+var music1: AudioClip;
+var music2: AudioClip;
+var music3: AudioClip;
 var runGravel: AudioClip;
 var runConcrete: AudioClip;
 var timSounds : AudioClip;
@@ -31,10 +34,13 @@ var explosion : AudioClip;
 
 
 function Start(){
-	runGravel = LoadSound("runGravel.mp3");
-	runConcrete = LoadSound("runConcrete.mp3");
-	timSounds = LoadSound("timTalk.mp3");
-	explosion = LoadSound("explosion.mp3");
+	music1 = LoadSound("IntroMusic");
+	music2 = LoadSound("City");
+	music3 = LoadSound("BossBattle");
+	runGravel = LoadSound("runGravel");
+	runConcrete = LoadSound("runConcrete");
+	timSounds = LoadSound("timTalk");
+	explosion = LoadSound("explosion");
 
 	TimTalk.instance.setSound(timSounds);
 	GirlMove.instance.setRunSound(runGravel);
@@ -66,10 +72,9 @@ function Start(){
 
 }
 
-@MenuItem("AssetDatabase/LoadAssetExample")
 public static function LoadSound(name: String)
 {
-    return AssetDatabase.LoadAssetAtPath("Assets/Sounds/"+name, AudioClip) as AudioClip;
+    return Resources.Load("Sounds/"+name) as AudioClip;
 }
 
 function Update () {
@@ -99,44 +104,48 @@ function changeScene(){
 	currentScene = SceneManager.GetActiveScene();
 	if(currentScene.name == leftScene ){
 		backwards = true;			
-		updateScenes();				
+		updateScenes(currentScene.name);				
 	}
 	else if(currentScene.name == rightScene){
 		backwards = false;
-		updateScenes();
+		updateScenes(currentScene.name);
 	}
 
 	newScene = false;
 
 }
 
-function updateScenes(){
+function updateScenes(scene:String){
 
-	if(currentScene.name == "Forest"){
+	if(scene == "Forest"){
 		leftScene = null;
 		rightScene = "Street1";
 		leaves.SetActive(true);
 		gears.SetActive(false);
 		floorOb.resizeFloor(20,6);
 		lastLvl = false;
+		SoundManager.instance.setBackMusic(music1);
 		GirlMove.instance.setRunSound(runGravel);
 	}
-	else if(currentScene.name == "Street1"){
+	else if(scene == "Street1"){
 		leftScene = "Forest";
 		rightScene = "FinalStage";
 		leaves.SetActive(false);
 		gears.SetActive(true);
 		floorOb.resizeFloor(60,6);
 		lastLvl = false;
+		SoundManager.instance.setBackMusic(music2);
 		GirlMove.instance.setRunSound(runConcrete);
 	}
-	else if(currentScene.name == "FinalStage"){
+	else if(scene == "FinalStage"){
 		leftScene = "Street1";
 		rightScene = null;
 		leaves.SetActive(false);
 		gears.SetActive(false);
 		floorOb.resizeFloor(50,6);
 		lastLvl = true;
+
+		SoundManager.instance.setBackMusicVol(music3,0.5);
 	}
 
 

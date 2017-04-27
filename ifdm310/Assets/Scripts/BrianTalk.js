@@ -7,7 +7,7 @@ public var brianChat: Sprite[];
 
  var index = 1;
 
- private var cam : cameraMove;
+ private var cam : CameraMove;
  private var girl: GameObject;
  private var tim: GameObject;
  private var tAnim:Animator;
@@ -18,20 +18,26 @@ public var brianChat: Sprite[];
  private var timDies = false;
  private var done = false;
  private var removeTim = false;
+ var laserBoxs: GameObject[];
+ private var laserOn = false;
 
  private var explosion: AudioClip;
  private var brianSpeak : AudioClip;
-
+ private var music3 : AudioClip;
 
  var nextTime = 0;
 
 function Start () {
-	explosion = LoadSound("explosion.mp3");
-	brianSpeak = LoadSound("brianSpeak.wav");
+	explosion = LoadSound("explosion");
+	brianSpeak = LoadSound("brianSpeak");
+	SoundManager.instance.changeRobotVol(.2);
 
-	cam = GameObject.Find("camera").GetComponent(cameraMove);
+	music3 = LoadSound("BossBattle");
+
+	cam = GameObject.Find("camera").GetComponent(CameraMove);
 	girl = GameObject.Find("girl");
 	tim = GameObject.Find("t1m");
+	laserBoxs = GameObject.FindGameObjectsWithTag("lazerBox");
 
 
 
@@ -39,10 +45,9 @@ function Start () {
 	GetComponent(SpriteRenderer).sprite = brianChat[0];
 }
 
-@MenuItem("AssetDatabase/LoadAssetExample")
 public static function LoadSound(name: String)
 {
-    return AssetDatabase.LoadAssetAtPath("Assets/Sounds/"+name, AudioClip) as AudioClip;
+    return Resources.Load("Sounds/"+name) as AudioClip;
 }
 
 
@@ -79,7 +84,12 @@ function Update () {
 		if(done){ 
 			cam.stopPan();
 			GirlMove.instance.setConveyor(true);
-
+			if(!laserOn){
+				for(var l in laserBoxs){
+					l.GetComponent(ShootLasers).turnOnLasers(true);
+				}
+				laserOn = true;
+			}
 		}
 
 		panToGirl = false;
@@ -101,7 +111,7 @@ function Update () {
 				GetComponent(SpriteRenderer).sprite = brianChat[index];
 				index++;
 
-				if(index == 10){
+				if(index == 11){
 					talk = false;
 					timDies = true;
 					panToGirl = true;
@@ -116,7 +126,7 @@ private function showBrian(){
 	var camPos = cam.getCamPos();
 	yield WaitForSeconds(1);
 	cam.zoomOut(90);
-	cam.panCam(new Vector3(transform.position.x, transform.position.y, camPos.z), 100);
+	cam.panCam(new Vector3(transform.position.x, transform.position.y - 5, camPos.z), 90);
 }
 
 private function showGirl(){
@@ -124,7 +134,7 @@ private function showGirl(){
 	var camPos = cam.getCamPos();
 	yield WaitForSeconds(1);
 	cam.zoomIn(75);	
-	cam.panCam(new Vector3(girl.transform.position.x, girl.transform.position.y,camPos.z),100);
+	cam.panCam(new Vector3(girl.transform.position.x, girl.transform.position.y,camPos.z),90);
 }
 
 private function timExplodes(){
@@ -145,7 +155,6 @@ private function timExplodes(){
 private function stopExplosion(){
 	tAnim.enabled = false;
 	SoundManager.instance.explosions.Stop();
-	//Destroy(tim);
 	tim.SetActive(false);
 }
 

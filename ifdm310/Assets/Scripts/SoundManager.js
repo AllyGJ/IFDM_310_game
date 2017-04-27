@@ -10,12 +10,18 @@ public var conveyors: AudioSource;
 public var lasers: AudioSource;
 public var musicSource: AudioSource;
 
+private var curVol:float;
+
 function Awake(){
 
 	if(instance == null) instance = this;
 	else if(instance != null)  Destroy(gameObject);
 
 	DontDestroyOnLoad(this);
+}
+
+function Update(){
+	curVol = MenuController.instance.GetVolume();
 }
 
 public function playGirl(clip: AudioClip){
@@ -59,21 +65,16 @@ public function playLasers(clip: AudioClip){
 		lasers.Play();
 	}
 }
-public function SetAllVolume(volume:float){
-	var diff = 0.5;
-	girlSound.volume = volume - diff;
-	mainRobot.volume = volume - diff;
-	robots.volume = volume - diff;
-	explosions.volume = volume - diff;
-	conveyors.volume = volume - diff;
-	lasers.volume = volume - diff;
-	musicSource.volume = volume;
+public function SetAllVolume(curVol:float){
+	girlSound.volume = curVol - 0.2;
+	mainRobot.volume = curVol;
+	robots.volume = curVol;
+	explosions.volume = curVol;
+	conveyors.volume = curVol;
+	lasers.volume = curVol;
+	musicSource.volume = curVol - 0.1;
 }
 
-
-public function changeMusic(clip:AudioClip){
-	musicSource.clip = clip;
-}
 
 public function TurnOn(val:boolean){
 	if(val){
@@ -101,4 +102,28 @@ public function fadeOut(audio: AudioSource) {
      {
          audio.volume -= 0.4 * Time.deltaTime;
      }
+ }
+
+ public function setBackMusic(clip: AudioClip){
+ 	musicSource.clip = clip;
+ 	musicSource.Play();
+ }
+
+ public function setBackMusicVol(clip: AudioClip, volume: float){
+ 	musicSource.clip = clip;
+ 	musicSource.volume = volume;
+ 	musicSource.Play();
+ }
+
+ public function changeRobotVol(vol:float){
+ 	mainRobot.volume = mainRobot.volume - vol;
+ }
+
+ public function StopSounds(){
+ 	girlSound.Stop();
+	mainRobot.Stop();
+	robots.Stop();
+	explosions.Stop();
+	conveyors.Stop();
+	lasers.Stop();
  }

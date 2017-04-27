@@ -2,7 +2,7 @@
 
 private var girl:GameObject;
 private var t1m:GameObject;
-private var cam:cameraMove;
+private var cam:CameraMove;
 
 private var followScript: TimFollow;
 private var girlScript: GirlMove;

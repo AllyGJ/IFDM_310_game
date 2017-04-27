@@ -21,7 +21,7 @@ private var speakSound:AudioClip;
 
 public static var instance: TimTalk = null;
 
-private var cam : cameraMove;
+private var cam : CameraMove;
 
 function Awake(){
 
@@ -35,7 +35,7 @@ function Awake(){
 function Start () {
 	tim = GameObject.Find("t1m");
 	girl = GameObject.Find("girl");
-	cam = GameObject.Find("camera").GetComponent(cameraMove);
+	cam = GameObject.Find("camera").GetComponent(CameraMove);
 
 	GetComponent(SpriteRenderer).sprite = intro[0];
 }

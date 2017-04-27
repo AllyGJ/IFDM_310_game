@@ -65,12 +65,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a115d6dae0744b9b3adca16b34c950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftBound: {fileID: 0}
-  rightBound: {fileID: 0}
-  leftScene: 
-  rightScene: 
-  spawn1: {fileID: 0}
-  spawn2: {fileID: 0}
+  music1: {fileID: 0}
+  music2: {fileID: 0}
+  music3: {fileID: 0}
+  runGravel: {fileID: 0}
+  runConcrete: {fileID: 0}
+  timSounds: {fileID: 0}
+  explosion: {fileID: 0}
 --- !u!114 &114552409154354162
 MonoBehaviour:
   m_ObjectHideFlags: 1

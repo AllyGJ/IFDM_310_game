@@ -4,8 +4,13 @@
 public static var canvas = null;
 
 public var deadWindow: GameObject;
+public var deadOther: GameObject;
 public var menu: GameObject;
 public var settings: GameObject;
+public var gameOver: GameObject;
+
+private var deathByRobots = false;
+private var deathByOther = false;
 
 private var level: NextLevel;
 private var game: GamePlay;
@@ -24,6 +29,7 @@ function Start () {
 	deadWindow.SetActive(false);
 	menu.SetActive(false);
 	settings.SetActive(false);
+	gameOver.SetActive(false);
 
 	level = GameObject.Find("GameManager").GetComponent(NextLevel);
 	game = GameObject.Find("GameManager").GetComponent(GamePlay);
@@ -35,15 +41,25 @@ function Start () {
 
 /**********************************************************************/
 
-public function show(val : boolean)
+public function show()
 {
-	deadWindow.SetActive(val);
+	deadWindow.SetActive(true);
+	deathByRobots = true;
+	pause();
+
+}
+
+public function showDieByOther(){
+	deadOther.SetActive(true);
+	deathByOther = true;
 	pause();
 }
 
 
 public function startOver(){
-	show(false);
+	if(deathByRobots) deadWindow.SetActive(false);
+	if(deathByOther) deadOther.SetActive(false);
+
 	level.restartLevel();
 	unpause();
 
@@ -51,7 +67,16 @@ public function startOver(){
 
 public function exit()
 {
+	gameOver.SetActive(true);
 
+	wait(5f);
+
+	print("quiting now");
+	Application.Quit();
+}
+
+function wait(secs: float){
+	yield WaitForSeconds(secs);
 }
 
 public function pause(){

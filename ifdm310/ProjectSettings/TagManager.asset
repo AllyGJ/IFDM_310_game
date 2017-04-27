@@ -19,6 +19,9 @@ TagManager:
   - fwd
   - redbutton
   - spikes
+  - menuC
+  - soundMan
+  - news
   layers:
   - Default
   - TransparentFX
