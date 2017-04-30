@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Weight
+  - Line
+  - Platform
+  - Robot
+  - Light
+  - lazerBeam
+  - scan
+  - LBound
+  - RBound
+  - bossLevel
+  - lazerBox
+  - backwards
+  - fwd
+  - redbutton
+  - spikes
+  - menuC
+  - soundMan
+  - roboScan
+  - menuWin
+  - news1
+  - news2
+  - news3
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - Player
+  - Robots
+  - Background
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: floor
+    uniqueID: 4184688373
+    locked: 0
+  - name: Background
+    uniqueID: 3721431811
+    locked: 0
+  - name: Midground
+    uniqueID: 3991225083
+    locked: 0
+  - name: Foreground
+    uniqueID: 1090084261
+    locked: 0
+  - name: Layer3
+    uniqueID: 3820576339
+    locked: 0
+  - name: Layer2
+    uniqueID: 3396031725
+    locked: 0
+  - name: Layer1
+    uniqueID: 3444334353
+    locked: 0
+  - name: UI
+    uniqueID: 3953762813
+    locked: 0
