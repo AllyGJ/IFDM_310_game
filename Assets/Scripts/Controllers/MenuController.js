@@ -26,6 +26,7 @@ function Start () {
 	var playB = GameObject.Find("Canvas/titleScreen/Play").GetComponent(Button);
 	var HowB = GameObject.Find("Canvas/titleScreen/How").GetComponent(Button);
 	var SoundB = GameObject.Find("Canvas/titleScreen/Sound").GetComponent(Button);
+	var exit = GameObject.Find("Canvas/titleScreen/Exit").GetComponent(Button);
 
 	var submitSound = GameObject.Find("Canvas/SoundSettings/Panel/OK").GetComponent(Button);
 	var musicToggle = GameObject.Find("Canvas/SoundSettings/Panel/Toggle").GetComponent(Toggle);
@@ -37,6 +38,7 @@ function Start () {
 	playB.onClick.AddListener( function() { GetComponent(LoadScene).loadScene("CutScene1");});
 	HowB.onClick.AddListener( function() { openWindow(HowTo);});
 	SoundB.onClick.AddListener( function() { openWindow(SoundSettings);});
+	exit.onClick.AddListener( function() { exitGame();});
 
 	submitSound.onClick.AddListener( function() { closeWindow(SoundSettings,false);});
 	musicToggle.onValueChanged.AddListener( function() { setMusic(musicToggle);});
@@ -98,4 +100,8 @@ function setVolume(slide: Slider){
 
 public function GetVolume(){
 	return volume;
+}
+
+public function exitGame(){
+	Application.Quit();
 }
